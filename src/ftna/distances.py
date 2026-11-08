@@ -33,12 +33,19 @@ CHUNK = 500  # lignes de la matrice des distances calculées à la fois
 
 @dataclass(frozen=True)
 class DistanceResult:
-    """Excentricités (sortantes et entrantes) et histogramme de toutes les distances."""
+    """Excentricités, sommes des distances (sortantes et entrantes) et histogramme."""
 
     nodes: list[int]
     out_ecc: np.ndarray  # distance maximale depuis le nœud
     in_ecc: np.ndarray  # distance maximale vers le nœud
+    out_sum: np.ndarray  # somme des distances depuis le nœud
+    in_sum: np.ndarray  # somme des distances vers le nœud
     histogram: np.ndarray  # histogram[d] = nombre de couples ordonnés à distance d
+
+    def closeness(self, direction: str) -> np.ndarray:
+        """Closeness classique (n - 1) / somme des distances ; `out` ou `in`."""
+        sums = self.out_sum if direction == "out" else self.in_sum
+        return (len(self.nodes) - 1) / sums
 
 
 def all_distances(graph: nx.Graph, directed: bool) -> DistanceResult:
@@ -48,6 +55,8 @@ def all_distances(graph: nx.Graph, directed: bool) -> DistanceResult:
     n = len(nodes)
     out_ecc = np.zeros(n, dtype=int)
     in_ecc = np.zeros(n, dtype=int)
+    out_sum = np.zeros(n, dtype=np.int64)
+    in_sum = np.zeros(n, dtype=np.int64)
     histogram = np.zeros(n, dtype=np.int64)
     for start in range(0, n, CHUNK):
         rows = np.arange(start, min(start + CHUNK, n))
@@ -57,10 +66,14 @@ def all_distances(graph: nx.Graph, directed: bool) -> DistanceResult:
         dist = dist.astype(int)
         out_ecc[rows] = dist.max(axis=1)
         in_ecc = np.maximum(in_ecc, dist.max(axis=0))
+        out_sum[rows] = dist.sum(axis=1)
+        in_sum += dist.sum(axis=0)
         histogram += np.bincount(dist.ravel(), minlength=n)[:n]
     histogram[0] = 0  # distance d'un nœud à lui-même
     last = int(np.nonzero(histogram)[0].max())
-    return DistanceResult(nodes, out_ecc, in_ecc, histogram[: last + 1])
+    return DistanceResult(
+        nodes, out_ecc, in_ecc, out_sum, in_sum, histogram[: last + 1]
+    )
 
 
 def mean_distance(histogram: np.ndarray) -> float:
