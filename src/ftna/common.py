@@ -1,5 +1,6 @@
 """Outils partagés par les analyses : chemins de sortie, tableaux Markdown, style des figures."""
 
+import math
 from pathlib import Path
 
 import matplotlib
@@ -48,7 +49,7 @@ def md_table(df: pd.DataFrame, floatfmt: str = ".3g") -> str:
 
     def fmt(value: object) -> str:
         if isinstance(value, float):
-            return format(value, floatfmt)
+            return "" if math.isnan(value) else format(value, floatfmt)  # NaN → vide
         if isinstance(value, int) and not isinstance(value, bool):
             return f"{value:,}"
         return str(value)
