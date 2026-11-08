@@ -110,7 +110,8 @@ def setup_style() -> None:
 def save_figure(fig: plt.Figure, name: str) -> Path:
     """Sauvegarde en PDF (rapport LaTeX) et PNG (aperçu) dans `results/figures/`."""
     FIGURES_DIR.mkdir(parents=True, exist_ok=True)
-    fig.savefig(FIGURES_DIR / f"{name}.pdf")
+    # Sans date de création : PDF identique d'une exécution à l'autre.
+    fig.savefig(FIGURES_DIR / f"{name}.pdf", metadata={"CreationDate": None})
     path = FIGURES_DIR / f"{name}.png"
     fig.savefig(path)
     plt.close(fig)

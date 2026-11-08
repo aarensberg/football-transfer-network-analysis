@@ -159,9 +159,7 @@ def main() -> None:
     table = participation(undirected, community)
     table["name"] = pd.Series(dict(graph.nodes(data="name")))
     table["country"] = pd.Series(dict(graph.nodes(data="country")))
-    table["bloc"] = table.community.map(
-        lambda c: f"C{c} " + " / ".join(names[c].split(" / ")[:2])
-    )
+    table["bloc"] = table.community.map(lambda c: f"C{c} {names[c]}")
     save_table(table.reset_index(), "roles")
     plot_community_graph(undirected, community, names)
 
