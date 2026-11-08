@@ -7,7 +7,10 @@ authors = [
     { name = "aarensberg", email = "sandro.arens@icloud.com" }
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "networkx>=3.7",
+    "pandas>=3.1.1",
+]
 
 [project.scripts]
 ftna = "ftna:main"
@@ -15,3 +18,11 @@ ftna = "ftna:main"
 [build-system]
 requires = ["uv_build>=0.13.7,<0.14.0"]
 build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "ftna"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.4",
+]
