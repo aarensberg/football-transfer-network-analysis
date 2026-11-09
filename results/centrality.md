@@ -5,6 +5,9 @@ Généré par `uv run python -m ftna.centrality`. Table complète : `results/tab
 - PageRank : α = 0.85, pondéré par le nombre de transferts ; PageRank inverse calculé sur le graphe transposé.
 - Closeness : exacte, sur la CFC géante (distances en sauts).
 - Betweenness : exacte, non pondérée, normalisée par (n − 1)(n − 2).
+- Closeness de Wasserman et Faust (`*_closeness_wf`) : tout le graphe, (r/(N−1))·(r/Σd) avec r le nombre de clubs atteignables ; Spearman avec la closeness sur la CFC géante (clubs de la CFC) : entrante 1.000, sortante 1.000. Elle attribue aussi une valeur aux 411 clubs hors de la CFC géante.
+- PageRank avec α = 0.8 (valeur du cours) : Spearman = 0.999 avec α = 0.85 ; recouvrement du top 20 = 95%.
+- Vecteur propre (CFF géante non orientée pondérée) : top 100 composé de Brazil 58, Italy 42 ; part de jeunes/réserves 0%. La mesure se **localise** sur le sous-réseau le plus dense, d'où le choix du PageRank (cours 3).
 - Contrôle de l'approximation (k = 1000 sources, graine 42) : Spearman = 0.964 avec la valeur exacte ; recouvrement du top 100 = 70%.
 
 ## Valeurs extrêmes de force sortante
@@ -150,6 +153,60 @@ Pays du top 100 : Cyprus 11, Türkiye 9, Romania 8, Greece 8, Croatia 6, Albania
 
 Pays du top 100 : Croatia 13, Greece 11, Italy 9, Cyprus 9, Serbia 8, Bulgaria 5.
 
+## Top 20 : out_closeness_wf
+
+| rang | club | pays | out_closeness_wf | jeunes/réserve |
+|---|---|---|---|---|
+| 1 | HNK Hajduk Split | Croatia | 0.3566 |  |
+| 2 | HNK Rijeka | Croatia | 0.3547 |  |
+| 3 | Udinese Calcio | Italy | 0.3538 |  |
+| 4 | NK Istra 1961 | Croatia | 0.3527 |  |
+| 5 | Red Star Belgrade | Serbia | 0.3509 |  |
+| 6 | GNK Dinamo Zagreb | Croatia | 0.3508 |  |
+| 7 | Olympiacos Piraeus | Greece | 0.3503 |  |
+| 8 | FK Partizan Belgrade | Serbia | 0.3497 |  |
+| 9 | FC Sion | Switzerland | 0.3493 |  |
+| 10 | CSKA-Sofia | Bulgaria | 0.3492 |  |
+| 11 | FK Sarajevo | Bosnia-Herzegovina | 0.349 |  |
+| 12 | Parma Calcio 1913 | Italy | 0.3489 |  |
+| 13 | Genoa CFC | Italy | 0.3488 |  |
+| 14 | AE Larisa | Greece | 0.3486 |  |
+| 15 | DAC Dunajska Streda | Slovakia | 0.3483 |  |
+| 16 | AEL Limassol | Cyprus | 0.3479 |  |
+| 17 | HSK Zrinjski Mostar | Bosnia-Herzegovina | 0.3478 |  |
+| 18 | FC Sheriff Tiraspol | Moldova | 0.3477 |  |
+| 19 | NK Lokomotiva Zagreb | Croatia | 0.3472 |  |
+| 20 | Enosis Neon Paralimniou | Cyprus | 0.347 |  |
+
+Pays du top 100 : Croatia 13, Greece 11, Italy 9, Cyprus 9, Serbia 8, Poland 6.
+
+## Top 20 : eigenvector
+
+| rang | club | pays | eigenvector | jeunes/réserve |
+|---|---|---|---|---|
+| 1 | Parma Calcio 1913 | Italy | 0.1468 |  |
+| 2 | Tombense Futebol Clube (MG) | Brazil | 0.1336 |  |
+| 3 | Genoa CFC | Italy | 0.1291 |  |
+| 4 | Mirassol Futebol Clube (SP) | Brazil | 0.117 |  |
+| 5 | Associação Atlética Ponte Preta | Brazil | 0.1154 |  |
+| 6 | Atalanta BC | Italy | 0.1112 |  |
+| 7 | Cruzeiro Esporte Clube | Brazil | 0.1102 |  |
+| 8 | Red Bull Bragantino | Brazil | 0.1029 |  |
+| 9 | Avaí FC | Brazil | 0.1014 |  |
+| 10 | Esporte Clube Vitória | Brazil | 0.1002 |  |
+| 11 | Ceará Sporting Club | Brazil | 0.1 |  |
+| 12 | Guarani Futebol Clube (SP) | Brazil | 0.09974 |  |
+| 13 | Sociedade Esportiva Palmeiras | Brazil | 0.09643 |  |
+| 14 | Delfino Pescara 1936 | Italy | 0.09624 |  |
+| 15 | Inter Milan | Italy | 0.09623 |  |
+| 16 | Coritiba Foot Ball Club | Brazil | 0.09621 |  |
+| 17 | UC Sampdoria | Italy | 0.09615 |  |
+| 18 | Clube Náutico Capibaribe | Brazil | 0.09568 |  |
+| 19 | Clube de Regatas Brasil (AL) | Brazil | 0.09492 |  |
+| 20 | Atlético Clube Goianiense | Brazil | 0.09478 |  |
+
+Pays du top 100 : Brazil 58, Italy 42.
+
 ## Top 20 : in_strength
 
 | rang | club | pays | in_strength | jeunes/réserve |
@@ -260,17 +317,20 @@ Pays du top 100 : Italy 44, England 11, Brazil 11, Türkiye 6, Portugal 4, Greec
 
 ## Corrélations de Spearman entre mesures
 
-| mesure | in_degree | out_degree | in_strength | out_strength | pagerank | reverse_pagerank | in_closeness | out_closeness | betweenness |
-|---|---|---|---|---|---|---|---|---|---|
-| in_degree | 1.00 | 0.91 | 0.94 | 0.81 | 0.79 | 0.63 | 0.91 | 0.79 | 0.82 |
-| out_degree | 0.91 | 1.00 | 0.90 | 0.94 | 0.62 | 0.81 | 0.82 | 0.90 | 0.84 |
-| in_strength | 0.94 | 0.90 | 1.00 | 0.85 | 0.80 | 0.67 | 0.84 | 0.78 | 0.81 |
-| out_strength | 0.81 | 0.94 | 0.85 | 1.00 | 0.57 | 0.90 | 0.72 | 0.86 | 0.80 |
-| pagerank | 0.79 | 0.62 | 0.80 | 0.57 | 1.00 | 0.45 | 0.67 | 0.43 | 0.72 |
-| reverse_pagerank | 0.63 | 0.81 | 0.67 | 0.90 | 0.45 | 1.00 | 0.54 | 0.74 | 0.76 |
-| in_closeness | 0.91 | 0.82 | 0.84 | 0.72 | 0.67 | 0.54 | 1.00 | 0.84 | 0.80 |
-| out_closeness | 0.79 | 0.90 | 0.78 | 0.86 | 0.43 | 0.74 | 0.84 | 1.00 | 0.79 |
-| betweenness | 0.82 | 0.84 | 0.81 | 0.80 | 0.72 | 0.76 | 0.80 | 0.79 | 1.00 |
+| mesure | in_degree | out_degree | in_strength | out_strength | pagerank | reverse_pagerank | in_closeness | out_closeness | in_closeness_wf | out_closeness_wf | betweenness | eigenvector |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| in_degree | 1.00 | 0.91 | 0.94 | 0.81 | 0.79 | 0.63 | 0.91 | 0.79 | 0.91 | 0.80 | 0.82 | 0.79 |
+| out_degree | 0.91 | 1.00 | 0.90 | 0.94 | 0.62 | 0.81 | 0.82 | 0.90 | 0.84 | 0.91 | 0.84 | 0.85 |
+| in_strength | 0.94 | 0.90 | 1.00 | 0.85 | 0.80 | 0.67 | 0.84 | 0.78 | 0.86 | 0.79 | 0.81 | 0.77 |
+| out_strength | 0.81 | 0.94 | 0.85 | 1.00 | 0.57 | 0.90 | 0.72 | 0.86 | 0.74 | 0.86 | 0.80 | 0.81 |
+| pagerank | 0.79 | 0.62 | 0.80 | 0.57 | 1.00 | 0.45 | 0.67 | 0.43 | 0.70 | 0.46 | 0.72 | 0.41 |
+| reverse_pagerank | 0.63 | 0.81 | 0.67 | 0.90 | 0.45 | 1.00 | 0.54 | 0.74 | 0.56 | 0.75 | 0.76 | 0.62 |
+| in_closeness | 0.91 | 0.82 | 0.84 | 0.72 | 0.67 | 0.54 | 1.00 | 0.84 | 1.00 | 0.84 | 0.80 | 0.75 |
+| out_closeness | 0.79 | 0.90 | 0.78 | 0.86 | 0.43 | 0.74 | 0.84 | 1.00 | 0.84 | 1.00 | 0.79 | 0.85 |
+| in_closeness_wf | 0.91 | 0.84 | 0.86 | 0.74 | 0.70 | 0.56 | 1.00 | 0.84 | 1.00 | 0.85 | 0.82 | 0.76 |
+| out_closeness_wf | 0.80 | 0.91 | 0.79 | 0.86 | 0.46 | 0.75 | 0.84 | 1.00 | 0.85 | 1.00 | 0.80 | 0.86 |
+| betweenness | 0.82 | 0.84 | 0.81 | 0.80 | 0.72 | 0.76 | 0.80 | 0.79 | 0.82 | 0.80 | 1.00 | 0.63 |
+| eigenvector | 0.79 | 0.85 | 0.77 | 0.81 | 0.41 | 0.62 | 0.75 | 0.85 | 0.76 | 0.86 | 0.63 | 1.00 |
 
 ## Validation externe
 
@@ -286,6 +346,9 @@ Clubs avec valeur marchande actuelle > 0 : 4,410 ; avec valeur moyenne 2010–20
 | reverse_pagerank | 0.47 | 0.53 | 0.47 |
 | in_closeness | 0.53 | 0.61 | 0.50 |
 | out_closeness | 0.59 | 0.72 | 0.56 |
+| in_closeness_wf | 0.54 | 0.62 | 0.50 |
+| out_closeness_wf | 0.59 | 0.72 | 0.56 |
 | betweenness | 0.36 | 0.43 | 0.44 |
+| eigenvector | 0.56 | 0.59 | 0.54 |
 
 Figure : `results/figures/pagerank_map.pdf`.

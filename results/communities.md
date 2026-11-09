@@ -64,9 +64,23 @@ Figure : `results/figures/community_countries.pdf`.
 | Louvain non orienté (référence) | 35 | 0.836 | 0.836 | 1.000 | 0.849 |
 | Leiden (modularité) | 34 | 0.836 | 0.836 | 0.992 | 0.852 |
 | Louvain orienté (optimise la modularité orientée) | 35 | 0.836 | 0.836 | 0.987 | 0.853 |
+| Propagation de labels asynchrone (pondérée) | 332 | 0.771 | 0.771 | 0.781 | 0.871 |
 | Pays (partition de référence externe) | 111 | 0.806 | 0.806 | 0.849 | 1.000 |
 
 Modularité non orientée : graphe w(u,v) = w(u→v) + w(v→u) ; modularité orientée : formule de Leicht et Newman sur le graphe orienté pondéré.
+
+La propagation de labels n'optimise aucune fonction objectif : sa concordance avec Louvain (NMI) indique si la structure trouvée dépend de la modularité.
+
+## Hiérarchie : niveaux du dendrogramme de Louvain
+
+| niveau | communautés | communautés ≥ 50 clubs | modularité | pureté nationale | NMI avec le pays |
+|---|---|---|---|---|---|
+| 1 | 389 | 55 | 0.758 | 0.982 | 0.858 |
+| 2 | 52 | 41 | 0.829 | 0.718 | 0.842 |
+| 3 | 36 | 27 | 0.836 | 0.683 | 0.841 |
+| 4 | 35 | 26 | 0.836 | 0.683 | 0.849 |
+
+Chaque niveau agrège les communautés du niveau précédent (passes de Louvain) ; le dernier niveau est la partition de référence.
 
 ## Significativité : modèle nul
 

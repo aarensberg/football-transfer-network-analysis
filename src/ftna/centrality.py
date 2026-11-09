@@ -4,8 +4,12 @@ Mesures (graphe orienté vendeur → acheteur) :
 - degrés et forces entrants/sortants ;
 - PageRank pondéré (destinations recevant des joueurs de clubs eux-mêmes centraux) ;
 - PageRank inverse, sur le graphe transposé (fournisseurs de clubs centraux) ;
-- closeness entrante/sortante exacte sur la CFC géante ;
-- betweenness exacte (non pondérée), parallélisée par paquets de sources.
+- closeness entrante/sortante exacte sur la CFC géante, et sur tout le graphe avec la
+  correction de Wasserman et Faust (formule du cours pour un graphe non connexe) ;
+- betweenness exacte (non pondérée), parallélisée par paquets de sources ;
+- centralité de vecteur propre (graphe non orienté pondéré, CFF géante), pour montrer
+  pourquoi le PageRank lui est préféré (localisation sur le sous-réseau le plus dense) ;
+- contrôle du PageRank avec α = 0,8 (valeur du cours) au lieu de 0,85.
 
 Validation externe : valeur marchande actuelle (`clubs.current_mv`) et valeur marchande
 moyenne sur les saisons de la fenêtre (`club_league`, cohérente avec la période du graphe).
@@ -21,7 +25,9 @@ from concurrent.futures import ProcessPoolExecutor
 
 import matplotlib.pyplot as plt
 import networkx as nx
+import numpy as np
 import pandas as pd
+from scipy.sparse.csgraph import shortest_path
 
 from ftna.common import (
     NEUTRAL,
@@ -36,11 +42,13 @@ from ftna.common import (
     setup_style,
     write_report,
 )
+from ftna.communities import undirected_weighted
 from ftna.data import load_raw
-from ftna.distances import all_distances
+from ftna.distances import CHUNK, all_distances
 from ftna.graph import GraphConfig
 
 PAGERANK_ALPHA = 0.85
+COURSE_ALPHA = 0.8  # facteur d'amortissement du cours (β)
 TOP = 20
 
 _WORKER_GRAPH: nx.DiGraph | None = None
@@ -60,23 +68,85 @@ def _partial_betweenness(sources: list[int]) -> dict[int, float]:
     )
 
 
+def _partial_edge_betweenness(sources: list[int]) -> dict[tuple[int, int], float]:
+    assert _WORKER_GRAPH is not None
+    return nx.edge_betweenness_centrality_subset(
+        _WORKER_GRAPH, sources, list(_WORKER_GRAPH), normalized=False
+    )
+
+
+def _parallel_sum(graph: nx.DiGraph, worker, processes: int | None) -> dict:
+    """Somme des contributions de paquets disjoints de sources (Brandes par paquets)."""
+    nodes = list(graph)
+    processes = processes or os.cpu_count() or 1
+    chunks = [nodes[i :: processes * 4] for i in range(processes * 4)]
+    total: dict = {}
+    with ProcessPoolExecutor(
+        processes, initializer=_init_worker, initargs=(list(graph.edges()), nodes)
+    ) as pool:
+        for partial in pool.map(worker, chunks):
+            for key, value in partial.items():
+                total[key] = total.get(key, 0.0) + value
+    return total
+
+
 def exact_betweenness(graph: nx.DiGraph, processes: int | None = None) -> pd.Series:
     """Betweenness exacte non pondérée, normalisée par (n - 1)(n - 2) comme NetworkX.
 
     Les contributions de paquets disjoints de sources s'additionnent (vérifié contre
     `nx.betweenness_centrality` sur un graphe test : écart < 1e-12).
     """
+    n = graph.number_of_nodes()
+    total = pd.Series(_parallel_sum(graph, _partial_betweenness, processes))
+    return total.reindex(list(graph), fill_value=0.0) / ((n - 1) * (n - 2))
+
+
+def exact_edge_betweenness(
+    graph: nx.DiGraph, processes: int | None = None
+) -> pd.Series:
+    """Betweenness exacte des arêtes (non pondérée), normalisée par n(n - 1) comme
+    NetworkX pour un graphe orienté ; même décomposition par paquets de sources."""
+    n = graph.number_of_nodes()
+    total = pd.Series(_parallel_sum(graph, _partial_edge_betweenness, processes))
+    total.index = pd.MultiIndex.from_tuples(total.index, names=["u", "v"])
+    return total / (n * (n - 1))
+
+
+def wf_closeness(graph: nx.DiGraph) -> tuple[pd.Series, pd.Series]:
+    """Closeness entrante et sortante sur tout le graphe, corrigée par Wasserman et Faust.
+
+    Pour un nœud atteignant r autres nœuds à une distance totale S :
+    closeness = (r / (N - 1)) · (r / S) ; 0 si r = 0. C'est la formule du cours pour un
+    graphe non connexe (et celle de `nx.closeness_centrality`, `wf_improved=True`).
+    """
     nodes = list(graph)
-    processes = processes or os.cpu_count() or 1
-    chunks = [nodes[i :: processes * 4] for i in range(processes * 4)]
-    total = pd.Series(0.0, index=nodes)
-    with ProcessPoolExecutor(
-        processes, initializer=_init_worker, initargs=(list(graph.edges()), nodes)
-    ) as pool:
-        for partial in pool.map(_partial_betweenness, chunks):
-            total = total.add(pd.Series(partial), fill_value=0.0)
+    matrix = nx.to_scipy_sparse_array(graph, nodelist=nodes, weight=None, format="csr")
     n = len(nodes)
-    return total / ((n - 1) * (n - 2))
+    out_r, out_s = np.zeros(n), np.zeros(n)
+    in_r, in_s = np.zeros(n), np.zeros(n)
+    for start in range(0, n, CHUNK):
+        rows = np.arange(start, min(start + CHUNK, n))
+        dist = shortest_path(matrix, directed=True, unweighted=True, indices=rows)
+        finite = np.isfinite(dist) & (dist > 0)
+        dist = np.where(finite, dist, 0.0)
+        out_r[rows], out_s[rows] = finite.sum(axis=1), dist.sum(axis=1)
+        in_r += finite.sum(axis=0)
+        in_s += dist.sum(axis=0)
+
+    def formula(r: np.ndarray, total: np.ndarray) -> pd.Series:
+        with np.errstate(divide="ignore", invalid="ignore"):
+            values = np.where(r > 0, (r / (n - 1)) * (r / total), 0.0)
+        return pd.Series(values, index=nodes)
+
+    return formula(in_r, in_s), formula(out_r, out_s)
+
+
+def eigenvector(graph: nx.DiGraph) -> pd.Series:
+    """Centralité de vecteur propre sur la CFF géante non orientée pondérée (le graphe
+    orienté n'étant pas fortement connexe, Perron-Frobenius ne s'y applique pas)."""
+    undirected = undirected_weighted(graph)
+    giant = undirected.subgraph(max(nx.connected_components(undirected), key=len))
+    return pd.Series(nx.eigenvector_centrality_numpy(giant, weight="weight"))
 
 
 def compute_centralities(
@@ -112,6 +182,13 @@ def compute_centralities(
             "betweenness": betweenness,
         }
     )
+    if exact:
+        in_wf, out_wf = wf_closeness(graph)
+        table["in_closeness_wf"], table["out_closeness_wf"] = in_wf, out_wf
+        table["eigenvector"] = eigenvector(graph)
+        table["pagerank_alpha08"] = nx.pagerank(
+            graph, alpha=COURSE_ALPHA, weight="weight"
+        )
     fees = pd.DataFrame(
         [(u, v, f) for u, v, f in graph.edges(data="total_fee")],
         columns=["u", "v", "fee"],
@@ -146,7 +223,10 @@ MEASURES = [
     "reverse_pagerank",
     "in_closeness",
     "out_closeness",
+    "in_closeness_wf",
+    "out_closeness_wf",
     "betweenness",
+    "eigenvector",
 ]
 
 
@@ -282,6 +362,22 @@ def main() -> None:
             ],
         }
     )
+    scc = table.in_closeness.notna()
+    wf_rho = {
+        d: table.loc[scc, f"{d}_closeness"].corr(
+            table.loc[scc, f"{d}_closeness_wf"], method="spearman"
+        )
+        for d in ("in", "out")
+    }
+    alpha_rho = table.pagerank.corr(table.pagerank_alpha08, method="spearman")
+    alpha_overlap = (
+        len(
+            set(table.pagerank.nlargest(TOP).index)
+            & set(table.pagerank_alpha08.nlargest(TOP).index)
+        )
+        / TOP
+    )
+    eig_top = table.nlargest(100, "eigenvector")
     outlier = table.nlargest(3, "out_strength")[
         ["name", "country", "out_strength", "out_degree"]
     ]
@@ -298,6 +394,23 @@ def main() -> None:
         "- Closeness : exacte, sur la CFC géante (distances en sauts).",
         "- Betweenness : exacte, non pondérée, normalisée par (n − 1)(n − 2).",
         (
+            "- Closeness de Wasserman et Faust (`*_closeness_wf`) : tout le graphe, "
+            "(r/(N−1))·(r/Σd) avec r le nombre de clubs atteignables ; Spearman avec la "
+            f"closeness sur la CFC géante (clubs de la CFC) : entrante {wf_rho['in']:.3f}, "
+            f"sortante {wf_rho['out']:.3f}. Elle attribue aussi une valeur aux "
+            f"{int((~scc).sum())} clubs hors de la CFC géante."
+        ),
+        (
+            f"- PageRank avec α = {COURSE_ALPHA} (valeur du cours) : Spearman = {alpha_rho:.3f} "
+            f"avec α = {PAGERANK_ALPHA} ; recouvrement du top {TOP} = {alpha_overlap:.0%}."
+        ),
+        (
+            "- Vecteur propre (CFF géante non orientée pondérée) : top 100 composé de "
+            f"{country_concentration(table, 'eigenvector')} ; part de jeunes/réserves "
+            f"{eig_top.youth_or_reserve.mean():.0%}. La mesure se **localise** sur le "
+            "sous-réseau le plus dense, d'où le choix du PageRank (cours 3)."
+        ),
+        (
             f"- Contrôle de l'approximation (k = 1000 sources, graine {SEED}) : Spearman = {approx_rho:.3f} "
             f"avec la valeur exacte ; recouvrement du top 100 = {approx_overlap:.0%}."
         ),
@@ -313,6 +426,8 @@ def main() -> None:
         "betweenness",
         "in_closeness",
         "out_closeness",
+        "out_closeness_wf",
+        "eigenvector",
         "in_strength",
         "out_strength",
         "in_degree",

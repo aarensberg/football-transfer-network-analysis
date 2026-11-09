@@ -1,4 +1,5 @@
-"""A2. Connectivité : composantes faiblement et fortement connexes, décomposition bow-tie.
+"""A2. Connectivité : composantes faiblement et fortement connexes, décomposition bow-tie,
+sommets d'articulation, ponts et composante biconnexe (robustesse, cours 1).
 
 Usage : `uv run python -m ftna.connectivity`
 Sortie : `results/connectivity.md`.
@@ -44,6 +45,30 @@ def describe_nodes(graph: nx.DiGraph, nodes: set[int]) -> dict[str, object]:
     }
 
 
+def cut_structure(graph: nx.DiGraph, giant: set[int]) -> dict[str, object]:
+    """Sommets d'articulation, ponts et 2-connexité de la CFF géante (non orientée).
+
+    Pour chaque sommet d'articulation, on compte les clubs qu'il détacherait de la
+    composante principale s'il était retiré.
+    """
+    undirected = graph.subgraph(giant).to_undirected(as_view=False)
+    points = list(nx.articulation_points(undirected))
+    bridges = list(nx.bridges(undirected))
+    blocks = sorted(nx.biconnected_components(undirected), key=len, reverse=True)
+    detached = {}
+    for a in points:
+        rest = nx.restricted_view(undirected, [a], [])
+        sizes = sorted((len(c) for c in nx.connected_components(rest)), reverse=True)
+        detached[a] = sum(sizes[1:])
+    return {
+        "nodes": undirected.number_of_nodes(),
+        "points": points,
+        "bridges": bridges,
+        "largest_block": len(blocks[0]),
+        "detached": pd.Series(detached, dtype=int).sort_values(ascending=False),
+    }
+
+
 def component_sizes(components: list[set[int]]) -> pd.DataFrame:
     sizes = (
         pd.Series([len(c) for c in components])
@@ -72,6 +97,15 @@ def main() -> None:
         [{"partie": k, **describe_nodes(graph, v)} for k, v in parts.items()]
     )
     bow.insert(2, "part des nœuds", bow.clubs / n)
+    cuts = cut_structure(graph, weak[0])
+    top_cuts = cuts["detached"].head(10)
+    cut_table = pd.DataFrame(
+        {
+            "club": [club_label(graph, a) for a in top_cuts.index],
+            "degré": [graph.degree(a) for a in top_cuts.index],
+            "clubs détachés": top_cuts.to_numpy(),
+        }
+    )
     lines = [
         "# A2. Connectivité",
         "",
@@ -105,6 +139,22 @@ def main() -> None:
         "## Décomposition bow-tie autour de la CFC géante",
         "",
         md_table(bow, floatfmt=".3g"),
+        "",
+        "## Robustesse : sommets d'articulation et ponts (CFF géante, non orientée)",
+        "",
+        (
+            f"- Sommets d'articulation (cutvertices) : {len(cuts['points'])} ; ponts : "
+            f"{len(cuts['bridges'])}. La CFF géante est donc 1-connexe (κ = λ = 1)."
+        ),
+        (
+            f"- Plus grande composante biconnexe (2-connexe) : {cuts['largest_block']:,} "
+            f"clubs ({cuts['largest_block'] / cuts['nodes']:.2%} de la CFF géante) ; "
+            f"retirer un sommet d'articulation détache au total "
+            f"{int(cuts['detached'].sum()):,} clubs (au plus {int(cuts['detached'].max())} "
+            "pour un même club)."
+        ),
+        "",
+        md_table(cut_table),
     ]
     write_report("connectivity", lines)
 

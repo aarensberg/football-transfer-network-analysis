@@ -5,6 +5,8 @@ Sur le graphe non orienté pondéré et la partition Louvain de A5 :
   vers la communauté s : 0 si tous ses échanges restent dans une communauté ;
 - score z_i : force intra-communauté standardisée au sein de la communauté du club.
 Rôles : hub si z ≥ 2,5 ; seuils de P de Guimerà & Amaral pour le reste.
+Ponts entre communautés : betweenness exacte des arêtes (graphe orienté, cours 3) ;
+une arête sur beaucoup de plus courts chemins joue le rôle de pont.
 
 Usage : `uv run python -m ftna.roles` (après `ftna.communities`)
 Sorties : `results/roles.md`, `results/tables/roles.csv`,
@@ -16,6 +18,7 @@ import networkx as nx
 import numpy as np
 import pandas as pd
 
+from ftna.centrality import exact_edge_betweenness
 from ftna.common import (
     NEUTRAL,
     SERIES,
@@ -75,6 +78,31 @@ def participation(undirected: nx.Graph, community: pd.Series) -> pd.DataFrame:
     table["z"] = ((table.internal - grouped.transform("mean")) / std).fillna(0.0)
     table["role"] = [role(p, z) for p, z in zip(table.P, table.z)]
     return table
+
+
+def edge_bridges(
+    graph: nx.DiGraph, community: pd.Series
+) -> tuple[pd.DataFrame, dict[str, float]]:
+    """Betweenness exacte des arêtes et part des arêtes inter-communautés en tête."""
+    eb = exact_edge_betweenness(graph).rename("edge_betweenness").reset_index()
+    eb["inter"] = eb.u.map(community).to_numpy() != eb.v.map(community).to_numpy()
+    eb = eb.sort_values("edge_betweenness", ascending=False, ignore_index=True)
+    stats = {
+        "base": eb.inter.mean(),
+        "top100": eb.inter.head(100).mean(),
+        "top1000": eb.inter.head(1000).mean(),
+        "ratio": eb.loc[eb.inter, "edge_betweenness"].mean()
+        / eb.loc[~eb.inter, "edge_betweenness"].mean(),
+    }
+    names = dict(graph.nodes(data="name"))
+    countries = dict(graph.nodes(data="country"))
+    top = eb.head(1000).copy()
+    top["from"] = [f"{names[u]} ({countries[u] or '?'})" for u in top.u]
+    top["to"] = [f"{names[v]} ({countries[v] or '?'})" for v in top.v]
+    top["weight"] = [graph[u][v]["weight"] for u, v in zip(top.u, top.v)]
+    top["community_from"] = top.u.map(community)
+    top["community_to"] = top.v.map(community)
+    return top, stats
 
 
 def community_names(communities: pd.DataFrame) -> pd.Series:
@@ -166,6 +194,11 @@ def main() -> None:
     save_table(table.reset_index(), "roles")
     plot_community_graph(undirected, community, names)
 
+    bridges, bridge_stats = edge_bridges(graph, community)
+    save_table(bridges, "edge_betweenness")
+    shown_bridges = bridges.head(15).assign(
+        **{"inter-communautés": bridges.inter.head(15).map({True: "oui", False: ""})}
+    )[["from", "to", "weight", "edge_betweenness", "inter-communautés"]]
     active = table[table.strength >= MIN_STRENGTH]
     roles = table.role.value_counts().sort_index()
     columns = ["name", "country", "bloc", "strength", "P", "z", "role"]
@@ -225,6 +258,25 @@ def main() -> None:
         md_table(corr, floatfmt=".2f"),
         "",
         "Figure : `results/figures/community_graph.pdf`.",
+        "",
+        "## Ponts : betweenness des arêtes",
+        "",
+        (
+            "Betweenness exacte des arêtes (graphe orienté, non pondéré, normalisée par "
+            "n(n − 1)). Top 1 000 : `results/tables/edge_betweenness.csv`."
+        ),
+        "",
+        (
+            f"- Part des arêtes reliant deux communautés : {bridge_stats['base']:.1%} de "
+            f"toutes les arêtes, {bridge_stats['top1000']:.1%} des 1 000 arêtes de plus "
+            f"forte betweenness, {bridge_stats['top100']:.1%} des 100 premières."
+        ),
+        (
+            "- Betweenness moyenne d'une arête inter-communautés : "
+            f"{bridge_stats['ratio']:.1f} fois celle d'une arête interne."
+        ),
+        "",
+        md_table(shown_bridges, floatfmt=".2e"),
     ]
     write_report("roles", lines)
 

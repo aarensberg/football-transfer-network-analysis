@@ -3,7 +3,9 @@
 Méthode principale : Louvain (maximisation de la modularité) sur le graphe non orienté
 pondéré, où w(u, v) = w(u→v) + w(v→u) (intensité totale d'échange entre deux clubs).
 Robustesse : stabilité entre graines, effet de la résolution, Leiden (modularité),
-Louvain orienté (modularité orientée). Significativité : Louvain sur des graphes
+Louvain orienté (modularité orientée), propagation de labels asynchrone (algorithme
+sans fonction objectif, cours 4). Hiérarchie : niveaux du dendrogramme de Louvain.
+Significativité : Louvain sur des graphes
 aléatoires du modèle de configuration pondéré (forces des clubs préservées).
 
 Usage : `uv run python -m ftna.communities`
@@ -90,6 +92,32 @@ def null_model_test(undirected: nx.Graph, observed: float) -> pd.DataFrame:
     std = table.modularité.std()
     table.attrs["z"] = (observed - table.modularité.mean()) / std if std else np.inf
     return table
+
+
+def louvain_hierarchy(
+    undirected: nx.Graph, nodes: list[int], country: np.ndarray
+) -> pd.DataFrame:
+    """Niveaux du dendrogramme de Louvain (graine `SEED`) : du plus fin au plus agrégé ;
+    le dernier niveau est la partition de référence."""
+    rows = []
+    for level, comms in enumerate(
+        nx.community.louvain_partitions(undirected, weight="weight", seed=SEED), 1
+    ):
+        labels = labels_of(comms, nodes)
+        purity = pd.crosstab(labels, country).max(axis=1).sum() / len(
+            nodes
+        )  # part des clubs appartenant au pays dominant de leur communauté
+        rows.append(
+            {
+                "niveau": level,
+                "communautés": len(comms),
+                "communautés ≥ 50 clubs": sum(len(c) >= 50 for c in comms),
+                "modularité": nx.community.modularity(undirected, comms),
+                "pureté nationale": purity,
+                "NMI avec le pays": nmi(labels, country),
+            }
+        )
+    return pd.DataFrame(rows)
 
 
 def labels_of(communities: list[set[int]], nodes: list[int]) -> np.ndarray:
@@ -313,6 +341,9 @@ def main() -> None:
         undirected, weight="weight", metric="modularity", seed=SEED
     )
     directed = nx.community.louvain_communities(graph, weight="weight", seed=SEED)
+    lpa = list(
+        nx.community.asyn_lpa_communities(undirected, weight="weight", seed=SEED)
+    )
     country_partition = [set(np.array(nodes)[country == c]) for c in np.unique(country)]
 
     def compare_row(name: str, partition: list[set[int]], ref_nmi: float) -> dict:
@@ -339,6 +370,11 @@ def main() -> None:
                 "Louvain orienté (optimise la modularité orientée)",
                 directed,
                 nmi(labels_of(directed, nodes), labels.to_numpy()),
+            ),
+            compare_row(
+                "Propagation de labels asynchrone (pondérée)",
+                lpa,
+                nmi(labels_of(lpa, nodes), labels.to_numpy()),
             ),
             compare_row(
                 "Pays (partition de référence externe)",
@@ -388,6 +424,21 @@ def main() -> None:
         (
             "Modularité non orientée : graphe w(u,v) = w(u→v) + w(v→u) ; modularité "
             "orientée : formule de Leicht et Newman sur le graphe orienté pondéré."
+        ),
+        "",
+        (
+            "La propagation de labels n'optimise aucune fonction objectif : sa "
+            "concordance avec Louvain (NMI) indique si la structure trouvée dépend de "
+            "la modularité."
+        ),
+        "",
+        "## Hiérarchie : niveaux du dendrogramme de Louvain",
+        "",
+        md_table(louvain_hierarchy(undirected, nodes, country), floatfmt=".3f"),
+        "",
+        (
+            "Chaque niveau agrège les communautés du niveau précédent (passes de "
+            "Louvain) ; le dernier niveau est la partition de référence."
         ),
         "",
         "## Significativité : modèle nul",

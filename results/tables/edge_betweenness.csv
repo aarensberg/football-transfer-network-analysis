@@ -1,0 +1,1001 @@
+u,v,edge_betweenness,inter,from,to,weight,community_from,community_to
+3451,48188,0.000995478870145227,False,FK Leotar Trebinje (Bosnia-Herzegovina),FK Sarajevo Academy U17 (Bosnia-Herzegovina),1,10,10
+829,21057,0.0008272178697757933,True,Omonia Nicosia (Cyprus),Eintracht Frankfurt U17 (Germany),1,14,1
+83948,6273,0.0005577232205499795,True,Shichigahama SC (Japan),TSV Eintracht Stadtallendorf (Germany),1,7,1
+83951,85590,0.0005040368905680123,False,Merry (Fukushima) (Japan),Iwaki Furukawa FC (Japan),1,7,7
+85590,39352,0.0004788722216046542,False,Iwaki Furukawa FC (Japan),Zuvor: Thespakusatsu Gunma Challengers (Reserves) (Japan),1,7,7
+7146,21070,0.0004713879211499791,True,Warta Poznan (Poland),MSV Duisburg U17 (Germany),1,19,1
+2209,11199,0.00046453095204762265,True,FK Borac 1926 Cacak (Serbia),Racing Strasbourg U19 (France),1,10,2
+22502,2481,0.0004627156735602922,True,Cefn Druids (Wales),FC Sheriff Tiraspol (Moldova),1,9,4
+26012,34166,0.0004309789626831115,False,Tallinn JK Legion (Estonia),Tallinn JK Legion U19 (Estonia),1,26,26
+387,1104,0.0004254230050960725,True,SC Westfalia Herne (Germany),ACR Messina (Italy),1,1,3
+33480,47136,0.00040771892128724316,False,JK Merkuur-Juunior (Estonia),FC Flora Tallinn U17 (Estonia),3,26,26
+912,28936,0.0004037723617809068,True,VfR Neumünster (Germany),FK Spartaks Jurmala (Latvia),1,13,4
+15665,33982,0.00039226897455995496,True,HJK Helsinki U19 (Finland),FC Zürich U17 (Switzerland),1,17,12
+22783,25529,0.00039198346232174853,False,Kalju FC (Estonia),Kalju FC U19 (Estonia),1,26,26
+9128,42826,0.00038477788718344595,False,SV Stegersbach (Austria),AKA Red Bull Salzburg U16 (Austria),1,5,5
+25411,33480,0.00038178638604957957,False,Kivioli FC Irbis (Estonia),JK Merkuur-Juunior (Estonia),3,26,26
+29585,33480,0.00035763994445604965,False,Tallinna FC Ararat (Estonia),JK Merkuur-Juunior (Estonia),1,26,26
+9695,12130,0.0003572151405117238,True,TSV Schott Mainz (Germany),Torino Primavera (Italy),1,1,3
+39172,8807,0.0003427259018497251,True,Lagend Shiga (Japan),Pallokerho-35 (Finland),1,7,17
+30433,47132,0.00033673002073037714,False,FCI Tallinn (Estonia),Levadia Tallinn U17 (Estonia),1,26,26
+71124,55744,0.00033185315851076556,False,Kochi U Torastar (- 2015) (Japan),Kochi United (Japan),2,7,7
+22656,83951,0.0003272124688605926,False,Primeiro Fukushima (Japan),Merry (Fukushima) (Japan),1,7,7
+71165,679,0.0003253940908408505,True,Akita FC Cambiare (Japan),Club Athletico Paranaense (Brazil),1,7,18
+23559,21077,0.00032343912000209834,True,FK Banga Gargzdai (Lithuania),SpVgg Greuther Fürth U17 (Germany),1,4,1
+40426,46703,0.0003233270373554022,False,FC Tosno (-2018) (Russia),SShOR Zenit St. Petersburg (Russia),1,4,4
+26012,25532,0.0003217681808781685,False,Tallinn JK Legion (Estonia),JK Trans Narva U19 (Estonia),1,26,26
+8078,22010,0.0003159508242215129,True,TBS Pinneberg (Germany),FK Qabala (Azerbaijan),1,13,4
+25529,72097,0.0003155205643962555,False,Kalju FC U19 (Estonia),Harju JK Laagri U17 (Estonia),1,26,26
+50290,675,0.0003095634414384635,True,Veroskronos Tsuno (Japan),Slavia Sofia (Bulgaria),1,7,14
+1297,11083,0.0002962215043608531,True,Heider SV (Germany),NK Rudes (Croatia),1,13,10
+18623,602,0.0002902737988613889,True,SC Landskron (Austria),FK Zalgiris Vilnius (Lithuania),1,5,4
+30433,14282,0.0002896353285863667,True,FCI Tallinn (Estonia),Akademia Dynamo Moscow (Russia),1,26,4
+10243,31068,0.0002869877193019931,True,SG Kinzenbach (Germany),Orange County SC (United States),1,1,22
+562,12672,0.00028590214840685065,True,FSV Optik Rathenow (Germany),Club Almirante Brown (Argentina),1,1,6
+45667,21064,0.0002813091566770397,True,KF 2 Korriku (?),Hannover 96 U17 (Germany),1,10,1
+22431,10824,0.0002809496127036805,True,Stal Mielec (Poland),RC Lens U19 (France),1,19,2
+7130,25411,0.00028039716604099117,False,JK Trans Narva (Estonia),Kivioli FC Irbis (Estonia),1,26,26
+95,1307,0.0002795163469018866,True,KFC Uerdingen 05 (Germany),FC Pistoiese (Italy),1,1,3
+491,5219,0.00027719908331046394,True,VfL 93 Hamburg (Germany),AOK Kerkyra (Greece),1,13,14
+33010,1785,0.0002747894254879245,True,Hilal 1994 Bergheim (Germany),Santa Cruz FC (PE) (Brazil),1,1,18
+16005,81286,0.00027446622211764823,False,Iwate Grulla Morioka (Japan),Omiya SC (Morioka) (Japan),1,7,7
+88268,15976,0.0002738869120330717,True,SR Komatsu (Japan),Hong Kong Rangers (Hongkong),1,7,21
+12566,8877,0.0002691317470313382,True,Carmarthen Town (Wales),AFC Eskilstuna (Sweden),1,9,8
+39533,485,0.0002673273351200758,True,Tuusulan Palloseura (Finland),NK Hrvatski Dragovoljac (Croatia),1,17,10
+298,4542,0.0002655271501937704,True,Altona 93 (Germany),Cultural Leonesa (Spain),1,13,16
+10172,6200,0.0002648241427369013,True,FC Pinzgau Saalfelden (Austria),FC Twente Enschede Under 19 (Netherlands),1,5,2
+1104,299,0.00026437681735076154,True,ACR Messina (Italy),Wuppertaler SV (Germany),1,3,1
+373,4111,0.00026353509926848657,True,KSV Hessen Kassel (Germany),Rimini FC (Italy),1,1,3
+1151,159,0.0002618978899263211,True,TSG Neustrelitz (Germany),Red Star Belgrade (Serbia),1,1,10
+37635,25716,0.00026147058559614056,False,Norbritz Hokkaido (Japan),Fujieda MYFC (Japan),1,7,7
+83961,30856,0.0002567677767668941,True,Bombonera Gifu (Japan),FK Nevezis Kedainiai (Lithuania),1,7,4
+5560,443,0.00025421906028158016,True,BSV Schwarz-Weiß Rehden (Germany),Vejle Boldklub (Denmark),1,1,8
+5771,52309,0.0002534180186079992,False,FCI Levadia (Estonia),Jalgpallikool Tammeka U21 (Estonia),1,26,26
+115,13517,0.00025310926054198594,True,FC Oberneuland (Germany),US Darfo Boario (Italy),1,13,3
+17398,15665,0.0002523573071672506,False,PS Kemi Kings (Finland),HJK Helsinki U19 (Finland),2,17,17
+2906,2209,0.00025173166294528953,True,1.FC Wülfrath (Germany),FK Borac 1926 Cacak (Serbia),1,1,10
+72097,47136,0.00025116307557146726,False,Harju JK Laagri U17 (Estonia),FC Flora Tallinn U17 (Estonia),1,26,26
+6273,8936,0.0002509478833459218,True,TSV Eintracht Stadtallendorf (Germany),Miedz Legnica (Poland),1,1,19
+1008,2824,0.0002497413731081584,True,HJK Helsinki (Finland),Ajax Amsterdam U19 (Netherlands),1,17,2
+47136,53207,0.0002476888290208131,False,FC Flora Tallinn U17 (Estonia),Tallinn JK Augur U17 (Estonia),1,26,26
+47136,47146,0.00024751104285898715,False,FC Flora Tallinn U17 (Estonia),Kalev Tallinn U17 (Estonia),1,26,26
+7995,94279,0.0002470519044256124,False,FCO Dijon U19 (France),ASPTT Dijon U19 (France),3,2,2
+82973,90473,0.0002466728329714189,False,Johvi FC Phoenix (Estonia),Ida-Virumaa FC Alliance U17 (Estonia),1,26,26
+101,23370,0.00024514481358606547,True,Tennis Borussia Berlin (Germany),Kalev Tallinn (Estonia),1,1,26
+12456,1210,0.000244887343278437,True,Türkgücü München (Germany),US Livorno 1915 (Italy),1,1,3
+42185,4529,0.0002445668402421965,True,Shahrdari Bandar Abbas (Iran),DAC Dunajska Streda (Slovakia),1,25,15
+43014,32337,0.00024435489499210545,False,FC Bubendorf (Switzerland),FC Basel 1893 U17 (Switzerland),1,12,12
+81287,22656,0.00024415399309944593,True,Hitome Senbonzakura FC feat. S.U.F.T. (Japan),Primeiro Fukushima (Japan),1,29,7
+25655,4768,0.00024290057309555907,False,Taiwan Leopard Cat FC (Chinese Taipei),Changchun Yatai (China),1,21,21
+25532,47135,0.00024243328613347877,False,JK Trans Narva U19 (Estonia),Tallinn JK Legion U17 (Estonia),1,26,26
+62228,4120,0.00024125309599825308,True,Rotonda Calcio (Italy),1.FC Mönchengladbach (Germany),1,3,1
+51344,53667,0.0002398419097034172,False,Nagoya SC (Japan),Khon Kaen United (Thailand),1,7,7
+1315,8818,0.00023933641248775612,True,KSV Baunatal (Germany),FC Botosani (Romania),1,1,14
+1328,16602,0.00023929887464236053,True,Bremer SV (Germany),UB Conquense (Spain),1,13,16
+18890,21059,0.00023908134067371679,False,Fortuna Babelsberg (Germany),FC Energie Cottbus U17 (Germany),1,1,1
+14361,8042,0.00023892975821463228,True,FC Teutonia 05 Ottensen (Germany),FC Inter Turku (Finland),1,13,17
+40083,5263,0.00023802920746031095,True,USD San Severo Calcio 1922 (Italy),TuS Erndtebrück (Germany),1,3,1
+23195,38224,0.00023738928570534042,True,Åbo IFK (Finland),FC Ingolstadt 04 U17 (Germany),1,17,1
+22297,115,0.00023686648095634188,True,FC Espoo (Finland),FC Oberneuland (Germany),1,17,13
+4714,11004,0.0002367551820629404,True,NTSV Strand 08 (Germany),Coquimbo Unido (Chile),1,13,6
+6,2537,0.00023302610668680506,True,Adanaspor (Türkiye),Husumer SV (Germany),1,11,13
+28214,95,0.00023218829552561164,True,PEPO Lappeenranta (Finland),KFC Uerdingen 05 (Germany),1,17,1
+51745,32283,0.00023146153548896198,False,FC Besa Biel/Bienne (Switzerland),BSC Young Boys U17 (Switzerland),1,12,12
+22558,53099,0.0002297143569580988,False,NK Croatia Zmijavci (Croatia),NK Siroki Brijeg U17 (Bosnia-Herzegovina),1,10,10
+82384,43214,0.00022935705529911004,False,FA Tartu Kalev (Estonia),Jalgpallikool Tammeka (Estonia),2,26,26
+23370,15665,0.00022923323276217013,True,Kalev Tallinn (Estonia),HJK Helsinki U19 (Finland),1,26,17
+44917,39172,0.00022906944455555994,True,FC International Leipzig (Germany),Lagend Shiga (Japan),1,1,7
+54134,485,0.00022807015241195483,True,Foshan Nanshi (China),NK Hrvatski Dragovoljac (Croatia),1,21,10
+28783,16996,0.00022794982400429857,True,Tartu JK Welco (Estonia),Hellas Verona Primavera (Italy),1,26,3
+2414,52068,0.00022673097674708045,True,AC Horsens (Denmark),Ajax U18 (Netherlands),1,8,2
+5263,4750,0.0002255692018185564,True,TuS Erndtebrück (Germany),SC Olhanense (Portugal),1,1,18
+8304,9196,0.0002251810102168385,True,Città di Gela (Italy),Eintracht Braunschweig U19 (Germany),1,3,1
+11083,1297,0.00022491258557353285,True,NK Rudes (Croatia),Heider SV (Germany),1,10,13
+63,5771,0.00022407980359398537,True,Sportfreunde Siegen (Germany),FCI Levadia (Estonia),1,1,26
+3393,54,0.00022293574606094014,True,Doxa Katokopias (Cyprus),PAS Hamedan (Iran),1,14,25
+33796,30082,0.00022275730376623734,True,Ganju Iwate (Japan),Independiente FBC (Paraguay),1,7,6
+23667,8807,0.00022261085174959312,True,TKI Tavsanli Linyitspor (Türkiye),Pallokerho-35 (Finland),1,11,17
+85590,83948,0.00022104381610632434,False,Iwaki Furukawa FC (Japan),Shichigahama SC (Japan),1,7,7
+33095,6044,0.00021982141623846485,True,Laranja Kyoto (Japan),Club Plaza Colonia (Uruguay),1,7,6
+4618,21086,0.00021941440160837486,False,1.FC Gievenbeck (Germany),VfL Osnabrück U17 (Germany),1,1,1
+10629,2288,0.00021919419318102538,False,Taffs Well (Wales),Swansea City (England),1,9,9
+58386,83948,0.00021871633254116391,False,Nippon Steel Kamaishi (Japan),Shichigahama SC (Japan),1,7,7
+53837,12132,0.0002179431198589292,True,Lichtenauer FV (Germany),GFK Jagodina (Serbia),1,1,10
+23653,13942,0.00021643302419341686,True,Qormi FC (Malta),Ba FC (Fiji),1,28,24
+1231,7875,0.00021626433227553622,True,ÍA Akranes (Iceland),LOSC Lille U19 (France),1,8,2
+22832,82973,0.00021582171308129293,False,JK Sillamäe Kalev (Estonia),Johvi FC Phoenix (Estonia),4,26,26
+33786,21508,0.00021550152045275375,True,Cento Cuore Harima (Japan),Zaria Balti (Moldova),1,7,4
+58872,18122,0.00021525691077013944,True,Esperanza SC (Yokohama) (Japan),CA Atenas de San Carlos (Uruguay),1,7,6
+10205,10857,0.00021511123187966738,True,SC Ostbahn XI (Austria),Paulista FC (SP) (Brazil),1,5,18
+52310,21075,0.0002150949636022524,True,FC Flora Tallinn U21 (Estonia),SC Freiburg U17 (Germany),1,26,1
+1057,7813,0.00021442160212751152,True,Bryne FK (Norway),Olympique Lyon U19 (France),1,8,2
+21423,21051,0.00021421329951150494,True,FC 72 Erpeldange (Luxembourg),1.FSV Mainz 05 U17 (Germany),1,2,1
+90,20189,0.00021364929868890429,True,SV Babelsberg 03 (Germany),Cerro Largo FC (Uruguay),1,1,6
+2714,54797,0.0002132517820748152,False,FC Zimbru Chisinau (Moldova),Kvant Obninsk (Russia),1,4,4
+18464,29524,0.00021282205015424327,False,FK Sloboda Tuzla U19 (Bosnia-Herzegovina),FK Buducnost Banovici U19 (Bosnia-Herzegovina),2,10,10
+510,15596,0.00021250131901419145,False,FC Chiasso (Switzerland),Team Ticino U18 (Switzerland),1,12,12
+9972,7119,0.00021080159084088906,True,TB Uphusen (Germany),UD Vilafranquense (Portugal),1,13,18
+17149,387,0.00020957034714264562,True,Hamrun Spartans (Malta),SC Westfalia Herne (Germany),1,28,1
+13467,7813,0.0002095400672778627,False,Racing FC Union Luxembourg (Luxembourg),Olympique Lyon U19 (France),1,2,2
+12100,5263,0.00020864397091679962,True,CA All Boys (Argentina),TuS Erndtebrück (Germany),1,6,1
+34,4102,0.00020829677925311292,True,FC Schalke 04 II (Germany),AC Carpi (Italy),1,1,3
+912,8819,0.0002082563036187288,True,VfR Neumünster (Germany),FK Javor-Matis Ivanjica (Serbia),1,13,10
+46933,1151,0.0002082217877749672,True,Castelvetro Calcio (Italy),TSG Neustrelitz (Germany),1,3,1
+256,6189,0.00020813070586075014,True,LKS Lodz (Poland),Spartak Moskow II (Russia),1,19,4
+1450,298,0.0002076007778123864,True,Club Sporting Cristal (Peru),Altona 93 (Germany),1,6,13
+61251,107,0.00020741417803363162,True,Vantaan Jalkapalloseura (Finland),Kickers Offenbach (Germany),1,17,1
+7245,3455,0.00020553042091517068,True,Oststeinbeker SV (Germany),Forest Green Rovers (England),1,13,9
+12563,3861,0.0002054830787730591,True,CA Alvarado (Argentina),TuRa Harksheide (Germany),1,6,13
+2824,10703,0.0002035683642135395,False,Ajax Amsterdam U19 (Netherlands),Sparta Rotterdam U19 (Netherlands),1,2,2
+21042,18077,0.00020347278095411998,True,TSC Vahdet Braunschweig (Germany),CS Cerrito (Uruguay),1,1,6
+71144,33796,0.00020329627965346035,False,Morioka Zebra (Japan),Ganju Iwate (Japan),2,7,7
+2906,16650,0.0002027877753630445,True,1.FC Wülfrath (Germany),AS Ardealul Tg. Mures (- 2018) (Romania),1,1,14
+2444,4389,0.0002023713520365674,False,FC Wacker Innsbruck (Austria),AKA Tirol U18 (Austria),1,5,5
+5472,33966,0.00020204647921718172,True,FV Eppelborn (Germany),ACSM Politehnica Iasi (Romania),1,1,14
+27118,36748,0.00020185964614008312,True,FS Jelgava (Latvia),SV Rot-Weiß Hadamar (Germany),1,4,1
+52309,43315,0.00020115925355760467,False,Jalgpallikool Tammeka U21 (Estonia),Jalgpallikool Tammeka U19 (Estonia),2,26,26
+1240,5228,0.0002008402081484086,True,SV Lurup (Germany),FK Atlantas Klaipeda (-2020) (Lithuania),1,13,4
+29172,1562,0.00020063117921998266,True,FC Osaka (Japan),FC Nitra (Slovakia),1,7,15
+12380,23370,0.00019969184711344717,True,Darica Genclerbirligi (Türkiye),Kalev Tallinn (Estonia),1,11,26
+364,7882,0.00019934488076799847,True,Germania Halberstadt (Germany),US Raon-l'Étape (France),1,1,2
+10742,88,0.00019854532270900002,True,Skála IF (Faroe Islands),Widzew Lodz (Poland),1,8,19
+83680,88268,0.00019837824155617456,False,Kansai Univ. Club 2010 (Japan),SR Komatsu (Japan),1,7,7
+2539,2275,0.00019833955469593395,True,Wedeler TSV/Spfr. Holm 1.SG (Germany),Turun Palloseura (Finland),1,13,17
+48188,61564,0.00019828183490313084,False,FK Sarajevo Academy U17 (Bosnia-Herzegovina),FK Sloboda Tuzla U17 (Bosnia-Herzegovina),3,10,10
+5263,5411,0.00019782295070020224,True,TuS Erndtebrück (Germany),FC Honka (Finland),1,1,17
+42635,60368,0.0001976205568147728,True,SC St. Tönis 1911/20 (Germany),FC Noah Yerevan (Armenia),1,1,4
+8298,11374,0.0001970019143455213,True,TV Jahn Hiesfeld (Germany),Jeanne d'Arc de Drancy (France),1,1,2
+23624,7130,0.0001954866800726659,True,VfB Ginsheim (Germany),JK Trans Narva (Estonia),1,1,26
+9972,765,0.00019492323791793332,True,TB Uphusen (Germany),NK Celik Zenica (Bosnia-Herzegovina),1,13,10
+786,15759,0.00019330395412085627,True,AEL Limassol (Cyprus),1.FC Slovacko U19 (Czech Republic),1,14,15
+712,26012,0.00019320381511095006,True,Etar Veliko Tarnovo (Bulgaria),Tallinn JK Legion (Estonia),1,14,26
+676,12179,0.00019285278716015756,True,Wiener Sport-Club (Austria),CS Independiente Rivadavia (Argentina),1,5,6
+31154,42628,0.00019171532417199593,True,Licata Calcio (Italy),azul claro Numazu (Japan),1,3,7
+44917,9262,0.0001916722471737414,True,FC International Leipzig (Germany),Fulham FC U21 (England),1,1,9
+34166,47147,0.00019076550458371088,False,Tallinn JK Legion U19 (Estonia),FC Flora Tallinn U16 (Estonia),1,26,26
+10538,40373,0.00019074273744405988,True,B68 Toftir (Faroe Islands),FC Viktoria 1889 Berlin (Germany),1,8,1
+3527,29757,0.00018987272173126427,True,Motor Lublin (Poland),Vipers SC (Uganda),1,19,23
+49934,5300,0.00018780072173413444,True,SSD Mariglianese Calcio (Italy),FSV Union Fürstenwalde (Germany),1,3,1
+18324,428,0.00018710068894372986,True,Lüneburger SK Hansa (Germany),Górnik Zabrze (Poland),1,13,19
+503,9699,0.00018707533843763106,False,Admira Wacker (Austria),AKA Admira Wacker U18 (Austria),2,5,5
+387,11720,0.00018657489783917923,True,SC Westfalia Herne (Germany),South China (Hongkong),1,1,21
+11149,68,0.00018634283427277853,True,Atlantis FC (Finland),SSV Reutlingen 05 (Germany),1,17,1
+36420,329,0.00018632772683751744,True,Manukau United FC (New Zealand),Sliema Wanderers (Malta),1,24,28
+5560,22890,0.00018599605379386852,True,BSV Schwarz-Weiß Rehden (Germany),Ekenäs IF (Finland),1,1,17
+10888,47,0.00018585866935445281,True,SV 1910 Neuhof (Germany),Iraklis Thessaloniki (Greece),1,1,14
+996,20923,0.00018526604742089695,True,TuS Koblenz (Germany),Khimik Dzerzhinsk (Russia),1,1,4
+748,6200,0.0001852017032376006,True,Mogren Budva (Montenegro),FC Twente Enschede Under 19 (Netherlands),1,10,2
+18395,11391,0.00018461491802847826,False,Navua FC (Fiji),Auckland City FC (New Zealand),1,24,24
+6017,1315,0.0001844714513603448,True,IFK Mariehamn (Finland),KSV Baunatal (Germany),1,17,1
+29055,19367,0.00018445775118822776,True,MSV Pampow (Germany),Tritium Calcio 1908 (Italy),1,1,3
+1009,30483,0.00018426741651049873,True,Meiendorfer SV (Germany),FC United Zürich (Switzerland),1,13,12
+23861,84160,0.00018425216241302545,False,Japan Soccer College FC (Japan),Granscena Niigata (Japan),1,7,7
+668,3474,0.0001842035189717933,True,Sportfreunde Lotte (Germany),Western Suburbs FC (New Zealand),1,1,24
+857,10639,0.00018388284826245454,True,TuRU Düsseldorf (Germany),MIKA Ashtarak (Armenia),1,1,4
+10044,17398,0.0001834754586405537,True,SV Horn (Austria),PS Kemi Kings (Finland),1,5,17
+23371,39805,0.00018332577079140352,True,Paide Linnameeskond (Estonia),Tuzlaspor (Türkiye),1,26,11
+1662,8936,0.00018197426337529402,True,Heidenauer SV (Germany),Miedz Legnica (Poland),1,1,19
+36590,50437,0.0001818642342535108,True,ACS Poli Timisoara (2012 - 2021) (Romania),Virtus Entella Under 17 (Italy),1,14,3
+64,45174,0.00018141242876634485,True,SV 07 Elversberg (Germany),Deportivo Guastatoya (Guatemala),1,1,6
+22783,25622,0.00018013167509670067,False,Kalju FC (Estonia),Nomme Kalju FC II (Estonia),4,26,26
+34990,10341,0.00018001603894865365,True,Brew Kashima (Saga) (Japan),CFC Hertha 06 (- 2024) (Germany),1,7,1
+25429,39805,0.0001795943152791367,True,Penrhyncoch FC (Wales),Tuzlaspor (Türkiye),1,9,11
+1068,1102,0.00017864162538041979,True,SV Straelen (Germany),Vaasan Palloseura (Finland),1,1,17
+6894,18777,0.0001785522481185496,True,Kayseri Erciyesspor (Türkiye),Kampala City Council (Uganda),1,11,23
+54797,30989,0.0001785279464425016,False,Kvant Obninsk (Russia),Akademia FK Krasnodar (Russia),1,4,4
+4120,4633,0.00017819102637440772,True,1.FC Mönchengladbach (Germany),FK Novi Pazar (Serbia),1,1,10
+46703,84695,0.00017798045234065652,False,SShOR Zenit St. Petersburg (Russia),Akademia Zenit St. Petersburg U16 (Russia),1,4,4
+54,14598,0.00017688688490463645,True,PAS Hamedan (Iran),Rampla Juniors FC (Uruguay),1,25,6
+8712,17397,0.00017644441681428046,True,TuS Ennepetal (Germany),Käpylän Pallo (Finland),1,1,17
+29307,43162,0.00017589717277009164,True,Tochigi City (Japan),FK Liepaja (Latvia),1,7,4
+83950,35635,0.00017582839672418044,False,Sendai Sasuke (Japan),Sapporo FC (Japan),1,7,7
+34332,952,0.00017567041476163907,True,Sham Shui Po (Hongkong),UTA Arad (Romania),1,21,14
+8997,2714,0.0001755695981431777,True,SV Werder Bremen III (Germany),FC Zimbru Chisinau (Moldova),1,13,4
+1102,40472,0.00017550005048953823,True,Vaasan Palloseura (Finland),Esteghlal Khuzestan (Iran),1,17,25
+2621,1102,0.00017525047190069555,True,SVN Zweibrücken (Germany),Vaasan Palloseura (Finland),1,1,17
+37179,3571,0.00017506432130792924,True,Vonds Ichihara (Japan),Favoritner AC (Austria),1,7,5
+4258,6107,0.00017486801836152753,True,TSV Germania Windeck (Germany),Arka Gdynia (Poland),1,1,19
+15171,3345,0.00017420306112684458,True,FC Hennef 05 (Germany),Leixões SC (Portugal),1,1,18
+312,2442,0.00017415135723670034,True,FC Dinamo Bucharest (Romania),SV Bergisch Gladbach 09 (Germany),1,14,1
+44917,49610,0.0001741372933103704,True,FC International Leipzig (Germany),Trastevere Calcio (Italy),1,1,3
+527,6150,0.00017410994088810312,True,FC Lausanne-Sport (Switzerland),USC Paloma Hamburg (Germany),1,12,13
+8077,808,0.00017392183138041352,True,US Vibonese (Italy),MSV Duisburg II (Germany),1,3,1
+4671,924,0.00017207239049427637,True,ASDC Verbania (Italy),Istanbulspor (Türkiye),1,3,11
+24309,143,0.00017150262879830918,False,SV Steinbach (Germany),VfL Wolfsburg II (- 2021) (Germany),1,1,1
+7025,34828,0.00017141543422749954,True,SV Todesfelde (Germany),Istiqlol Dushanbe (Tajikistan),1,13,4
+44917,10528,0.0001714037355479358,True,FC International Leipzig (Germany),JIPPO Joensuu (Finland),1,1,17
+7197,25095,0.00017097479923121285,True,Potenza Calcio (Italy),HSK Zrinjski Mostar U19 (Bosnia-Herzegovina),1,3,10
+4406,364,0.00017073451157063166,True,FC Stadlau (Austria),Germania Halberstadt (Germany),1,5,1
+44917,11149,0.00017014689836365526,True,FC International Leipzig (Germany),Atlantis FC (Finland),1,1,17
+38137,223,0.00016955815637844458,True,Tiamo Hirakata (Japan),HNK Sibenik (Croatia),1,7,10
+33982,42368,0.000169212569230407,False,FC Zürich U17 (Switzerland),SC Kriens Youth (Switzerland),1,12,12
+27820,6621,0.00016824539440001823,True,Shahid Ghandi Yazd (Iran),FK Cukaricki (Serbia),1,25,10
+47132,65265,0.00016808446527933284,False,Levadia Tallinn U17 (Estonia),Maardu Linnameeskond U17 (Estonia),2,26,26
+22344,1341,0.0001678249850979128,True,AC Nardò (Italy),SV Seligenporten (Germany),1,3,1
+1235,3349,0.00016773030027136576,True,Germania Schöneiche (Germany),CD Feirense (Portugal),2,1,18
+43532,18464,0.0001676134110350811,False,FK Tuzla City (Bosnia-Herzegovina),FK Sloboda Tuzla U19 (Bosnia-Herzegovina),2,10,10
+39352,22178,0.00016731870940092793,False,Zuvor: Thespakusatsu Gunma Challengers (Reserves) (Japan),Thespa Gunma (Japan),5,7,7
+11853,5163,0.00016730223978037614,True,SV Austria Salzburg (Austria),Brindisi FC (Italy),1,5,3
+11746,14298,0.00016729796681907788,False,FK Rostov II (Russia),Akademia Rubin Kazan (Russia),1,4,4
+1315,701,0.00016660852988423694,True,KSV Baunatal (Germany),Trelleborgs FF (Sweden),1,1,8
+10888,40553,0.00016658813389442694,True,SV 1910 Neuhof (Germany),Lynx FC (Gibraltar),1,1,16
+1092,12767,0.0001661218017214718,True,IF Brommapojkarna (Sweden),Amiens SC U19 (France),1,8,2
+6871,37635,0.00016601186626422805,True,SV Gonsenheim (Germany),Norbritz Hokkaido (Japan),1,1,7
+4900,2455,0.00016576524784364698,True,FC Bayern Alzenau (Germany),Bristol Rovers (England),1,1,9
+94279,87455,0.0001655089004038405,False,ASPTT Dijon U19 (France),Andrézieux-Bouthéon FC U19 (France),1,2,2
+4153,248,0.00016547301480056536,True,L'Aquila 1927 (Italy),SpVgg Bayern Hof (Germany),1,3,1
+10703,53458,0.00016509325147342127,False,Sparta Rotterdam U19 (Netherlands),VV Alexandria '66 U19 (Netherlands),2,2,2
+7447,712,0.00016481193159799306,True,FC Zell am See (Austria),Etar Veliko Tarnovo (Bulgaria),1,5,14
+48188,61569,0.00016457595947853585,False,FK Sarajevo Academy U17 (Bosnia-Herzegovina),FK Mladost Doboj-Kakanj U17 (Bosnia-Herzegovina),1,10,10
+61568,61567,0.0001645234917564013,False,FK Borac Banja Luka U17 (Bosnia-Herzegovina),FK Krupa na Vrbasu U17 (Bosnia-Herzegovina),2,10,10
+3676,20035,0.00016449412335137396,True,FC Anker Wismar (Germany),AS Vitré (France),1,1,2
+90473,98538,0.0001644267021807817,False,Ida-Virumaa FC Alliance U17 (Estonia),Ida-Virumaa FC Alliance U19 (Estonia),2,26,26
+22656,88164,0.0001644267021807817,False,Primeiro Fukushima (Japan),FFC Matsushita (Japan),3,7,7
+8935,819,0.00016439800596766823,True,USI Lupo-Martini Wolfsburg (Germany),Club Africain Tunis (Tunisia),1,1,20
+12740,42832,0.00016432687141824853,False,Union Pettenbach (Austria),AKA SV Ried U16 (Austria),1,5,5
+81286,83944,0.0001642540160968031,False,Omiya SC (Morioka) (Japan),Oshu United (Japan),1,7,7
+6673,14308,0.00016410187568823085,False,SKA Rostov-na-Donu (Russia),Akademia Zenit St. Petersburg (Russia),1,4,4
+33094,10528,0.00016396609234654988,True,Arterivo Wakayama (Japan),JIPPO Joensuu (Finland),1,7,17
+22832,29585,0.0001639349738576952,False,JK Sillamäe Kalev (Estonia),Tallinna FC Ararat (Estonia),1,26,26
+117533,116915,0.0001637130659727228,False,Stroitel Kamensk-Shakhtinskiy (Russia),Akademia Chaika Peschanokopskoe U16 (Russia),1,4,4
+43315,65262,0.00016362581861722886,False,Jalgpallikool Tammeka U19 (Estonia),FC Helios Tartu U19 (Estonia),1,26,26
+98538,118292,0.0001635876135314681,False,Ida-Virumaa FC Alliance U19 (Estonia),Johvi FC Phoenix U17 (Estonia),1,26,26
+83944,87258,0.0001635876135314681,False,Oshu United (Japan),Tono Club (Japan),1,7,7
+6017,217,0.00016351773005551605,True,IFK Mariehamn (Finland),Füchse Berlin Reinickendorf (Germany),1,17,1
+20399,1102,0.0001635081534756182,False,FC Kiisto Vaasa (Finland),Vaasan Palloseura (Finland),2,17,17
+66,36420,0.0001633945364915489,True,SpVgg Unterhaching (Germany),Manukau United FC (New Zealand),1,1,24
+12765,6326,0.0001632427578108454,False,LOSC Lille B (France),Paris Saint-Germain U19 (France),1,2,2
+83956,39352,0.00016319060098729282,False,Libertas Chikuma (Japan),Zuvor: Thespakusatsu Gunma Challengers (Reserves) (Japan),1,7,7
+5001,5151,0.00016297988171804672,False,SV Steinach (Germany),SV Schott Jena (Germany),1,1,1
+4436,10614,0.0001629731459319797,True,SK Bischofshofen (Austria),Sammaurese Calcio (Italy),1,5,3
+30768,6541,0.00016289766016124797,True,Bay Olympic FC (New Zealand),SK Slavia Prague B (Czech Republic),1,24,15
+88264,37688,0.00016283561082170106,False,Michinoku Sendai (Japan),Ococias Kyoto (Japan),1,7,7
+109927,65036,0.0001628093587932184,False,Olimpik-Mobiuz Tashkent (Uzbekistan),Surkhon Termiz (Uzbekistan),1,4,4
+76647,33095,0.00016276932873296395,False,Hannan University Club (Japan),Laranja Kyoto (Japan),1,7,7
+81499,15726,0.00016276932873296395,True,Niigata Univ. of Health & Welfare FC (Japan),Jarota Jarocin (Poland),1,34,19
+118292,82973,0.0001627485248821545,False,Johvi FC Phoenix U17 (Estonia),Johvi FC Phoenix (Estonia),1,26,26
+87258,58386,0.00016274159026521804,False,Tono Club (Japan),Nippon Steel Kamaishi (Japan),1,7,7
+562,3318,0.0001626285919101676,True,FSV Optik Rathenow (Germany),Racing Club de France (France),1,1,2
+28936,115,0.00016248270995002567,True,FK Spartaks Jurmala (Latvia),FC Oberneuland (Germany),1,4,13
+27118,7484,0.00016204305641689503,True,FS Jelgava (Latvia),Teutonia Uelzen (Germany),1,4,13
+108131,85921,0.00016175684487686965,False,Shenzhen Juniors (China),Quanzhou Yassin (China),1,21,21
+32125,23624,0.00016175619083734342,True,Mosta FC (Malta),VfB Ginsheim (Germany),1,28,1
+44102,25408,0.00016171591168916608,False,Pärnu Jalgpalliklubi (Estonia),Pärnu Linnameeskond (Estonia),3,26,26
+116915,46703,0.00016140117512546007,False,Akademia Chaika Peschanokopskoe U16 (Russia),SShOR Zenit St. Petersburg (Russia),1,4,4
+23624,32125,0.00016137646916362204,True,VfB Ginsheim (Germany),Mosta FC (Malta),1,1,28
+14334,75513,0.00016131768941900164,False,FC Pratteln (Switzerland),FC Concordia BS/FC Solothurn U17 (Switzerland),1,12,12
+14766,42838,0.00016080673440278982,True,NK Primorac Stobrec (Croatia),AKA LASK OÖ U16 (Austria),1,10,5
+32621,19840,0.00016066470154566366,True,TuS Rüssingen (Germany),Club Sportivo Desamparados (SJ) (Argentina),1,1,6
+6646,1627,0.00016044568730295064,True,Fatih Karagümrük (Türkiye),Catania FC (Italy),1,11,3
+100736,3713,0.00015997598414714586,False,Newport City (Wales),Eastbourne Borough (England),1,9,9
+20299,50220,0.000159849425774118,False,FC Volendam U21 (Netherlands),Feyenoord U18 (Netherlands),1,2,2
+1521,26738,0.0001596713566228647,True,SK Vorwärts Steyr (Austria),AC Kajaani (Finland),1,5,17
+364,1102,0.0001596511878408028,True,Germania Halberstadt (Germany),Vaasan Palloseura (Finland),1,1,17
+37527,14520,0.00015956083269490004,True,SV Genc Osman Duisburg (Germany),AFC Compiègne (France),1,1,2
+28969,222,0.00015927108523558056,True,Aluminium Hormozgan (Iran),BFC Dynamo (Germany),1,25,1
+39172,20825,0.00015926357011571406,True,Lagend Shiga (Japan),Union Mauer (Austria),1,7,5
+215,2964,0.00015923941282123356,True,Bonner SC (Germany),Scunthorpe United (England),1,1,9
+1225,110,0.0001592337230017238,True,FC Haka (Finland),SV Wacker Burghausen (Germany),1,17,1
+22667,42834,0.0001591738265858866,True,FC Bolzano 1996 (Italy),AKA Tirol U16 (Austria),1,3,5
+4452,3166,0.00015908681731306227,True,SV Hall (Austria),Pau FC (France),1,5,2
+2598,2509,0.00015897015445608906,True,FK Pribram (Czech Republic),Hamburger SV U19 (Germany),1,15,1
+49304,42822,0.00015884193507503285,False,SK Austria Klagenfurt II (Austria),AKA Wolfsberger AC U16 (Austria),1,5,5
+1990,21056,0.00015878038893775174,True,Pallo-Iirot (Finland),Borussia Mönchengladbach U17 (Germany),1,17,1
+2275,15697,0.0001583925203614731,False,Turun Palloseura (Finland),Turun Palloseura U19 (Finland),1,17,17
+12616,42818,0.00015827501988707624,False,SV Absam (Austria),AKA Austria Wien U16 (Austria),1,5,5
+8045,4093,0.0001582315913311621,True,Tampere United (Finland),Taranto FC 1927 (Italy),1,17,3
+17397,9196,0.00015807693548356043,True,Käpylän Pallo (Finland),Eintracht Braunschweig U19 (Germany),1,17,1
+12942,19356,0.0001578906517782207,False,Oulun Palloseura (Finland),Pallokerho-35 U19 (Finland),1,17,17
+2481,5118,0.00015788196388495437,True,FC Sheriff Tiraspol (Moldova),Germania Leer (Germany),2,4,1
+64234,22114,0.00015762608432419662,False,Tokai FC (Japan),Kelantan FC (Malaysia),1,7,7
+11099,11746,0.0001569470116571711,True,OFK Grbalj (Montenegro),FK Rostov II (Russia),1,10,4
+29172,1622,0.0001567591353185279,True,FC Osaka (Japan),FC Viktoria Köln (Germany),1,7,1
+24243,485,0.00015675258891307393,True,SC St. Pölten (Austria),NK Hrvatski Dragovoljac (Croatia),1,5,10
+5560,27041,0.000156701282560261,True,BSV Schwarz-Weiß Rehden (Germany),FC Sparta Bremerhaven (Germany),1,1,13
+10044,22276,0.00015666351376485222,True,SV Horn (Austria),SPAL Primavera (Italy),1,5,3
+857,23472,0.0001565559607887045,True,TuRU Düsseldorf (Germany),Albirex Niigata (S) (Singapore),1,1,7
+3676,840,0.00015648307116911125,True,FC Anker Wismar (Germany),Enosis Neon Paralimniou (Cyprus),1,1,14
+1179,25449,0.0001562032200243602,True,Hammer SpVg (Germany),Buriram United (Thailand),1,1,7
+26712,6646,0.00015606973513778252,True,TSV Buch (Bay.) (Germany),Fatih Karagümrük (Türkiye),1,1,11
+7006,2824,0.00015604361390996415,True,Melbourne Victory (Australia),Ajax Amsterdam U19 (Netherlands),1,24,2
+42137,5292,0.00015576407907168808,False,ESV Westbahn Linz (Austria),SC Marchtrenk (Austria),1,5,5
+32125,248,0.00015564078717046322,True,Mosta FC (Malta),SpVgg Bayern Hof (Germany),1,28,1
+5560,22952,0.00015557863550027184,True,BSV Schwarz-Weiß Rehden (Germany),Salgueiro AC (Brazil),1,1,18
+37083,10538,0.0001554466055928529,False,ÍF Fuglafjördur II (Faroe Islands),B68 Toftir (Faroe Islands),1,8,8
+12262,1302,0.00015540632717883955,True,FV 1210 Wien (Austria),Northampton Town (England),1,5,9
+49924,28440,0.00015520728665849946,False,MSC Preussen 1899 (Germany),1.FC Magdeburg U17 (Germany),1,1,1
+28545,512,0.00015503139239376654,True,Christchurch United (New Zealand),Stoke City (England),1,24,9
+35635,37635,0.00015498432602739827,False,Sapporo FC (Japan),Norbritz Hokkaido (Japan),7,7,7
+2681,327,0.00015456677806535173,True,FC Wegberg-Beeck (Germany),NK Osijek (Croatia),1,1,10
+4120,789,0.0001545273815480903,True,1.FC Mönchengladbach (Germany),NK Rudar Velenje (Slovenia),1,1,10
+32125,32395,0.00015446966250082654,True,Mosta FC (Malta),JK Viljandi Tulevik (Estonia),1,28,26
+3558,10884,0.0001544196633527048,False,GFC Ajaccio (France),AC Ajaccio U19 (France),1,2,2
+29988,675,0.00015428736722632668,True,SV Atlas Delmenhorst (Germany),Slavia Sofia (Bulgaria),1,1,14
+9815,42836,0.00015358892808606112,False,FC Bizau (Austria),AKA Vorarlberg U16 (Austria),1,5,5
+6992,21728,0.00015343230892087074,True,Chornomorets Odessa (Ukraine),FC BW Friesdorf (Germany),1,4,1
+22327,5507,0.0001533136460499728,True,FC Rot-Weiß Koblenz (Germany),FC Stade Nyonnais (Switzerland),1,1,12
+50760,2278,0.00015320502511289067,True,FBC Gravina (Italy),SpVgg SV Weiden (Germany),1,3,1
+28377,3650,0.000153100669353255,True,Hunan Billows (China),FF Jaro (Finland),1,21,17
+1063,15709,0.00015307416745750677,False,Viborg FF (Denmark),Randers FC U19 (Denmark),1,8,8
+115,976,0.00015277469804608418,True,FC Oberneuland (Germany),CF União Madeira (-2021) (Portugal),1,13,18
+76176,115,0.00015251519676835992,True,Nankatsu SC (Japan),FC Oberneuland (Germany),1,7,13
+857,12469,0.0001524419560869056,True,TuRU Düsseldorf (Germany),KF Skënderbeu (Albania),1,1,10
+3925,17136,0.00015241106126130565,True,HSC Hannover (Germany),NK Krsko (Slovenia),1,1,10
+14621,18464,0.00015205177058907405,False,NK Zvijezda Gradacac (Bosnia-Herzegovina),FK Sloboda Tuzla U19 (Bosnia-Herzegovina),1,10,10
+2086,314,0.00015202839354012035,True,1.FC Bruchsal (Germany),HNK Cibalia Vinkovci (Croatia),1,1,10
+21645,23564,0.00015189881401823663,True,US Hostert (Luxembourg),IF Gnistan (Finland),1,2,17
+1109,6920,0.00015168942930704764,True,BK Häcken (Sweden),Everton FC U18 (England),1,8,9
+25527,39243,0.0001514135359263895,False,FC Flora Tallinn U19 (Estonia),Rakvere JK Tarvas U19 (Estonia),1,26,26
+16104,32942,0.0001513721095960166,True,FC Copenhagen U19 (Denmark),RasenBallsport Leipzig U17 (Germany),1,8,1
+1484,66993,0.00015129395721161186,True,SV Alemannia Mariadorf (Germany),ASD San Luca (Italy),1,1,3
+60296,29735,0.0001512696617976298,False,FK Tuzla City U19 (Bosnia-Herzegovina),FK Drina Zvornik U19 (Bosnia-Herzegovina),1,10,10
+35635,51344,0.0001512475453103707,False,Sapporo FC (Japan),Nagoya SC (Japan),1,7,7
+8415,9544,0.00015115972769884212,True,Hamburger SV III (Germany),NK GOSK Gabela (Bosnia-Herzegovina),1,13,10
+1381,32125,0.0001510939704626315,True,FSV Erlangen-Bruck (Germany),Mosta FC (Malta),1,1,28
+23370,5300,0.0001510001180934581,True,Kalev Tallinn (Estonia),FSV Union Fürstenwalde (Germany),1,26,1
+392,4519,0.00015088283594594877,False,1.FC Bocholt (Germany),SC Enschede (Netherlands),2,1,1
+37920,21082,0.0001506711572925294,True,Mika Erewan II (Armenia),TSG 1899 Hoffenheim U17 (Germany),1,4,1
+30433,25527,0.00015043666045836323,False,FCI Tallinn (Estonia),FC Flora Tallinn U19 (Estonia),1,26,26
+8891,32125,0.00015004370688658728,True,Goslarer SC (Germany),Mosta FC (Malta),1,1,28
+26718,996,0.00015000021932326922,False,FC Schwarz-Weiß Dorndorf (Germany),TuS Koblenz (Germany),3,1,1
+3732,95,0.0001498254086504251,True,Hellerup IK (Denmark),KFC Uerdingen 05 (Germany),1,8,1
+11757,8,0.00014978642227796764,True,SV Wienerberg (Austria),Alemannia Aachen (Germany),1,5,1
+26012,7750,0.00014968994051640537,True,Tallinn JK Legion (Estonia),SSV Ulm 1846 U19 (Germany),1,26,1
+922,105,0.00014967844857992398,False,TSG Wörsdorf (Germany),SV Darmstadt 98 (Germany),1,1,1
+75513,100638,0.00014930237186224193,False,FC Concordia BS/FC Solothurn U17 (Switzerland),FC Concordia BS/BSC Old Boys U17 (Switzerland),2,12,12
+4482,10075,0.00014926070492702245,True,Volyn Lutsk (Ukraine),FC Viktoria Köln U19 (Germany),1,4,1
+27193,3649,0.00014925831587539652,True,DJK Don Bosco Bamberg (Germany),Bangor City (Wales),1,1,9
+1151,5716,0.00014917005893641717,True,TSG Neustrelitz (Germany),BK Fremad Amager (Denmark),1,1,8
+12672,562,0.0001491352774068455,True,Club Almirante Brown (Argentina),FSV Optik Rathenow (Germany),1,6,1
+5512,16441,0.00014899777105041256,True,SV Sandhausen II (Germany),ADRC Icasa (Brazil),1,1,18
+4355,11282,0.00014886965340764368,True,MTV Gifhorn (Germany),Alanyaspor (Türkiye),1,1,11
+6524,21071,0.00014872281000225142,False,TSV Marl-Hüls (Germany),Preußen Münster U17 (Germany),1,1,1
+90831,31355,0.00014868057133188577,True,Sakai Trinitas (Japan),FSV Duisburg (Germany),1,7,1
+12469,3007,0.00014866656377051046,True,KF Skënderbeu (Albania),Montego Bay United FC (Jamaica),1,10,22
+81074,34344,0.00014844427238091523,False,Taipei Vikings (Chinese Taipei),Shatin (Hongkong),1,21,21
+39470,5771,0.00014810162024881678,True,TSV Steinbach Haiger (Germany),FCI Levadia (Estonia),1,1,26
+42948,5469,0.00014796072747616529,False,USK St. Michael (Austria),USK Anif (Austria),1,5,5
+17339,2444,0.0001478548318017084,True,Inter Türkspor Kiel (Germany),FC Wacker Innsbruck (Austria),1,13,5
+24547,27118,0.00014729630256450968,True,FC Mauerwerk (Austria),FS Jelgava (Latvia),1,5,4
+1288,1523,0.00014725019983280043,True,FC Fribourg (Switzerland),Brandenburger SC Süd (Germany),1,12,1
+4436,15244,0.00014721458412626998,True,SK Bischofshofen (Austria),Ballymena United FC (Northern Ireland),1,5,9
+104,5543,0.00014693037898472582,True,SV Eintracht Trier 05 (Germany),Chieti Calcio (Italy),1,1,3
+50171,48325,0.0001468684949237971,True,Kyoto Shiko SC (1994) (Japan),Riga FC (Latvia),1,7,4
+11757,1302,0.00014661266761363713,True,SV Wienerberg (Austria),Northampton Town (England),1,5,9
+8508,54755,0.00014638675675694972,True,FC Sion U21 (Switzerland),FK Mladost Doboj-Kakanj U19 (Bosnia-Herzegovina),1,12,10
+545,32125,0.00014631620133821914,True,SG Quelle Fürth (Germany),Mosta FC (Malta),1,1,28
+2156,68228,0.00014620297689299787,True,AEK Larnaca (Cyprus),Pontypridd United (Wales),1,14,9
+42109,10075,0.00014578582273746472,True,Karmiotissa Pano Polemidion (Cyprus),FC Viktoria Köln U19 (Germany),1,14,1
+2580,10858,0.00014577334192642001,False,Istres Football Club (France),SC Bastia U19 (France),1,2,2
+21057,33697,0.00014549849726028312,False,Eintracht Frankfurt U17 (Germany),FSV Frankfurt U17 (Germany),3,1,1
+8045,108,0.00014527938502571157,True,Tampere United (Finland),SV Wehen Wiesbaden (Germany),1,17,1
+6273,12388,0.00014518892438236225,True,TSV Eintracht Stadtallendorf (Germany),Ankara Keciörengücü (Türkiye),1,1,11
+32125,104,0.000145167542625674,True,Mosta FC (Malta),SV Eintracht Trier 05 (Germany),1,28,1
+29524,69749,0.0001451111532536974,False,FK Buducnost Banovici U19 (Bosnia-Herzegovina),FK Tuzla City U17 (Bosnia-Herzegovina),1,10,10
+6604,36745,0.0001449966857579717,True,SC Paderborn 07 II (Germany),AC Tuttocuoio (Italy),1,1,3
+12462,43314,0.00014468539750052742,True,KS Kastrioti (Albania),UD Songo (Mozambique),1,10,23
+5163,73,0.0001445290936954135,True,Brindisi FC (Italy),TSV 1860 München II (Germany),1,3,1
+26468,10849,0.0001444964409328324,True,Deportivo La Guaira (Venezuela),FC Metz U19 (France),1,6,2
+9060,33332,0.0001444564516873525,False,FK BSK Borca (Serbia),FK Kozara Gradiska U19 (Bosnia-Herzegovina),1,10,10
+19042,14340,0.00014445554534070094,False,FC Pisek (Czech Republic),SK Slavia Prague U19 (Czech Republic),1,15,15
+5615,31273,0.00014417495111520515,True,Alma Juventus Fano 1906 (Italy),Gostaresh Foolad FC (Iran),1,3,25
+1262,2925,0.00014411104818503034,True,FSV 08 Bietigheim-Bissingen (Germany),FC Lahti (Finland),1,1,17
+83328,24832,0.00014387323494243344,False,Víkingur Göta III (Faroe Islands),Víkingur Gøta (Faroe Islands),1,8,8
+2638,22552,0.00014367107771252747,True,Bramfelder SV (Germany),Whitehawk FC (England),1,13,9
+8048,31409,0.00014347188283096897,True,KSV Hessen Kassel II (Germany),FK Jonava (Lithuania),1,1,4
+21064,21067,0.0001432606421088069,True,Hannover 96 U17 (Germany),Holstein Kiel U17 (Germany),1,1,13
+7813,7995,0.0001429370471764325,False,Olympique Lyon U19 (France),FCO Dijon U19 (France),1,2,2
+2638,6804,0.00014279559598088883,True,Bramfelder SV (Germany),NK Travnik (Bosnia-Herzegovina),1,13,10
+101,18687,0.00014277034568313768,True,Tennis Borussia Berlin (Germany),CD Atlético Baleares (Spain),1,1,16
+30746,5560,0.00014242751899065455,True,Wellington Phoenix FC Reserves (New Zealand),BSV Schwarz-Weiß Rehden (Germany),1,24,1
+77,13907,0.0001422934648477641,True,Vardar Skopje (North Macedonia),FC Viktoria Plzen U19 (Czech Republic),1,10,15
+10044,23548,0.00014229219495740075,True,SV Horn (Austria),SC Sagamihara (Japan),1,5,7
+33627,25094,0.00014227080272697184,False,FK Mladost Doboj-Kakanj (Bosnia-Herzegovina),FK Velez Mostar U19 (Bosnia-Herzegovina),1,10,10
+27820,3900,0.00014210109516762544,True,Shahid Ghandi Yazd (Iran),FK Borac Banja Luka (Bosnia-Herzegovina),1,25,10
+6646,23568,0.00014202004342582736,True,Fatih Karagümrük (Türkiye),Machida Zelvia (Japan),1,11,7
+328,21460,0.00014196294552510852,True,Borussia Neunkirchen (Germany),NK Radomlje (Slovenia),1,1,10
+2266,3207,0.0001418537832414335,True,FSV Fernwald (Germany),Boluspor (Türkiye),1,1,11
+6776,57095,0.00014185179523106152,True,SSV Jeddeloh II (Germany),Cittanova Calcio (Italy),2,1,3
+31306,562,0.000141610008731092,True,Eastern Suburbs AFC (New Zealand),FSV Optik Rathenow (Germany),1,24,1
+10263,364,0.00014160505448084442,True,SG Drautal (-2016) (Austria),Germania Halberstadt (Germany),1,5,1
+6763,89791,0.0001414565123744923,False,Football Club Mantois (France),FC Montfermeil U19 (France),1,2,2
+27820,2413,0.0001410206455481869,True,Shahid Ghandi Yazd (Iran),Bury FC (England),1,25,9
+3915,95,0.00014083387885828678,True,Angoulême Charente FC (France),KFC Uerdingen 05 (Germany),1,2,1
+4908,38479,0.00014064923925660546,True,SC Brühl (Germany),Real Vicenza VS (Italy),1,1,3
+2639,30433,0.00014056372529179628,True,União de Leiria (Portugal),FCI Tallinn (Estonia),1,18,26
+9344,3349,0.00014055026916101515,True,Haldensleber SC (Germany),CD Feirense (Portugal),1,1,18
+17397,47192,0.00014051419296554524,False,Käpylän Pallo (Finland),Käpylän Pallo U19 (Finland),1,17,17
+166,8508,0.00014051106247372873,True,VfB Oldenburg (Germany),FC Sion U21 (Switzerland),1,1,12
+50973,29831,0.00014034812925945784,True,Liaoning Tieren (China),FCV Farul Constanta (Romania),1,21,14
+32125,6078,0.00014030492255498144,True,Mosta FC (Malta),Paykan FC (Iran),1,28,25
+15446,6326,0.00014009763801675425,True,FC Lausanne-Sport II (Switzerland),Paris Saint-Germain U19 (France),1,12,2
+17444,4333,0.0001400382628147907,True,1. Fortuna Wiener Neustädter SC (Austria),US Grosseto 1912 (Italy),1,5,3
+21307,9492,0.00014000834635498845,True,CSC 03 Kassel (Germany),NK Jedinstvo Bihac (Bosnia-Herzegovina),1,1,10
+88,882,0.00013997185548686198,True,Widzew Lodz (Poland),VfB Speldorf (Germany),1,19,1
+1246,5771,0.00013985112996024414,True,TSV 1860 Rosenheim (Germany),FCI Levadia (Estonia),1,1,26
+47136,1002,0.00013980288583604608,False,FC Flora Tallinn U17 (Estonia),FC Flora Tallinn (Estonia),2,26,26
+4466,12109,0.00013977451115639353,True,SVG Reichenau (Austria),NK Lucko (Croatia),1,5,10
+7443,8043,0.00013972556558170148,True,Floridsdorfer AC (Austria),Kokkolan Pallo-Veikot (Finland),1,5,17
+151,3189,0.00013971230772426017,True,1.FC Kaiserslautern II (Germany),Ilves Tampere (Finland),1,1,17
+48188,61574,0.00013965076380405964,False,FK Sarajevo Academy U17 (Bosnia-Herzegovina),FK Velez Mostar U17 (Bosnia-Herzegovina),1,10,10
+4333,2444,0.00013960833040514568,True,US Grosseto 1912 (Italy),FC Wacker Innsbruck (Austria),1,3,5
+6726,9128,0.0001393915874954253,True,Police Tero FC (Thailand),SV Stegersbach (Austria),1,7,5
+31267,35137,0.00013938255000853797,True,Luparense FC (Italy),Berekum Chelsea FC (Ghana),1,3,23
+81075,411,0.0001393464432415994,True,Inter Taoyuan (Chinese Taipei),VfB Friedrichshafen (Germany),1,21,5
+10107,23564,0.00013907408980721417,True,UR La Louvière Centre (Belgium),IF Gnistan (Finland),1,2,17
+29055,1397,0.00013905520025116696,True,MSV Pampow (Germany),FC Gueugnon (France),1,1,2
+4916,1426,0.00013904546706251978,True,SC Düsseldorf-West (Germany),VVV-Venlo (Netherlands),1,1,2
+1478,8117,0.00013903594806678626,True,HEBC Hamburg (Germany),Olympique Beja (Tunisia),1,13,20
+22552,2638,0.0001387179450221295,True,Whitehawk FC (England),Bramfelder SV (Germany),1,9,13
+17663,5972,0.00013865143058565656,True,SC Schwaz (Austria),Rudar Pljevlja (Montenegro),1,5,10
+40629,2259,0.0001381802914676921,True,FC Mecklenburg Schwerin (Germany),Lokomotiv Plovdiv (Bulgaria),1,1,14
+1400,8877,0.00013817439383249667,True,VfB Auerbach (Germany),AFC Eskilstuna (Sweden),1,1,8
+85924,208,0.00013807957736084497,True,Ji'nan Xingzhou (China),CSKA-Sofia (Bulgaria),1,21,14
+4466,2394,0.0001379574935288734,False,SVG Reichenau (Austria),SV Kapfenberg (Austria),1,5,5
+34990,2931,0.0001378357639107417,True,Brew Kashima (Saga) (Japan),Wollongong Wolves FC (Australia),1,7,24
+30989,84689,0.00013778707754010216,False,Akademia FK Krasnodar (Russia),Akron Akademia Konoplev U16 (Russia),1,4,4
+17648,169,0.00013777409796024144,True,Türkspor Augsburg (Germany),Panionios Athens (Greece),1,1,14
+18344,8043,0.00013768400333265363,True,FC Wacker Innsbruck II (Austria),Kokkolan Pallo-Veikot (Finland),1,5,17
+32588,2671,0.00013736131030169706,True,Schwarz-Weiß Düren (Germany),PAS Giannina (Greece),1,1,14
+15945,4269,0.00013732519868500274,True,Concordia Chiajna (Romania),Rot-Weiss Essen U19 (Germany),1,14,1
+5647,7130,0.00013716878358643162,True,Rostocker FC 1895 (Germany),JK Trans Narva (Estonia),1,1,26
+1180,26012,0.0001370422191153045,True,Dinamo Minsk (Belarus),Tallinn JK Legion (Estonia),1,4,26
+82973,22832,0.00013702124180373616,False,Johvi FC Phoenix (Estonia),JK Sillamäe Kalev (Estonia),2,26,26
+443,14347,0.00013673831848963776,False,Vejle Boldklub (Denmark),AC Horsens U19 (Denmark),1,8,8
+584,9890,0.00013659637186005512,True,Berliner AK 07 (Germany),US Monastir (Tunisia),1,1,20
+18408,94,0.00013652347696726863,False,FC Stollberg (Germany),FC Erzgebirge Aue (Germany),1,1,1
+7003,5411,0.0001365002927822372,True,Malchower SV 90 (Germany),FC Honka (Finland),1,1,17
+2944,44267,0.00013641119306158283,True,Ankaraspor (Türkiye),Sepidrood Rasht FC (Iran),1,11,25
+6621,20299,0.00013637210795607144,True,FK Cukaricki (Serbia),FC Volendam U21 (Netherlands),1,10,2
+4519,18460,0.00013623437964589387,False,SC Enschede (Netherlands),VV Rigtersbleek (Netherlands),2,1,1
+853,9133,0.00013587129957514028,True,F91 Dudelange (Luxembourg),SSV Jahn Regensburg U19 (Germany),1,2,1
+32125,43738,0.00013568477929181254,True,Mosta FC (Malta),Wong Tai Sin (Hongkong),1,28,21
+2016,2925,0.00013568060091186327,True,BSC Old Boys (Switzerland),FC Lahti (Finland),1,12,17
+166,7008,0.00013562136397936436,True,VfB Oldenburg (Germany),AC Oulu (Finland),1,1,17
+26594,10826,0.00013550431681412585,False,FCM Aubervilliers (France),FC Sochaux-Montbéliard U19 (France),1,2,2
+11747,857,0.0001353567625466053,True,Krylya Sovetov Samara II (Russia),TuRU Düsseldorf (Germany),1,4,1
+996,3684,0.0001353294117028004,True,TuS Koblenz (Germany),Stevenage FC (England),1,1,9
+1212,1078,0.00013521830958570995,True,Eintracht Braunschweig II (Germany),Oldham Athletic (England),1,1,9
+39470,29172,0.00013517927452686207,True,TSV Steinbach Haiger (Germany),FC Osaka (Japan),1,1,7
+45500,11044,0.00013512121789998786,True,Heilongjiang Ice City (China),FK Indjija (Serbia),1,21,10
+32397,6105,0.00013499126213726046,True,Rakvere JK Tarvas (Estonia),FC Ashdod (Israel),1,26,27
+373,14084,0.0001349225192228401,True,KSV Hessen Kassel (Germany),Churchill Brothers FC (India),1,1,24
+5560,28760,0.00013479688108016826,True,BSV Schwarz-Weiß Rehden (Germany),SK Austria Klagenfurt (Austria),1,1,5
+37978,5568,0.00013461784500682484,True,Usak Spor (Türkiye),Finn Harps (Ireland),1,11,9
+48188,61568,0.00013456743972376338,False,FK Sarajevo Academy U17 (Bosnia-Herzegovina),FK Borac Banja Luka U17 (Bosnia-Herzegovina),1,10,10
+8,1320,0.0001342591285084543,True,Alemannia Aachen (Germany),Shenzhen FC (1994-2024) (China),1,1,21
+38888,7445,0.00013417134002018623,True,TSV Bicken (Germany),SC Ritzing (-2024) (Austria),1,1,5
+2925,7245,0.00013416042220017283,True,FC Lahti (Finland),Oststeinbeker SV (Germany),1,17,13
+36519,20132,0.00013415224204988782,True,FC Iserlohn 46/49 (Germany),Clube Atlético Linense (SP) (Brazil),1,1,18
+10341,8117,0.00013339277497643998,True,CFC Hertha 06 (- 2024) (Germany),Olympique Beja (Tunisia),1,1,20
+18627,3899,0.00013333028957347883,True,SV Wals-Grünau (Austria),Anorthosis Famagusta (Cyprus),1,5,14
+1251,87,0.00013329835246157374,True,Cliftonville FC (Northern Ireland),SV Werder Bremen II (Germany),1,9,1
+27118,10734,0.00013328348435638333,True,FS Jelgava (Latvia),The New Saints (Wales),1,4,9
+27118,30433,0.00013326596938332725,True,FS Jelgava (Latvia),FCI Tallinn (Estonia),1,4,26
+12017,11215,0.000133225062493562,True,Happy Valley (Hongkong),FK Olimpik Sarajevo (Bosnia-Herzegovina),1,21,10
+3650,68228,0.00013310433082986312,True,FF Jaro (Finland),Pontypridd United (Wales),1,17,9
+5817,18778,0.00013298573406954003,True,Sönderjyske (Denmark),SC Villa (Uganda),1,8,23
+51787,15665,0.00013282782717262382,False,Puistolan Urheilijat (Finland),HJK Helsinki U19 (Finland),1,17,17
+37151,45176,0.00013275141368729028,True,SV Neukirchen b. Hl. Blut (Germany),EC Água Santa (SP) (Brazil),1,1,18
+4436,7056,0.0001325785243315321,True,SK Bischofshofen (Austria),CD Mafra (Portugal),1,5,18
+9471,588,0.00013245384947658693,True,OSC Bremerhaven (Germany),FC Dinamo City (Albania),1,13,10
+1212,25765,0.00013242572981175902,True,Eintracht Braunschweig II (Germany),Matsumoto Yamaga (Japan),1,1,7
+4043,24570,0.00013229352039160648,False,1.FC Lok Stendal (Germany),SSV 80 Gardelegen (Germany),1,1,1
+17276,7465,0.0001322764676926017,True,Zhejiang FC (China),Vitesse Arnhem U19 (Netherlands),1,21,2
+2053,17398,0.00013214325561346693,True,FC Bulle (Switzerland),PS Kemi Kings (Finland),1,12,17
+24260,1470,0.00013195404155736057,True,FC Tulsa (United States),Bischofswerdaer FV 08 (Germany),1,22,1
+7008,2539,0.0001317100983322801,True,AC Oulu (Finland),Wedeler TSV/Spfr. Holm 1.SG (Germany),1,17,13
+5647,3349,0.00013169187970589003,True,Rostocker FC 1895 (Germany),CD Feirense (Portugal),1,1,18
+541,10684,0.00013166694538423466,True,SC Austria Lustenau (Austria),Rah Ahan Yazdan FC (Iran),1,5,25
+26876,29055,0.00013161788736402443,True,FC Gifu Second (Reserves) (Japan),MSV Pampow (Germany),1,7,1
+74189,10743,0.00013135684062968477,False,Bóltfelagið Royn (Faroe Islands),TB Tvøroyri (Faroe Islands),2,8,8
+28936,11741,0.0001312196877887011,False,FK Spartaks Jurmala (Latvia),Dynamo Moscow II (Russia),1,4,4
+2925,36174,0.00013119266462310154,False,FC Lahti (Finland),SJK Seinäjoki U19 (Finland),1,17,17
+21234,9469,0.00013107984785987238,True,FK Bylis (Albania),KSV Vatan Sport (Germany),1,10,13
+803,3392,0.00013092713636624564,True,Eimsbütteler TV (Germany),Apollon Kalamarias (Greece),1,13,14
+54,836,0.0001309256455375311,True,PAS Hamedan (Iran),TuS Mayen (Germany),1,25,1
+71112,34942,0.00013082907150110726,False,Antelope Shiojiri (Japan),Dezzolla Shimane (-2020) (Japan),1,7,7
+7153,15483,0.0001307190157214484,False,Zawisza Bydgoszcz (Poland),Arka Gdynia U19 (Poland),1,19,19
+90170,42109,0.0001306913813817718,True,Swansea University (Wales),Karmiotissa Pano Polemidion (Cyprus),1,9,14
+12816,912,0.0001306350770571268,True,Lazio U19 (Italy),VfR Neumünster (Germany),1,3,13
+996,1397,0.00013051762639871702,True,TuS Koblenz (Germany),FC Gueugnon (France),1,1,2
+2925,23164,0.0001305086490471138,False,FC Lahti (Finland),FC Reipas Lahti U19 (Finland),1,17,17
+435,14178,0.0001304768349798845,True,SGV Freiberg (Germany),Neman Grodno (Belarus),1,1,4
+18699,708,0.0001304763706989201,True,Sport-Union Neckarsulm (Germany),Újpest FC (Hungary),1,1,15
+28936,42321,0.00013041609032307054,True,FK Spartaks Jurmala (Latvia),Real Madriz FC (Nicaragua),1,4,6
+2633,8984,0.0001303526184291655,True,SC Vier- und Marschlande (Germany),Sandecja Nowy Sacz (Poland),1,13,19
+6646,1038,0.00013034121592861358,True,Fatih Karagümrük (Türkiye),UC Sampdoria (Italy),1,11,3
+71138,71124,0.0001301064702506162,False,llamas Kochi (Japan),Kochi U Torastar (- 2015) (Japan),1,7,7
+10743,4330,0.00013006866301643394,True,TB Tvøroyri (Faroe Islands),US Sambenedettese (Italy),1,8,3
+9721,6954,0.00013002467401629283,True,Port Talbot Town (Wales),Central Coast Mariners (Australia),1,9,24
+443,15644,0.00012980567201587885,False,Vejle Boldklub (Denmark),Vejle Boldklub U19 (Denmark),1,8,8
+2773,31843,0.00012966034708280643,True,1.FC Phönix Lübeck (Germany),CE Lajeadense (Brazil),1,13,18
+20431,393,0.00012945589862260637,True,ASV 13 (Austria),SpVgg Greuther Fürth II (Germany),1,5,1
+328,11282,0.00012928299528587736,True,Borussia Neunkirchen (Germany),Alanyaspor (Türkiye),1,1,11
+2540,11134,0.0001291393835702349,True,VfV Borussia 06 Hildesheim (Germany),Vaasa IFK (Finland),1,1,17
+15976,6131,0.00012913277100039302,True,Hong Kong Rangers (Hongkong),Dynamo Brest (Belarus),1,21,4
+62204,111,0.00012903787734370857,True,Las Vegas Lights FC (United States),Rot-Weiß Erfurt (Germany),1,22,1
+4078,18777,0.00012899527047532876,True,CF Montréal (United States),Kampala City Council (Uganda),1,22,23
+35030,2906,0.00012896053847690495,True,IF Fram (Norway),1.FC Wülfrath (Germany),1,8,1
+17398,55564,0.00012869565853810237,False,PS Kemi Kings (Finland),Oulunsalon Pallo (Finland),1,17,17
+8086,2293,0.0001286087602738742,True,1. SC Sollenau (Austria),Konyaspor (Türkiye),1,5,11
+1054,2444,0.00012859025418777303,True,Concordia Hamburg (Germany),FC Wacker Innsbruck (Austria),1,13,5
+5151,578,0.00012846258525502712,False,SV Schott Jena (Germany),Alemannia Aachen II (Germany),1,1,1
+2581,1203,0.00012821314497508504,True,Mantova 1911 (Italy),FC Nöttingen (Germany),1,3,1
+9492,10636,0.00012805271774281204,True,NK Jedinstvo Bihac (Bosnia-Herzegovina),VfR Fischeln (Germany),1,10,1
+8780,26012,0.00012803067336069224,True,Sligo Rovers (Ireland),Tallinn JK Legion (Estonia),1,9,26
+1521,5560,0.00012796963440049573,True,SK Vorwärts Steyr (Austria),BSV Schwarz-Weiß Rehden (Germany),1,5,1
+1127,9972,0.00012789967078351972,True,FC Halifax Town (England),TB Uphusen (Germany),1,9,13
+1151,3521,0.00012784865387718781,True,TSG Neustrelitz (Germany),FK Zemun (Serbia),1,1,10
+112,5771,0.00012784471021287685,True,SC Pfullendorf (Germany),FCI Levadia (Estonia),1,12,26
+22266,23564,0.00012783265071609774,True,AVC Vogherese (Italy),IF Gnistan (Finland),1,3,17
+31068,9721,0.00012780867090638357,True,Orange County SC (United States),Port Talbot Town (Wales),1,22,9
+7154,11539,0.0001277469028814005,True,Radomiak Radom (Poland),B71 Sandoy (Faroe Islands),1,19,8
+10850,50670,0.00012773347501759112,False,FC Nantes B (France),US Orléans U19 (France),1,2,2
+19197,17136,0.0001277183655111527,True,TV Askania Bernburg (Germany),NK Krsko (Slovenia),1,1,10
+39352,23548,0.00012764704866278197,False,Zuvor: Thespakusatsu Gunma Challengers (Reserves) (Japan),SC Sagamihara (Japan),1,7,7
+8,3776,0.00012764257830556565,True,Alemannia Aachen (Germany),Rovaniemen Palloseura (Finland),1,1,17
+81554,71124,0.0001275002634752015,False,Kochi Univ. FC Nankoku (Japan),Kochi U Torastar (- 2015) (Japan),1,7,7
+78046,27276,0.0001274965806491511,True,Saturday Football International (Chinese Taipei),SV Frauental (Austria),1,21,5
+12257,2394,0.0001274965676140002,False,SV Innsbruck (Austria),SV Kapfenberg (Austria),1,5,5
+1852,3544,0.0001274693672285995,True,FC Langenthal (Switzerland),FK Smederevo 1924 (Serbia),1,12,10
+11853,2805,0.00012732650540881447,True,SV Austria Salzburg (Austria),Wycombe Wanderers (England),1,5,9
+4840,10044,0.00012718168997403223,True,VfB Homberg (Germany),SV Horn (Austria),1,1,5
+12065,84693,0.00012699609639809482,False,Torpedo Vladimir (Russia),Akademia FK Rostov U16 (Russia),1,4,4
+55623,63,0.00012678934735842187,True,FC Amical Saint-Prex (Switzerland),Sportfreunde Siegen (Germany),1,12,1
+12132,59469,0.00012672337676326588,False,GFK Jagodina (Serbia),FK Zvijezda 09 U19 (Bosnia-Herzegovina),1,10,10
+393,11131,0.00012668730336066832,True,SpVgg Greuther Fürth II (Germany),HJK Klubi 04 Helsinki (Finland),1,1,17
+35609,1461,0.00012652461360923283,True,FK Fyllingsdalen (Norway),1.FC Köln U19 (Germany),1,8,1
+40251,32395,0.00012643980396299579,False,Läänemaa JK Haapsalu (Estonia),JK Viljandi Tulevik (Estonia),1,26,26
+77124,34177,0.00012636999942172722,True,Futuro (Chinese Taipei),Yokohama Sports & Culture Club (Japan),1,21,7
+18160,14908,0.00012635317386856785,True,SC Imst (Austria),Modena Primavera (Italy),1,5,3
+12942,20872,0.00012633646790258414,False,Oulun Palloseura (Finland),FC Honka U19 (Finland),1,17,17
+6764,16005,0.00012617412287866444,True,Beroe Stara Zagora (Bulgaria),Iwate Grulla Morioka (Japan),1,14,7
+4208,111,0.00012614149729310939,False,SV 09 Arnstadt (Germany),Rot-Weiß Erfurt (Germany),1,1,1
+23370,10107,0.00012613528041521564,True,Kalev Tallinn (Estonia),UR La Louvière Centre (Belgium),1,26,2
+1341,3205,0.00012606017405404052,True,SV Seligenporten (Germany),Kayserispor (Türkiye),1,1,11
+25716,8047,0.0001260394078337097,True,Fujieda MYFC (Japan),FK Suduva Marijampole (Lithuania),1,7,4
+485,7249,0.00012603176178353943,True,NK Hrvatski Dragovoljac (Croatia),FC Kray (Germany),1,10,1
+34200,14536,0.00012585035499523654,False,FC Wil 1900 II (Switzerland),FC Winterthur U18 (Switzerland),1,12,12
+54841,1262,0.00012578897636592945,False,SV Breuningsweiler (Germany),FSV 08 Bietigheim-Bissingen (Germany),1,1,1
+45805,22327,0.00012577469573278236,True,Colorado Springs Switchbacks FC (United States),FC Rot-Weiß Koblenz (Germany),1,22,1
+79085,17398,0.00012560842447846877,True,Efeler 09 Spor FK (Türkiye),PS Kemi Kings (Finland),1,11,17
+37647,13268,0.00012559591824841656,True,Gudja United FC (Malta),TSV Burgdorf (Germany),1,28,1
+17447,6251,0.0001255662148053266,False,SC Riverball (Finland),Kuopion Palloseura (Finland),1,17,17
+1307,1521,0.00012553527070532924,True,FC Pistoiese (Italy),SK Vorwärts Steyr (Austria),1,3,5
+10888,2444,0.00012552688392962854,True,SV 1910 Neuhof (Germany),FC Wacker Innsbruck (Austria),1,1,5
+4405,14758,0.00012549562321443133,True,FC St. Veit (- 2018) (Austria),Racing Club de Montevideo (Uruguay),1,5,6
+31355,44917,0.00012542497629752284,False,FSV Duisburg (Germany),FC International Leipzig (Germany),1,1,1
+2442,6429,0.00012541815598029153,True,SV Bergisch Gladbach 09 (Germany),FC Universitatea Cluj (Romania),1,1,14
+26743,32125,0.000125387561891985,True,CD Costa do Sol (Mozambique),Mosta FC (Malta),1,23,28
+7130,912,0.00012536506897871532,True,JK Trans Narva (Estonia),VfR Neumünster (Germany),1,26,13
+16576,364,0.00012531919785640616,True,CD Guadalajara (Spain),Germania Halberstadt (Germany),1,16,1
+41626,11066,0.0001252723688450162,True,Shanghai Jiading Huilong (China),GFK Sloboda Uzice (Serbia),1,21,10
+30082,106,0.00012526431420429183,True,Independiente FBC (Paraguay),VfR Mannheim (Germany),1,6,1
+23370,485,0.0001252382495732972,True,Kalev Tallinn (Estonia),NK Hrvatski Dragovoljac (Croatia),1,26,10
+10172,31068,0.00012503631030669275,True,FC Pinzgau Saalfelden (Austria),Orange County SC (United States),1,5,22
+40965,1350,0.00012499642181205484,True,Real Vis Artena (Italy),SC Viktoria 06 Griesheim (Germany),1,3,1
+31068,8,0.00012491454871122804,True,Orange County SC (United States),Alemannia Aachen (Germany),1,22,1
+8328,4643,0.000124845557549337,True,SV Hönnepel-Niedermörmter (Germany),Mladi Radnik Pozarevac (Serbia),1,1,10
+269,2297,0.00012480851068199066,True,Holstein Kiel (Germany),TSV Kropp (Germany),1,1,13
+35000,95,0.00012463860022451912,True,Vanraure Hachinohe (Japan),KFC Uerdingen 05 (Germany),1,7,1
+14079,12469,0.00012463588116284611,True,Ethiopia Nigd Bank FC (Ethiopia),KF Skënderbeu (Albania),1,23,10
+2209,4840,0.00012455345789739653,True,FK Borac 1926 Cacak (Serbia),VfB Homberg (Germany),1,10,1
+23574,58872,0.0001243943979195355,False,Mitsubishi Motors Mizushima (Japan),Esperanza SC (Yokohama) (Japan),1,7,7
+47192,21063,0.0001243699506887579,True,Käpylän Pallo U19 (Finland),Hamburger SV U17 (Germany),2,17,1
+27818,28936,0.0001243064781799944,True,Machine Sazi Tabriz (Iran),FK Spartaks Jurmala (Latvia),1,25,4
+10643,248,0.0001242633367700633,True,AC Bellaria Igea Marina (Italy),SpVgg Bayern Hof (Germany),1,3,1
+30006,25716,0.00012423975417427127,True,1.CfR Pforzheim (Germany),Fujieda MYFC (Japan),1,1,7
+96,51479,0.00012420985722719647,True,SV Wilhelmshaven (Germany),Royal Blues (- 2018) (Chinese Taipei),1,1,21
+4277,12771,0.00012413018513719818,True,Drogheda United FC (Ireland),SM Caen U19 (France),1,9,2
+71112,36953,0.0001239299366259973,False,Antelope Shiojiri (Japan),Artista Asama (Japan),1,7,7
+11915,31068,0.00012378500742282536,True,Llanelli Town AFC (Wales),Orange County SC (United States),1,9,22
+2118,66461,0.0001235991092579276,False,Wisla Plock (Poland),FCB Escola Varsovia U19 (Poland),1,19,19
+78101,1225,0.00012327928020049723,False,Hämeenlinnan Jalkapalloseura U19 (Finland),FC Haka (Finland),2,17,17
+48188,61572,0.00012325959386212998,False,FK Sarajevo Academy U17 (Bosnia-Herzegovina),FK Olimpik Sarajevo U17 (Bosnia-Herzegovina),5,10,10
+101,21283,0.00012321451115256322,True,Tennis Borussia Berlin (Germany),Muangthong United (Thailand),1,1,7
+7996,3776,0.00012316221018972853,True,1.FC Trogen (Germany),Rovaniemen Palloseura (Finland),1,1,17
+39148,166,0.00012315323228602603,True,Indy Eleven (United States),VfB Oldenburg (Germany),1,22,1
+3463,43,0.0001229990367688799,False,Glenavon FC (Northern Ireland),Heart of Midlothian FC (Scotland),1,9,9
+562,43613,0.00012298744893980302,True,FSV Optik Rathenow (Germany),FC Twenty 11 (New Zealand),1,1,24
+15151,27820,0.00012290880326453868,True,Ceyhan Spor (Türkiye),Shahid Ghandi Yazd (Iran),1,11,25
+10493,1304,0.00012284767007310408,True,FC Kuusysi (Finland),Heracles Almelo (Netherlands),1,17,2
+50673,11855,0.00012284171176878884,True,Tegevajaro Miyazaki (Japan),Club Guaraní (Paraguay),1,7,6
+9624,6646,0.0001226132767901943,True,SV Schalding-Heining (Germany),Fatih Karagümrük (Türkiye),1,1,11
+22218,2444,0.00012255161820628986,False,FC Volders (Austria),FC Wacker Innsbruck (Austria),2,5,5
+32991,3417,0.00012250060070905275,True,SD Juazeirense (BA) (Brazil),Niendorfer TSV (Germany),1,18,13
+4000,49759,0.00012247464604793994,True,Lechia Gdansk (Poland),Bologna Under 17 (Italy),1,19,3
+47132,5771,0.00012243894961328207,False,Levadia Tallinn U17 (Estonia),FCI Levadia (Estonia),1,26,26
+10743,443,0.00012239406349712865,False,TB Tvøroyri (Faroe Islands),Vejle Boldklub (Denmark),1,8,8
+2259,2508,0.00012239292990362324,True,Lokomotiv Plovdiv (Bulgaria),SV Schermbeck (Germany),1,14,1
+220,3650,0.0001223135420075132,True,FC Gütersloh (Germany),FF Jaro (Finland),1,1,17
+1562,18752,0.00012216123026800624,False,FC Nitra (Slovakia),FC ViOn Zlate Moravce-Vrable U19 (Slovakia),2,15,15
+34329,2209,0.00012202038688572875,True,Tai Po (Hongkong),FK Borac 1926 Cacak (Serbia),1,21,10
+12262,2442,0.00012175410164686195,True,FV 1210 Wien (Austria),SV Bergisch Gladbach 09 (Germany),1,5,1
+10586,4043,0.00012171842759290415,True,Aris Limassol (Cyprus),1.FC Lok Stendal (Germany),1,14,1
+23621,5084,0.00012148592435595588,True,Turriff United FC (Scotland),Valmiera FC (Latvia),1,9,4
+2974,111,0.00012138769404584923,True,Francs Borains (Belgium),Rot-Weiß Erfurt (Germany),2,2,1
+11134,2540,0.00012134803916592328,True,Vaasa IFK (Finland),VfV Borussia 06 Hildesheim (Germany),1,17,1
+32621,4814,0.00012109445945792521,True,TuS Rüssingen (Germany),Associação Naval 1893 (Portugal),1,1,18
+3776,30433,0.00012105438243667286,True,Rovaniemen Palloseura (Finland),FCI Tallinn (Estonia),1,17,26
+1068,1562,0.00012102439200213213,True,SV Straelen (Germany),FC Nitra (Slovakia),1,1,15
+10145,6807,0.0001210181025775099,True,SG Johannesberg (Germany),FK Slavija Sarajevo (Bosnia-Herzegovina),1,1,10
+5411,67978,0.00012097146044496704,False,FC Honka (Finland),FC Espoo II (Finland),1,17,17
+47130,23371,0.00012094029732874651,False,FC Nomme United U17 (Estonia),Paide Linnameeskond (Estonia),4,26,26
+4059,1009,0.00012079590522549317,True,NS Mura (Slovenia),Meiendorfer SV (Germany),1,10,13
+85901,33796,0.00012075185590012703,False,Bogolle D. Tsugaru (Japan),Ganju Iwate (Japan),1,7,7
+12520,314,0.00012057251371911294,True,Damash Gilan FC (Iran),HNK Cibalia Vinkovci (Croatia),1,25,10
+37417,78046,0.0001205259460589036,True,NK Fuzinar (Slovenia),Saturday Football International (Chinese Taipei),1,10,21
+5560,11435,0.00012048825752766079,True,BSV Schwarz-Weiß Rehden (Germany),Chikhura Sachkhere (Georgia),1,1,4
+101,2855,0.00012041620182246074,True,Tennis Borussia Berlin (Germany),SD Compostela (Spain),1,1,16
+50,22830,0.00012039544022357682,True,Rot Weiss Ahlen (Germany),CA Bordj Bou Arreridj (Algeria),1,1,20
+4150,66,0.00012031912728632239,True,AC Cuneo 1905 Olmo (Italy),SpVgg Unterhaching (Germany),1,3,1
+4458,999,0.00012027461033677878,True,SV Neuberg (Austria),NK Istra 1961 (Croatia),1,5,10
+9128,96,0.00012023031319521288,True,SV Stegersbach (Austria),SV Wilhelmshaven (Germany),1,5,1
+10121,33206,0.00012014548325526521,True,Hamm United FC (Germany),KF Llapi (Kosovo),1,13,10
+3461,4436,0.0001199528994329652,True,Larne FC (Northern Ireland),SK Bischofshofen (Austria),1,9,5
+602,21637,0.0001199211658125793,False,FK Zalgiris Vilnius (Lithuania),Akademia Togliatti (-2012) (Russia),1,4,4
+5560,26564,0.00011986706526514155,True,BSV Schwarz-Weiß Rehden (Germany),Olimpia Grudziadz (Poland),1,1,19
+26916,10841,0.00011985260199654565,False,ES Cannet Rocheville (France),AS Nancy-Lorraine U19 (France),1,2,2
+36953,857,0.00011985169864553682,True,Artista Asama (Japan),TuRU Düsseldorf (Germany),1,7,1
+31409,8048,0.0001198065941016702,True,FK Jonava (Lithuania),KSV Hessen Kassel II (Germany),1,4,1
+2278,814,0.00011978025818171182,True,SpVgg SV Weiden (Germany),FK Teplice (Czech Republic),1,1,15
+166,5411,0.00011970444401940279,True,VfB Oldenburg (Germany),FC Honka (Finland),2,1,17
+584,1045,0.00011944898549625459,True,Berliner AK 07 (Germany),Notts County (England),1,1,9
+40508,13337,0.00011943576432905703,True,New Taipei City Hang Yuan FC (Chinese Taipei),Santiago Morning (Chile),1,21,6
+57783,23370,0.00011934562813572567,False,Paide Linnameeskond U21 (Estonia),Kalev Tallinn (Estonia),2,26,26
+33083,84698,0.0001192153183312809,False,Dinamo Sokhumi (?),Akademia ZSKA Moskau U16 (Russia),1,4,4
+32933,66,0.00011917435705601824,False,TuS 1860 Pfarrkirchen (Germany),SpVgg Unterhaching (Germany),1,1,1
+15990,3391,0.0001191504681111555,True,SV Mehring (Rhld.) (Germany),AO Kavala (Greece),1,2,14
+1485,4031,0.00011913771942841184,True,Rheydter SV (Germany),Cosenza Calcio (Italy),1,1,3
+48871,31631,0.00011907937785785193,True,Knockbreda FC (Northern Ireland),St. Andrews FC (Malta),1,9,28
+3840,21580,0.00011903897313060471,True,Adana Demirspor (Türkiye),FC Türkiye Wilhelmsburg (Germany),2,11,13
+14154,17149,0.00011892698001310748,True,ASV Schrems (Austria),Hamrun Spartans (Malta),1,5,28
+578,7378,0.00011889832742799905,True,Alemannia Aachen II (Germany),Portimonense SC (Portugal),1,1,18
+33796,41503,0.0001188233016542497,True,Ganju Iwate (Japan),FK Cetinje (Montenegro),1,7,10
+3413,18382,0.0001187940338398475,True,SC Condor (Germany),FK Sloga Kraljevo (Serbia),1,13,10
+9572,17676,0.00011877437511367166,True,BSG Chemie Leipzig (Germany),AD Alcorcón B (Spain),1,1,16
+6078,22297,0.00011870285587026579,True,Paykan FC (Iran),FC Espoo (Finland),1,25,17
+28098,117533,0.0001187006093216599,False,FK Kaluga (Russia),Stroitel Kamensk-Shakhtinskiy (Russia),1,4,4
+5761,10107,0.0001186365974249685,True,FSV 63 Luckenwalde (Germany),UR La Louvière Centre (Belgium),1,1,2
+394,385,0.00011860509473253335,True,FC Amberg (Germany),Fortuna Sittard (Netherlands),1,1,2
+35967,442,0.0001184820301625269,True,Roccella (Italy),FSV Salmrohr (Germany),1,3,2
+28596,50290,0.00011843149874812421,True,FC SILON Taborsko (Czech Republic),Veroskronos Tsuno (Japan),1,15,7
+32125,23088,0.00011839374274280323,True,Mosta FC (Malta),Airbus UK Broughton (Wales),1,28,9
+422,392,0.0001183599209757049,True,Wisla Kraków (Poland),1.FC Bocholt (Germany),1,19,1
+15305,393,0.00011834842983951886,True,Kaya FC-Iloilo (Philippines),SpVgg Greuther Fürth II (Germany),1,7,1
+6273,25029,0.00011828032710379614,True,TSV Eintracht Stadtallendorf (Germany),NK Sesvete (Croatia),1,1,10
+6275,6273,0.00011823046217440714,False,VfB Wetter (Germany),TSV Eintracht Stadtallendorf (Germany),1,1,1
+20437,66,0.00011820437356401091,True,FC Kitzbühel (Austria),SpVgg Unterhaching (Germany),1,5,1
+31022,384,0.00011820392845133646,True,SV 1914 Eilendorf (Germany),MVV Maastricht (Netherlands),1,1,2
+17398,26012,0.00011816514934522071,True,PS Kemi Kings (Finland),Tallinn JK Legion (Estonia),1,17,26
+1876,4120,0.00011814504263117511,True,Pierikos Katerini (Greece),1.FC Mönchengladbach (Germany),1,14,1
+46551,26738,0.00011813847216091284,False,Union Plaani (Finland),AC Kajaani (Finland),1,17,17
+20924,438,0.00011813776498518133,True,Helsinki IFK (Finland),1.FC Köln II (Germany),1,17,1
+5084,7525,0.00011812306759625628,True,Valmiera FC (Latvia),SC Alstertal/Langenhorn (Germany),1,4,13
+22820,1293,0.00011803716179100387,False,Skjervøy IK (Norway),Tromsø IL (Norway),1,8,8
+2231,1025,0.00011798302860542929,True,FC Lustenau (Austria),Bologna FC 1909 (Italy),1,5,3
+24547,1319,0.0001179741734417561,True,FC Mauerwerk (Austria),Ludwigsfelder FC (Germany),1,5,1
+50973,2977,0.00011792590910392122,True,Liaoning Tieren (China),KSV Roeselare (- 2020) (Belgium),1,21,2
+1127,111,0.00011791014445922999,True,FC Halifax Town (England),Rot-Weiß Erfurt (Germany),1,9,1
+840,1068,0.00011789322736016958,True,Enosis Neon Paralimniou (Cyprus),SV Straelen (Germany),1,14,1
+431,22537,0.00011777822098124879,True,SC Victoria Hamburg (Germany),Is-Selongey Football (France),1,13,2
+52309,5771,0.00011763429947216292,False,Jalgpallikool Tammeka U21 (Estonia),FCI Levadia (Estonia),1,26,26
+4258,60977,0.00011760270421268558,True,TSV Germania Windeck (Germany),Karela United FC (Ghana),1,1,23
+23371,22276,0.00011739327183122582,True,Paide Linnameeskond (Estonia),SPAL Primavera (Italy),1,26,3
+35292,5560,0.0001173407405201998,True,"Changwon FC (Korea, South)",BSV Schwarz-Weiß Rehden (Germany),1,7,1
+59676,20957,0.00011732216927864371,True,Identy Mirai (Japan),Pallokerho Keski-Uusimaa (Finland),1,7,17
+510,34397,0.0001172531357029193,True,FC Chiasso (Switzerland),Yuen Long (Hongkong),1,12,21
+23370,24326,0.0001170581382681093,True,Kalev Tallinn (Estonia),Ermis Aradippou (Cyprus),1,26,14
+935,4753,0.00011686651189534138,False,LASK Amateure OÖ (Austria),AKA Rapid Wien U18 (Austria),1,5,5
+36902,32942,0.00011680572363610489,True,FS Metta II (Latvia),RasenBallsport Leipzig U17 (Germany),1,4,1
+952,166,0.00011664734359390488,True,UTA Arad (Romania),VfB Oldenburg (Germany),1,14,1
+7384,25671,0.00011662205021032538,True,SC Austria Lustenau II (Austria),Atlético Monte Azul (SP) (Brazil),1,5,18
+208,12265,0.00011660032208681002,True,CSKA-Sofia (Bulgaria),Gersthofer SV (Austria),1,14,5
+139,28522,0.0001164787436584224,True,Kickers Emden (Germany),Kamatamare Sanuki (Japan),1,1,7
+1151,36049,0.00011647791605598812,True,TSG Neustrelitz (Germany),Global FC (Philippines),1,1,7
+10874,1009,0.00011644937025103958,True,Stade Bordelais (France),Meiendorfer SV (Germany),1,2,13
+2394,11207,0.00011639462134838118,True,SV Kapfenberg (Austria),Aurillac FC (France),1,5,2
+920,8712,0.00011638559915910138,True,Derry City (Ireland),TuS Ennepetal (Germany),1,9,1
+26275,10888,0.00011638002033938554,True,Wellington Olympic AFC (New Zealand),SV 1910 Neuhof (Germany),1,24,1
+9492,22783,0.00011633401539889357,True,NK Jedinstvo Bihac (Bosnia-Herzegovina),Kalju FC (Estonia),1,10,26
+25716,2594,0.00011628937555837999,True,Fujieda MYFC (Japan),TuS Mechtersheim (Germany),1,7,1
+81233,31355,0.00011624713887294055,True,FC AWJ (Japan),FSV Duisburg (Germany),1,7,1
+710,17397,0.00011622474899763849,True,NK Celje (Slovenia),Käpylän Pallo (Finland),1,10,17
+96,3258,0.00011613404432353613,True,SV Wilhelmshaven (Germany),Shamrock Rovers (Ireland),1,1,9
+19083,15788,0.00011611087446662009,False,FK Frydek-Mistek (Czech Republic),Slezsky FC Opava U19 (Czech Republic),1,15,15
+3258,48967,0.00011610587485481849,True,Shamrock Rovers (Ireland),Inter Under 17 (Italy),1,9,3
+7468,4436,0.0001160963131906516,True,Club Olimpo (Argentina),SK Bischofshofen (Austria),2,6,5
+109,2351,0.00011606747332614402,True,SSV Jahn Regensburg (Germany),Deportes Quindío (Colombia),1,1,6
+50,6335,0.00011599566605163343,True,Rot Weiss Ahlen (Germany),Valletta FC (Malta),1,1,28
+5262,668,0.00011584957683523695,False,Blau-Weiß Hollage (Germany),Sportfreunde Lotte (Germany),1,1,1
+18158,7567,0.00011563859042297614,True,FC Mäder (Austria),FK Radnicki Nis (Serbia),1,5,10
+18573,21460,0.0001156215240181229,True,ASKÖ Gmünd (Austria),NK Radomlje (Slovenia),1,5,10
+14933,6169,0.00011559183996372245,True,Beykoz Ishakli Spor (Türkiye),Dulwich Hamlet (England),1,11,9
+46717,30433,0.00011556156109060238,True,Charlotte Independence (United States),FCI Tallinn (Estonia),1,22,26
+2442,1245,0.00011551290780821167,True,SV Bergisch Gladbach 09 (Germany),KAS Eupen (Belgium),2,1,2
+20,73900,0.00011548449395750269,False,Bursaspor (Türkiye),Istanbul Basaksehir FK U19 (Türkiye),1,11,11
+22890,107,0.00011544060195781586,True,Ekenäs IF (Finland),Kickers Offenbach (Germany),1,17,1
+22297,31273,0.00011543579418493524,True,FC Espoo (Finland),Gostaresh Foolad FC (Iran),1,17,25
+47583,1068,0.00011534533489372836,False,VfL Jüchen-Garzweiler (Germany),SV Straelen (Germany),1,1,1
+25532,7130,0.00011525936141030639,False,JK Trans Narva U19 (Estonia),JK Trans Narva (Estonia),5,26,26
+115,22878,0.00011524858880457383,True,FC Oberneuland (Germany),Rio Branco EC (SP) (Brazil),1,13,18
+29307,81554,0.0001152438537068366,False,Tochigi City (Japan),Kochi Univ. FC Nankoku (Japan),1,7,7
+10172,23768,0.00011523785401051073,False,FC Pinzgau Saalfelden (Austria),UFC Maria Alm (Austria),7,5,5
+1414,1009,0.00011521604049704695,True,Amora FC (Portugal),Meiendorfer SV (Germany),1,18,13
+11149,58608,0.00011505451991139107,True,Atlantis FC (Finland),US Avranches B (France),1,17,2
+996,6418,0.00011502257750344495,True,TuS Koblenz (Germany),Panetolikos GFS (Greece),1,1,14
+8877,1710,0.00011495925091108871,True,AFC Eskilstuna (Sweden),TSG Thannhausen (Germany),1,8,1
+5518,588,0.00011492622837660185,True,Baiersdorfer SV (Germany),FC Dinamo City (Albania),1,1,10
+1759,3739,0.00011483324585238953,True,Oranienburger FC Eintracht (Germany),KF Teuta (Albania),1,1,10
+38176,15535,0.00011477646385094345,False,Miedz Legnica II (Poland),Zaglebie Lubin U19 (Poland),1,19,19
+17136,32395,0.00011477064323208108,True,NK Krsko (Slovenia),JK Viljandi Tulevik (Estonia),1,10,26
+8997,9259,0.00011475209281551665,True,SV Werder Bremen III (Germany),Bolton Wanderers B (England),1,13,9
+36176,6724,0.00011474409298542485,False,aries Tokyo (Japan),Songkhla United (2009-2017) (Thailand),1,7,7
+31806,571,0.00011473170988053121,True,Hamilton Wanderers (New Zealand),BV Cloppenburg (Germany),1,24,1
+87985,34177,0.00011467235593005689,False,J-Lease FC (Japan),Yokohama Sports & Culture Club (Japan),1,7,7
+55705,61126,0.00011462214106066169,True,Isparta 32 Spor (Türkiye),Nereto (Italy),1,11,3
+14926,8058,0.00011455725692874931,True,Perugia Primavera (Italy),Olympique Marseille U19 (France),1,3,2
+48431,510,0.00011453691500683196,False,FC Gambarogno-Contone (Switzerland),FC Chiasso (Switzerland),2,12,12
+18822,1027,0.00011446458469364123,True,FC Internationale (Germany),Bradford City (England),1,1,9
+2055,11083,0.00011444782107584014,True,FC La Chaux-de-Fonds (Switzerland),NK Rudes (Croatia),1,12,10
+917,6981,0.00011444677314042184,True,Rotenburger SV (Germany),South Melbourne FC (Australia),1,13,24
+27820,6804,0.00011438048859405238,True,Shahid Ghandi Yazd (Iran),NK Travnik (Bosnia-Herzegovina),1,25,10
+11131,46621,0.00011432424868473278,False,HJK Klubi 04 Helsinki (Finland),Ilves Tampere U19 (Finland),1,17,17
+36669,5411,0.00011429554264724967,False,Etelä-Espoon Pallo (Finland),FC Honka (Finland),1,17,17
+12672,1333,0.00011427920791360221,True,Club Almirante Brown (Argentina),SV Lichtenberg 47 (Germany),1,6,1
+10044,23568,0.0001142028484181508,True,SV Horn (Austria),Machida Zelvia (Japan),1,5,7
+214,1455,0.00011413894366066732,True,FV Bad Honnef (Germany),FC Dordrecht (Netherlands),1,1,2
+18517,4590,0.00011411853681287419,True,SC Wiener Viktoria (Austria),Ethnikos Achnas (Cyprus),1,5,14
+6643,72901,0.00011408866716886776,False,Real Salt Lake City (United States),Phoenix FC (United States),1,22,22
+6763,12763,0.00011406371568218365,False,Football Club Mantois (France),OGC Nizza U19 (France),1,2,2
+2266,8101,0.00011406145997974204,True,FSV Fernwald (Germany),NK Solin (Croatia),1,1,10
+44917,31103,0.00011405411883936291,True,FC International Leipzig (Germany),North Shore United (New Zealand),1,1,24
+459,40813,0.00011400462033171911,True,FC 08 Homburg (Germany),Dro Alto Garda Calcio (Italy),1,1,3
+16005,71144,0.00011396922193138486,False,Iwate Grulla Morioka (Japan),Morioka Zebra (Japan),5,7,7
+521,25311,0.00011396818694750537,True,Pirin Blagoevgrad (Bulgaria),FTSV Altenwerder (Germany),1,14,13
+30006,9614,0.00011387842827487967,True,1.CfR Pforzheim (Germany),Östersunds FK (Sweden),1,1,8
+64345,110457,0.00011386239773828735,False,Tepatitlán FC (Mexico),Atlas Guadalajara U23 (Mexico),1,6,6
+58877,61568,0.0001137804727402114,False,FK Krupa na Vrbasu U19 (Bosnia-Herzegovina),FK Borac Banja Luka U17 (Bosnia-Herzegovina),1,10,10
+9721,101972,0.00011374327332699043,False,Port Talbot Town (Wales),Baglan Dragons (Wales),3,9,9
+34828,7025,0.00011369315492404467,True,Istiqlol Dushanbe (Tajikistan),SV Todesfelde (Germany),1,4,13
+582,1047,0.0001136909100163493,True,Karlsruher SC II (Germany),Como 1907 (Italy),1,1,3
+3189,16104,0.00011367668731406595,True,Ilves Tampere (Finland),FC Copenhagen U19 (Denmark),1,17,8
+11140,63109,0.00011361408224864787,True,ATSV Stadl-Paura (Austria),Club Sol de Mayo (Argentina),1,5,6
+4059,30968,0.00011358651888461158,True,NS Mura (Slovenia),Arnett Gardens FC (Jamaica),1,10,22
+4115,373,0.00011355521604873064,True,Charleston Battery (United States),KSV Hessen Kassel (Germany),1,22,1
+14505,58877,0.00011352463854403313,True,TWL Elektra (Austria),FK Krupa na Vrbasu U19 (Bosnia-Herzegovina),1,5,10
+25381,44917,0.00011349276848516818,True,Nagaworld FC (Cambodia),FC International Leipzig (Germany),1,7,1
+35384,14361,0.00011345659943851995,True,Krabi FC (Thailand),FC Teutonia 05 Ottensen (Germany),1,7,13
+5458,4807,0.0001133132807247701,True,FC Bötzingen (Germany),FC Shirak Gyumri (Armenia),1,1,4
+282,27820,0.00011328747155150582,True,FK Sarajevo (Bosnia-Herzegovina),Shahid Ghandi Yazd (Iran),2,10,25
+57783,23371,0.00011324454563974251,False,Paide Linnameeskond U21 (Estonia),Paide Linnameeskond (Estonia),11,26,26
+31367,16005,0.00011318830812097563,True,Chester FC (England),Iwate Grulla Morioka (Japan),1,9,7
+27462,23611,0.00011309608154000884,True,AC Este 1920 (Italy),Olimpik Donetsk (Ukraine),1,3,4
+33332,50305,0.00011307582536357285,False,FK Kozara Gradiska U19 (Bosnia-Herzegovina),HSK Zrinjski Mostar U17 (Bosnia-Herzegovina),1,10,10
+3776,39470,0.00011304830328159207,True,Rovaniemen Palloseura (Finland),TSV Steinbach Haiger (Germany),1,17,1
+20957,11493,0.00011300984459393053,True,Pallokerho Keski-Uusimaa (Finland),Palermo Primavera (Italy),1,17,3
+54804,8983,0.0001129671668347703,False,TSV Strümpfelbrunn (Germany),SpVgg Neckarelz (Germany),1,1,1
+104661,39172,0.00011290925936412086,False,AC Middlerange (Osaka) (Japan),Lagend Shiga (Japan),1,7,7
+1225,126,0.00011286552344782371,True,FC Haka (Finland),Caykur Rizespor (Türkiye),1,17,11
+9471,20179,0.00011283739691797446,True,OSC Bremerhaven (Germany),Nakhonpathom United (Thailand),1,13,7
+8505,4270,0.00011276596221041659,True,Fiorentina Primavera (Italy),VfL Osnabrück U19 (Germany),1,3,1
+52310,6869,0.000112757463149149,True,FC Flora Tallinn U21 (Estonia),Holstein Kiel U19 (Germany),1,26,13
+38561,8877,0.0001126820313737227,True,Correggese Calcio 1948 (Italy),AFC Eskilstuna (Sweden),1,3,8
+35828,24547,0.00011263636731095782,False,SV Strasshof (Austria),FC Mauerwerk (Austria),1,5,5
+29307,7831,0.00011258661580767645,True,Tochigi City (Japan),Brisbane Roar (Australia),1,7,24
+23370,3417,0.00011257904556156844,True,Kalev Tallinn (Estonia),Niendorfer TSV (Germany),1,26,13
+152,1381,0.00011257047706648754,True,Samsunspor (Türkiye),FSV Erlangen-Bruck (Germany),1,11,1
+45369,2394,0.00011254919671138123,True,52 Orduspor FK (Türkiye),SV Kapfenberg (Austria),1,11,5
+364,2692,0.00011250165917823283,True,Germania Halberstadt (Germany),Egersunds IK (Norway),1,1,8
+32397,1102,0.0001124932604398427,True,Rakvere JK Tarvas (Estonia),Vaasan Palloseura (Finland),1,26,17
+8043,39197,0.00011247944695582793,True,Kokkolan Pallo-Veikot (Finland),Cavalier FC (Jamaica),1,17,22
+31331,20302,0.0001124599186759952,True,Nomads United AFC (New Zealand),Roda JC Kerkrade U21 (Netherlands),1,24,2
+18488,318,0.00011245069929626934,True,TSV Kornburg (Germany),Ruch Chorzow (Poland),1,1,19
+37914,1400,0.00011241573791504835,True,Alashkert Yerevan FC (Armenia),VfB Auerbach (Germany),1,4,1
+28006,11140,0.00011236821211800047,True,Holzheimer SG (Germany),ATSV Stadl-Paura (Austria),1,1,5
+40472,8043,0.00011231264280387169,True,Esteghlal Khuzestan (Iran),Kokkolan Pallo-Veikot (Finland),1,25,17
+2394,27354,0.00011230779122054392,True,SV Kapfenberg (Austria),Virtus Entella Primavera (Italy),1,5,3
+1341,23565,0.00011228619479986443,True,SV Seligenporten (Germany),Tampa Bay Rowdies (United States),1,1,22
+6499,373,0.0001121736113362872,True,"Daejeon Hana Citizen (Korea, South)",KSV Hessen Kassel (Germany),1,7,1
+25871,14596,0.00011216562923905034,True,FC Vorwärts Röslau (Germany),Monagas SC (Venezuela),1,1,6
+3948,17004,0.00011212995720004906,True,Union Saint-Gilloise (Belgium),Kwara United FC (Nigeria),1,2,23
+25201,39805,0.00011205519622819787,True,Viktoria Arnoldsweiler (Germany),Tuzlaspor (Türkiye),1,1,11
+23619,632,0.00011200256491380152,True,Rothes FC (Scotland),Hønefoss BK (Norway),1,9,8
+4531,64725,0.00011193380797947117,False,1.FC Tatran Presov (Slovakia),FK Poprad U19 (Slovakia),1,15,15
+248,28,0.00011191939202424738,False,SpVgg Bayern Hof (Germany),FC Bayern Munich II (Germany),1,1,1
+50437,49752,0.00011183745791948001,False,Virtus Entella Under 17 (Italy),Milan Under 17 (Italy),1,3,3
+526,1463,0.00011173986093267351,False,Arminia Hannover (Germany),FC Schalke 04 U19 (Germany),1,1,1
+8818,435,0.00011170990348869241,True,FC Botosani (Romania),SGV Freiberg (Germany),1,14,1
+7831,214,0.00011159205327737746,True,Brisbane Roar (Australia),FV Bad Honnef (Germany),1,24,1
+5560,4602,0.00011156277720054075,True,BSV Schwarz-Weiß Rehden (Germany),Olympiakos Volou (Greece),1,1,14
+12520,467,0.00011151283797516238,True,Damash Gilan FC (Iran),NEC Nijmegen (Netherlands),1,25,2
+1404,1837,0.00011150261107676344,True,1.FC Saarbrücken II (Germany),Panachaiki GE (Greece),1,1,14
+19004,13937,0.00011140575138589753,False,HFK Trebic (Czech Republic),FC Zbrojovka Brno U19 (Czech Republic),1,15,15
+6321,14389,0.00011136973671477071,True,Vancouver Whitecaps FC (United States),Leicester City U18 (England),1,22,9
+6390,26621,0.00011131644259805577,True,Alta IF (Norway),RasenBallsport Leipzig U19 (Germany),1,8,1
+435,4672,0.00011131463432417923,False,SGV Freiberg (Germany),FV Zuffenhausen (Germany),1,1,1
+38173,1328,0.00011129472929951197,True,Vélez CF (Spain),Bremer SV (Germany),1,16,13
+83963,26876,0.00011120827408872685,False,AS Kariya (Japan),FC Gifu Second (Reserves) (Japan),1,7,7
+1313,61825,0.00011119585331551368,True,SC 04 Schwabach (Germany),FK Minaj (Ukraine),1,1,4
+32502,767,0.00011118429076896821,True,Naft Novin Tehran (Iran),SV Lippstadt 08 (Germany),1,25,1
+39901,32130,0.00011108954877708122,True,SRC Hiroshima (Japan),Naxxar Lions FC (Malta),1,7,28
+30945,584,0.000111088799352431,True,MC El Eulma (Algeria),Berliner AK 07 (Germany),1,20,1
+31068,17499,0.0001109801621125342,True,Orange County SC (United States),Malavan Bandar Anzali (Iran),1,22,25
+431,13240,0.00011088065042538255,True,SC Victoria Hamburg (Germany),Sestao River (Spain),1,13,16
+7882,364,0.00011083563192443555,True,US Raon-l'Étape (France),Germania Halberstadt (Germany),1,2,1
+9471,32314,0.00011078807053620277,True,OSC Bremerhaven (Germany),KFC Komarno (Slovakia),1,13,15
+3544,14120,0.00011073867638684796,True,FK Smederevo 1924 (Serbia),Saint George SA (?),1,10,23
+53,77124,0.00011065085044646036,True,OFK Beograd (Serbia),Futuro (Chinese Taipei),1,10,21
+21575,83945,0.00011063811871911415,True,FK Jezero (Montenegro),New Pearl Hiraizumi-Maezawa (Japan),1,10,7
+391,33783,0.00011061742842636031,True,VFC Plauen (Germany),FC RFS (Latvia),1,1,4
+45721,47136,0.00011047519814874317,False,Viimsi JK U19 (Estonia),FC Flora Tallinn U17 (Estonia),1,26,26
+20880,10138,0.00011044044636342294,True,Atlantis FC U19 (Finland),NK HASK Zagreb (Croatia),1,17,10
+13562,29401,0.00011042639364874429,True,Savona FBC (Italy),Kultsu FC (Finland),1,3,17
+45723,23371,0.00011038165406066905,False,Pohja-Tallinna JK Volta (Estonia),Paide Linnameeskond (Estonia),1,26,26
+745,102,0.00011030027558033894,False,Freiburger FC (Germany),VfB Stuttgart II (Germany),1,1,1
+73135,14467,0.00011016050304168653,True,Yanbian Longding (China),FC Dietikon (Switzerland),1,21,12
+22327,6327,0.00011011974025288729,False,FC Rot-Weiß Koblenz (Germany),SC Waldgirmes II (Germany),1,1,1
+3690,14064,0.00011010971303889476,False,SKA Khabarovsk (Russia),Kuzbass Kemerovo (-2012) (Russia),1,4,4
+24547,2086,0.00010998946358197663,True,FC Mauerwerk (Austria),1.FC Bruchsal (Germany),1,5,1
+52229,56447,0.0001099780058139623,True,Toukolan Teräs (Finland),Notaresco Calcio (Italy),1,17,3
+7245,22563,0.00010997541675556817,True,Oststeinbeker SV (Germany),Oxford City (England),1,13,9
+1151,9590,0.0001098616280544583,True,TSG Neustrelitz (Germany),Diegem Sport (Belgium),1,1,2
+77124,82724,0.0001098461816444485,False,Futuro (Chinese Taipei),FC Kaohsiung (Chinese Taipei),1,21,21
+8877,9955,0.00010974634008007298,True,AFC Eskilstuna (Sweden),West Ham United U18 (England),1,8,9
+23370,883,0.00010970269572711225,True,Kalev Tallinn (Estonia),FC Bergedorf 85 (Germany),1,26,13
+6807,54771,0.00010969253076912356,True,FK Slavija Sarajevo (Bosnia-Herzegovina),FC Ise-shima (Japan),1,10,7
+50,14187,0.00010968701462620655,True,Rot Weiss Ahlen (Germany),Maritzburg United FC (South Africa),1,1,23
+187,1038,0.00010966468505762086,True,1.FC Magdeburg (Germany),UC Sampdoria (Italy),1,1,3
+62648,23985,0.0001096039432613989,False,Saitama SC (Japan),Kokushikan University (Japan),1,7,7
+2808,151,0.00010955534751022705,False,FSC Lohfelden (Germany),1.FC Kaiserslautern II (Germany),1,1,1
+27276,2394,0.00010952381618165133,False,SV Frauental (Austria),SV Kapfenberg (Austria),1,5,5
+5114,5560,0.0001095079877246974,False,Heeßeler SV (Germany),BSV Schwarz-Weiß Rehden (Germany),1,1,1
+4657,24733,0.00010942561040219125,True,FK Macva Sabac (Serbia),SSG Nikola Tesla Hamburg (Germany),1,10,13
+23565,1341,0.00010933761201738934,True,Tampa Bay Rowdies (United States),SV Seligenporten (Germany),1,22,1
+23370,902,0.0001092984676153031,True,Kalev Tallinn (Estonia),FK Rad (Serbia),1,26,10
+8166,3060,0.00010924920293340399,True,FC Memmingen II (Germany),Atromitos Athens (Greece),1,1,14
+4378,78,0.00010920570164409059,True,ASK Kottingbrunn (-2024) (Austria),VfB Lübeck (Germany),1,5,1
+3900,49304,0.00010905097614991599,True,FK Borac Banja Luka (Bosnia-Herzegovina),SK Austria Klagenfurt II (Austria),1,10,5
+45299,476,0.00010902132421358843,True,Chennaiyin FC (India),TSV Havelse (Germany),1,24,1
+6169,1737,0.0001089553416703875,True,Dulwich Hamlet (England),TuS Germania Schnelsen (Germany),1,9,13
+43738,20437,0.00010894001283024362,True,Wong Tai Sin (Hongkong),FC Kitzbühel (Austria),1,21,5
+12179,676,0.0001089328892077481,True,CS Independiente Rivadavia (Argentina),Wiener Sport-Club (Austria),1,6,5
+30483,2275,0.0001089180364575095,True,FC United Zürich (Switzerland),Turun Palloseura (Finland),1,12,17
+41545,7445,0.00010891624530826697,True,Cizre Spor (Türkiye),SC Ritzing (-2024) (Austria),1,11,5
+3021,4750,0.00010882774339156785,True,Arbroath FC (Scotland),SC Olhanense (Portugal),1,9,18
+3535,8207,0.00010882521370548303,True,"Ulsan HD FC (Korea, South)",SpVgg Unterhaching U19 (Germany),1,7,1
+14064,84699,0.00010881901346538875,False,Kuzbass Kemerovo (-2012) (Russia),Akademia Lokomotiv Moskau U16 (Russia),1,4,4
+6646,408,0.00010877341771227883,True,Fatih Karagümrük (Türkiye),Ascoli Calcio (Italy),1,11,3
+23548,20924,0.00010868475945631127,True,SC Sagamihara (Japan),Helsinki IFK (Finland),1,7,17
+497,4641,0.00010863514210368684,True,1.FC Lokomotive Leipzig (Germany),Rabotnicki Skopje (North Macedonia),1,1,10
+11391,18395,0.00010852404643306917,False,Auckland City FC (New Zealand),Navua FC (Fiji),2,24,24
+36881,27116,0.00010845858179419255,True,Jiangxi Lushan (China),FK Kukësi (Albania),1,21,10
+1350,23569,0.00010835127457123153,True,SC Viktoria 06 Griesheim (Germany),FC Ryukyu (Japan),1,1,7
+11050,2566,0.00010833866769033024,True,SV Zweckel (Germany),HNK Zadar (Croatia),1,1,10
+41544,10044,0.00010830507583327807,True,Bayburt Özel Idare Spor (Türkiye),SV Horn (Austria),1,11,5
+2300,54395,0.00010818139213612758,True,Jagiellonia Bialystok (Poland),Parma Under 17 (Italy),1,19,3
+11483,14559,0.00010816901861206974,True,FC Vado (Italy),1. Göppinger Sportverein (Germany),1,3,1
+7130,13379,0.00010814118205011844,True,JK Trans Narva (Estonia),Cúcuta Deportivo (Colombia),1,26,6
+5590,28936,0.00010810429047059324,True,Castrovillari Calcio (Italy),FK Spartaks Jurmala (Latvia),1,3,4
+1328,30483,0.00010806845938490888,True,Bremer SV (Germany),FC United Zürich (Switzerland),1,13,12
+66,7097,0.0001080381206265589,True,SpVgg Unterhaching (Germany),CA Unión (Santa Fe) (Argentina),1,1,6
+28931,5558,0.00010798332765205596,True,BFC Daugavpils (Latvia),FC Kilia Kiel (Germany),3,4,13
+33783,95,0.00010795526315675063,True,FC RFS (Latvia),KFC Uerdingen 05 (Germany),1,4,1
+23564,22455,0.00010792146469733137,False,IF Gnistan (Finland),Tampereen Pallo-Veikot U19 (Finland),1,17,17
+11149,10883,0.000107829572354558,True,Atlantis FC (Finland),OFK Titograd (Montenegro),1,17,10
+83362,1467,0.00010778642985522122,True,ASD Città Di Varese (Italy),Göztepe (Türkiye),1,3,11
+40472,172,0.00010776964052974746,True,Esteghlal Khuzestan (Iran),R Charleroi SC (Belgium),1,25,2
+4408,23370,0.0001077638576492416,True,FC Widnau (Switzerland),Kalev Tallinn (Estonia),1,12,26
+7003,789,0.00010761153067374511,True,Malchower SV 90 (Germany),NK Rudar Velenje (Slovenia),1,1,10
+5263,78046,0.00010755487948194659,True,TuS Erndtebrück (Germany),Saturday Football International (Chinese Taipei),1,1,21
+12719,8671,0.00010750526673754608,True,1.FC Monheim (Germany),KF Vllaznia (Albania),1,1,10
+7130,22276,0.00010741011926042684,True,JK Trans Narva (Estonia),SPAL Primavera (Italy),1,26,3
+3189,166,0.00010735028907215127,True,Ilves Tampere (Finland),VfB Oldenburg (Germany),1,17,1
+3392,761,0.00010734900302451558,True,Apollon Kalamarias (Greece),1.SC Göttingen 05 (Germany),1,14,1
+548,38200,0.00010732655536999517,True,SV Wörgl (Austria),Glacis United (Gibraltar),1,5,16
+6266,63170,0.00010727538134119382,True,Cavese 1919 (Italy),Dundela FC (Northern Ireland),1,3,9
+18028,9492,0.00010724548107245952,True,SV Forchtenstein (Austria),NK Jedinstvo Bihac (Bosnia-Herzegovina),1,5,10
+3650,111,0.0001072441064195215,True,FF Jaro (Finland),Rot-Weiß Erfurt (Germany),1,17,1
+5620,3140,0.00010713947646852263,True,Calcio Leinfelden-Echterdingen (Germany),FK Hajduk 1912 (Serbia),1,1,10
+997,9492,0.00010708511310164676,True,Lüner SV (Germany),NK Jedinstvo Bihac (Bosnia-Herzegovina),1,1,10
+12675,3527,0.00010708335895529813,True,FC Fortuna Mombach (Germany),Motor Lublin (Poland),1,1,19
+28377,16012,0.00010705430770657563,False,Hunan Billows (China),National Sports Training Center (Chinese Taipei),1,21,21
+892,560,0.00010704845368098117,True,FK Viktoria Zizkov (Czech Republic),FC Ederbergland (Germany),1,15,1
+34,27118,0.00010703277064370717,True,FC Schalke 04 II (Germany),FS Jelgava (Latvia),1,1,4
+24950,32942,0.00010699524418737033,True,MFK Karvina U19 (Czech Republic),RasenBallsport Leipzig U17 (Germany),1,15,1
+2671,2491,0.00010698941347603445,True,PAS Giannina (Greece),SV Werder Bremen U19 (Germany),1,14,1
+298,15305,0.00010696746880155825,True,Altona 93 (Germany),Kaya FC-Iloilo (Philippines),1,13,7
+39805,9469,0.0001068971295975606,True,Tuzlaspor (Türkiye),KSV Vatan Sport (Germany),1,11,13
+5411,12573,0.00010684792863103774,True,FC Honka (Finland),Rangers FC B (Scotland),1,17,9
+81286,33796,0.00010681175547232062,False,Omiya SC (Morioka) (Japan),Ganju Iwate (Japan),2,7,7
+4714,27082,0.00010676803247418933,True,NTSV Strand 08 (Germany),ASD Manzanese Calcio (Italy),1,13,3
+1001,8,0.00010675313819853562,False,SC Borussia Freialdenhoven (Germany),Alemannia Aachen (Germany),1,1,1
+4955,2963,0.00010666027352701745,True,SC Wiedenbrück (Germany),Burton Albion (England),1,1,9
+6311,34,0.00010664038507655911,False,SV Sonsbeck (Germany),FC Schalke 04 II (Germany),1,1,1
+364,5091,0.00010663476072768891,True,Germania Halberstadt (Germany),Naestved Boldklub (Denmark),1,1,8
+7315,2067,0.00010656751703690175,True,FC KTP (Finland),US Créteil-Lusitanos (France),1,17,2
+752,24260,0.00010654468452770167,True,SpVgg Bayreuth (Germany),FC Tulsa (United States),1,1,22
+12262,12469,0.00010653349679302526,True,FV 1210 Wien (Austria),KF Skënderbeu (Albania),1,5,10
+20866,7690,0.00010643218551235686,True,SV Wienerfeld (-2023) (Austria),UMF Grindavík (Iceland),1,5,8
+1009,5379,0.00010638313375572873,True,Meiendorfer SV (Germany),FC Augsburg II (Germany),1,13,1
+15171,38268,0.00010630956510557119,True,FC Hennef 05 (Germany),CD Manchego Ciudad Real (Spain),1,1,16
+25,1297,0.00010629288197976085,True,FC Energie Cottbus (Germany),Heider SV (Germany),1,1,13
+97,2961,0.00010628275099056285,True,SG Wattenscheid 09 (Germany),Moss FK (Norway),1,1,8
+11282,5623,0.00010614248736941382,True,Alanyaspor (Türkiye),Club Atlético Morelia (Mexico),1,11,6
+7443,23371,0.00010607813987046029,True,Floridsdorfer AC (Austria),Paide Linnameeskond (Estonia),1,5,26
+1402,90170,0.00010607333700220315,True,Olympiakos Nicosia (Cyprus),Swansea University (Wales),1,14,9
+1068,306,0.00010605697945942261,True,SV Straelen (Germany),SC Heerenveen (Netherlands),1,1,2
+21234,5560,0.00010588740303361139,True,FK Bylis (Albania),BSV Schwarz-Weiß Rehden (Germany),1,10,1
+10484,73905,0.00010574596928686473,False,Kasimpasa (Türkiye),Kasimpasa U19 (Türkiye),2,11,11
+584,17980,0.00010568037378456874,True,Berliner AK 07 (Germany),Hemel Hempstead Town (England),1,1,9
+2221,6646,0.00010566346220794386,True,ASV Durlach (Germany),Fatih Karagümrük (Türkiye),1,1,11
+31409,6202,0.00010553386358359386,True,FK Jonava (Lithuania),Chemnitzer FC U19 (Germany),1,4,1
+1297,44631,0.00010544415622884978,True,Heider SV (Germany),Europa Point FC (Gibraltar),1,13,16
+6017,6763,0.00010543947696286866,True,IFK Mariehamn (Finland),Football Club Mantois (France),1,17,2
+2773,4436,0.00010540088908152982,True,1.FC Phönix Lübeck (Germany),SK Bischofshofen (Austria),1,13,5
+13362,110447,0.00010537502603831324,False,CD Tapatío (Mexico),CF Pachuca U23 (Mexico),1,6,6
+32174,2444,0.00010532722062868572,False,SPG Silz/Mötz (Austria),FC Wacker Innsbruck (Austria),1,5,5
+8758,49567,0.00010530888059765286,True,Diagoras Rodou (Greece),Juventus Under 17 (Italy),1,14,3
+59676,5382,0.00010520028013574127,True,Identy Mirai (Japan),FC Unterföhring (Germany),1,7,1
+40788,48967,0.00010514583220020458,True,SK Super Nova (Latvia),Inter Under 17 (Italy),1,4,3
+3544,11252,0.00010511002885935776,False,FK Smederevo 1924 (Serbia),FK Zeljeznicar Sarajevo U19 (Bosnia-Herzegovina),1,10,10
+1316,36628,0.00010507003941753108,True,TSV Aubstadt (Germany),Guizhou FC (China),1,1,21
+19327,23370,0.00010503835779101821,False,FC Elva (Estonia),Kalev Tallinn (Estonia),1,26,26
+4554,459,0.0001049715020032002,True,FC Südtirol (Italy),FC 08 Homburg (Germany),1,3,1
+2731,72,0.00010493592839980065,True,Coronel Bolognesi (Peru),TSV 1860 Munich (Germany),1,6,1
+5125,11853,0.00010490540759376778,True,OSC Vellmar (Germany),SV Austria Salzburg (Austria),1,1,5
+2576,7461,0.00010486576825862679,True,Fylkir Reykjavík (Iceland),FC Groningen U19 (Netherlands),1,8,2
+27100,15551,0.00010485800614428222,True,Tokyo 23 (Japan),FK Berane (Montenegro),1,7,10
+1523,24547,0.00010477089038353498,True,Brandenburger SC Süd (Germany),FC Mauerwerk (Austria),1,1,5
+7249,64528,0.00010474591150130567,True,FC Kray (Germany),Yokohama Takeru (Japan),1,1,7
+18160,166,0.0001046593280523312,True,SC Imst (Austria),VfB Oldenburg (Germany),1,5,1
+22110,26012,0.00010464571811842039,True,FC Helsingör (Denmark),Tallinn JK Legion (Estonia),1,8,26
+584,5091,0.00010461449447665758,True,Berliner AK 07 (Germany),Naestved Boldklub (Denmark),1,1,8
+4736,21052,0.00010459220104082921,False,Jugendsport Wenau 1957 (Germany),Alemannia Aachen U17 (Germany),1,1,1
+30484,30838,0.00010457642667562836,True,AB Argir (Faroe Islands),CA Sarmiento (Resistencia) (Argentina),1,8,6
+33033,2444,0.000104576192772522,False,SV Haiming/Ötztal (Austria),FC Wacker Innsbruck (Austria),1,5,5
+4682,7142,0.00010457398864457367,True,SV Altlüdersdorf (Germany),Nejmeh SC (Lebanon),1,1,23
+16613,20350,0.00010454713787168334,False,Sakhalin Yuzhno-Sakhalinsk (Russia),Akron Akademia Konoplev (Russia),1,4,4
+33742,36470,0.00010454201804067136,True,Klub Kosova (Germany),Gostivar (North Macedonia),1,13,10
+5165,64,0.00010452979448720812,False,FC Gärtringen (Germany),SV 07 Elversberg (Germany),1,1,1
+83681,70841,0.00010450535896343197,True,Basara Hyogo (Japan),SD Huesca B (Spain),1,7,16
+34942,2996,0.00010433998716190542,False,Dezzolla Shimane (-2020) (Japan),"Incheon United (Korea, South)",1,7,7
+65680,215,0.00010433785917089835,True,Visakha FC (Cambodia),Bonner SC (Germany),1,7,1
+5390,456,0.0001043272424586081,True,FVgg. Kastel 06 (Germany),HNK Vukovar 1991 (Croatia),1,1,10
+392,5699,0.00010430329825763247,True,1.FC Bocholt (Germany),Odra Opole (Poland),1,1,19
+95,11708,0.00010428427491586714,False,KFC Uerdingen 05 (Germany),TSV Neudrossenfeld (Germany),1,1,1
+924,8078,0.00010425191558049127,True,Istanbulspor (Türkiye),TBS Pinneberg (Germany),1,11,13
+1387,672,0.0001042455016036237,True,Siena FC (Italy),JEF United Chiba (Japan),1,3,7
+78289,16005,0.00010422953300281847,False,Criacao Shinjuku (Japan),Iwate Grulla Morioka (Japan),1,7,7
+3696,10888,0.00010421640357450912,True,Dagenham & Redbridge FC (England),SV 1910 Neuhof (Germany),1,9,1
+21728,6499,0.00010414764677173437,True,FC BW Friesdorf (Germany),"Daejeon Hana Citizen (Korea, South)",1,1,7
+2541,8043,0.00010405975589558692,True,SSV Vorsfelde (Germany),Kokkolan Pallo-Veikot (Finland),1,1,17
+3189,4406,0.00010396567576913521,True,Ilves Tampere (Finland),FC Stadlau (Austria),1,17,5
+3779,7461,0.00010394735917788471,True,JJK Jyväskylä (Finland),FC Groningen U19 (Netherlands),1,17,2
+912,43214,0.00010392281131144738,True,VfR Neumünster (Germany),Jalgpallikool Tammeka (Estonia),2,13,26
+2773,14456,0.00010390479642872818,True,1.FC Phönix Lübeck (Germany),Al-Dhafra FC (United Arab Emirates),1,13,20
+21789,21786,0.00010389550744467247,True,OSV Hannover (Germany),FC Kamza (Albania),1,1,10
+4093,2925,0.00010387908517762578,True,Taranto FC 1927 (Italy),FC Lahti (Finland),1,3,17
+1002,6869,0.00010386484780762507,True,FC Flora Tallinn (Estonia),Holstein Kiel U19 (Germany),1,26,13
+5228,298,0.00010386320003707695,True,FK Atlantas Klaipeda (-2020) (Lithuania),Altona 93 (Germany),1,4,13
+11131,4042,0.00010384484346902591,True,HJK Klubi 04 Helsinki (Finland),SC Freiburg U19 (Germany),2,17,1
+8983,29424,0.00010367994319250169,True,SpVgg Neckarelz (Germany),NK Novigrad (Croatia),1,1,10
+48325,4714,0.00010364541564767696,True,Riga FC (Latvia),NTSV Strand 08 (Germany),1,4,13
+22783,112,0.00010362803340510414,True,Kalju FC (Estonia),SC Pfullendorf (Germany),1,26,12
+69,2423,0.00010355870634970644,True,SSV Ulm 1846 (Germany),CD Santa Clara (Portugal),1,1,18
+32860,22327,0.00010353402609846772,False,SG Ellingen/Bonefeld/Willroth (Germany),FC Rot-Weiß Koblenz (Germany),1,1,1
+140,21958,0.00010352002836988722,True,SSV Reutlingen 05 II (Germany),PAEEK Kyrenia (Cyprus),1,1,14
+32125,15723,0.00010350700977594153,True,Mosta FC (Malta),Nasarawa United (Nigeria),1,28,23
+435,362,0.00010350147530683164,True,SGV Freiberg (Germany),Akademisk Boldklub (Denmark),1,1,8
+1941,8043,0.0001034919647271431,True,FC Dornbreite Lübeck (Germany),Kokkolan Pallo-Veikot (Finland),1,13,17
+6646,2239,0.00010348879164460177,True,Fatih Karagümrük (Türkiye),US Cremonese (Italy),1,11,3
+1385,22783,0.00010341491374022692,True,Modena FC (Italy),Kalju FC (Estonia),1,3,26
+5560,41673,0.0001034006174294532,True,BSV Schwarz-Weiß Rehden (Germany),Western Springs AFC (New Zealand),1,1,24
+33293,22327,0.00010339671223750336,True,Chattanooga FC (United States),FC Rot-Weiß Koblenz (Germany),1,22,1
+10680,5560,0.00010339374558131346,True,Bidvest Wits FC (South Africa),BSV Schwarz-Weiß Rehden (Germany),1,23,1
+15665,10849,0.00010335469679286577,True,HJK Helsinki U19 (Finland),FC Metz U19 (France),1,17,2
+12405,431,0.00010334090449259044,True,Real Unión Club (Spain),SC Victoria Hamburg (Germany),1,16,13
+5271,712,0.00010331633937694611,True,1.FC Frickenhausen (Germany),Etar Veliko Tarnovo (Bulgaria),1,1,14
+13397,5501,0.00010331577840758349,True,FC Oberneuland II (Germany),FC Zürich U21 (Switzerland),1,13,12

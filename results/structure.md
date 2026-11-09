@@ -35,3 +35,14 @@ Figure : `results/figures/degree_ccdf.pdf`.
 - in→in : 0.459
 - out→out : 0.526
 - non orienté : 0.501
+
+## Décomposition en k-cœurs (graphe non orienté, non pondéré)
+
+Le k-cœur est le plus grand sous-graphe où chaque club a au moins k partenaires dans le sous-graphe ; le cœur principal est celui de k maximal.
+
+- Dégénérescence (k maximal) : 76 ; cœur principal : 139 clubs, dont 0% de jeunes/réserves.
+- Pays du cœur principal : Türkiye (139).
+- Clubs les plus actifs du cœur principal : Genclerbirligi Ankara, Adana Demirspor, Boluspor, Eyüpspor, Göztepe, Ankara Keciörengücü, Fethiyespor, Yeni Malatyaspor.
+- Pays du 60-cœur : Italy (320), Türkiye (211), England (144), Brazil (99), Spain (36), France (35), Germany (31), Portugal (26).
+- Part des clubs dans le k-cœur : k ≥ 10 : 87.8% ; k ≥ 20 : 69.2% ; k ≥ 40 : 31.2% ; k ≥ 60 : 8.7%.
+- Spearman entre nombre de cœur et degré non orienté : 0.966.

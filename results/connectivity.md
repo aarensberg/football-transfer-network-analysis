@@ -34,3 +34,21 @@ Généré par `uv run python -m ftna.connectivity`.
 | IN | 259 | 0.0216 | 3.96 | 0.452 | Japan (76), Estonia (20), Germany (17) |
 | OUT | 138 | 0.0115 | 2.51 | 0.167 | Japan (24), Germany (15), Türkiye (12) |
 | Autres | 14 | 0.00117 | 1.71 | 0.286 | Japan (11), Estonia (2), France (1) |
+
+## Robustesse : sommets d'articulation et ponts (CFF géante, non orientée)
+
+- Sommets d'articulation (cutvertices) : 180 ; ponts : 181. La CFF géante est donc 1-connexe (κ = λ = 1).
+- Plus grande composante biconnexe (2-connexe) : 11,814 clubs (98.46% de la CFF géante) ; retirer un sommet d'articulation détache au total 194 clubs (au plus 4 pour un même club).
+
+| club | degré | clubs détachés |
+|---|---|---|
+| Libertas Chikuma (Japan) | 6 | 4 |
+| Primeiro Fukushima (Japan) | 10 | 3 |
+| Oyama SC (Tsuruoka) (Japan) | 2 | 3 |
+| Artista Asama (Japan) | 67 | 2 |
+| Mikawa SC (Japan) | 3 | 2 |
+| Jarota Jarocin (Poland) | 78 | 2 |
+| Brew Kashima (Saga) (Japan) | 22 | 2 |
+| FA Tartu Kalev (Estonia) | 9 | 2 |
+| Laranja Kyoto (Japan) | 28 | 2 |
+| Hitome Senbonzakura FC feat. S.U.F.T. (Japan) | 5 | 2 |

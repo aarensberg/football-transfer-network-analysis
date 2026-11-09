@@ -113,3 +113,28 @@ Généré par `uv run python -m ftna.roles`. Partition Louvain de A5 ; graphe no
 | z | 0.81 | 0.73 | 0.71 | 0.82 |
 
 Figure : `results/figures/community_graph.pdf`.
+
+## Ponts : betweenness des arêtes
+
+Betweenness exacte des arêtes (graphe orienté, non pondéré, normalisée par n(n − 1)). Top 1 000 : `results/tables/edge_betweenness.csv`.
+
+- Part des arêtes reliant deux communautés : 19.7% de toutes les arêtes, 75.5% des 1 000 arêtes de plus forte betweenness, 65.0% des 100 premières.
+- Betweenness moyenne d'une arête inter-communautés : 2.8 fois celle d'une arête interne.
+
+| from | to | weight | edge_betweenness | inter-communautés |
+|---|---|---|---|---|
+| FK Leotar Trebinje (Bosnia-Herzegovina) | FK Sarajevo Academy U17 (Bosnia-Herzegovina) | 1 | 9.95e-04 |  |
+| Omonia Nicosia (Cyprus) | Eintracht Frankfurt U17 (Germany) | 1 | 8.27e-04 | oui |
+| Shichigahama SC (Japan) | TSV Eintracht Stadtallendorf (Germany) | 1 | 5.58e-04 | oui |
+| Merry (Fukushima) (Japan) | Iwaki Furukawa FC (Japan) | 1 | 5.04e-04 |  |
+| Iwaki Furukawa FC (Japan) | Zuvor: Thespakusatsu Gunma Challengers (Reserves) (Japan) | 1 | 4.79e-04 |  |
+| Warta Poznan (Poland) | MSV Duisburg U17 (Germany) | 1 | 4.71e-04 | oui |
+| FK Borac 1926 Cacak (Serbia) | Racing Strasbourg U19 (France) | 1 | 4.65e-04 | oui |
+| Cefn Druids (Wales) | FC Sheriff Tiraspol (Moldova) | 1 | 4.63e-04 | oui |
+| Tallinn JK Legion (Estonia) | Tallinn JK Legion U19 (Estonia) | 1 | 4.31e-04 |  |
+| SC Westfalia Herne (Germany) | ACR Messina (Italy) | 1 | 4.25e-04 | oui |
+| JK Merkuur-Juunior (Estonia) | FC Flora Tallinn U17 (Estonia) | 3 | 4.08e-04 |  |
+| VfR Neumünster (Germany) | FK Spartaks Jurmala (Latvia) | 1 | 4.04e-04 | oui |
+| HJK Helsinki U19 (Finland) | FC Zürich U17 (Switzerland) | 1 | 3.92e-04 | oui |
+| Kalju FC (Estonia) | Kalju FC U19 (Estonia) | 1 | 3.92e-04 |  |
+| SV Stegersbach (Austria) | AKA Red Bull Salzburg U16 (Austria) | 1 | 3.85e-04 |  |

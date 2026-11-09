@@ -1,4 +1,5 @@
-"""A1. Structure du réseau : degrés, forces, réciprocité, clustering, assortativité.
+"""A1. Structure du réseau : degrés, forces, réciprocité, clustering, assortativité,
+décomposition en k-cœurs (structure cœur-périphérie, cours 4).
 
 Usage : `uv run python -m ftna.structure`
 Sorties : `results/structure.md`, `results/figures/degree_ccdf.{pdf,png}`.
@@ -110,6 +111,43 @@ def clustering_baselines(undirected: nx.Graph) -> dict[str, float]:
     }
 
 
+def core_summary(
+    graph: nx.DiGraph, undirected: nx.Graph
+) -> tuple[list[str], pd.Series]:
+    """k-cœurs du graphe non orienté non pondéré : cœur principal et distribution."""
+    core = pd.Series(nx.core_number(undirected))
+    k_max = int(core.max())
+    main = core[core == k_max].index
+    attrs = pd.DataFrame.from_dict({n: graph.nodes[n] for n in main}, orient="index")
+    countries = attrs.country.replace("", "?").value_counts().head(5)
+    strength = pd.Series(dict(graph.degree(main, weight="weight")))
+    top = ", ".join(attrs.loc[strength.nlargest(8).index, "name"])
+    shares = {k: (core >= k).mean() for k in (10, 20, 40, 60)}
+    country = pd.Series(dict(graph.nodes(data="country"))).replace("", "?")
+    dense = country[core[core >= 60].index].value_counts().head(8)
+    lines = [
+        (
+            f"- Dégénérescence (k maximal) : {k_max} ; cœur principal : {len(main):,} clubs, "
+            f"dont {attrs.youth_or_reserve.mean():.0%} de jeunes/réserves."
+        ),
+        "- Pays du cœur principal : "
+        + ", ".join(f"{c} ({k})" for c, k in countries.items())
+        + ".",
+        f"- Clubs les plus actifs du cœur principal : {top}.",
+        "- Pays du 60-cœur : "
+        + ", ".join(f"{c} ({k})" for c, k in dense.items())
+        + ".",
+        "- Part des clubs dans le k-cœur : "
+        + " ; ".join(f"k ≥ {k} : {v:.1%}" for k, v in shares.items())
+        + ".",
+        (
+            "- Spearman entre nombre de cœur et degré non orienté : "
+            f"{core.corr(pd.Series(dict(undirected.degree())), method='spearman'):.3f}."
+        ),
+    ]
+    return lines, core
+
+
 def main() -> None:
     graph = main_graph()
     n, m = graph.number_of_nodes(), graph.number_of_edges()
@@ -135,6 +173,7 @@ def main() -> None:
         "non orienté": nx.degree_assortativity_coefficient(undirected),
     }
     rank_corr = degrees.corr(method="spearman")
+    core_lines, _ = core_summary(graph, undirected)
 
     plot_ccdf(degrees)
 
@@ -192,6 +231,15 @@ def main() -> None:
         "## Assortativité de degré",
         "",
         *(f"- {k} : {v:.3f}" for k, v in assortativity.items()),
+        "",
+        "## Décomposition en k-cœurs (graphe non orienté, non pondéré)",
+        "",
+        (
+            "Le k-cœur est le plus grand sous-graphe où chaque club a au moins k partenaires "
+            "dans le sous-graphe ; le cœur principal est celui de k maximal."
+        ),
+        "",
+        *core_lines,
     ]
     write_report("structure", lines)
 
