@@ -53,13 +53,13 @@ def plot_ccdf(degrees: pd.DataFrame) -> None:
     setup_style()
     fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.0), sharey=True)
     panels = [
-        (axes[0], "in_degree", "out_degree", "Degré (clubs partenaires distincts)"),
-        (axes[1], "in_strength", "out_strength", "Force (nombre de transferts)"),
+        (axes[0], "in_degree", "out_degree", "Degree (distinct partner clubs)"),
+        (axes[1], "in_strength", "out_strength", "Strength (number of transfers)"),
     ]
     for ax, col_in, col_out, xlabel in panels:
         for col, label in (
-            (col_in, "entrant (arrivées)"),
-            (col_out, "sortant (départs)"),
+            (col_in, "in (arrivals)"),
+            (col_out, "out (departures)"),
         ):
             x, y = ccdf(degrees[col])
             ax.loglog(x, y, label=label)
@@ -67,7 +67,7 @@ def plot_ccdf(degrees: pd.DataFrame) -> None:
     axes[0].set_ylabel("P(X ≥ x)")
     axes[0].legend(loc="lower left")
     fig.suptitle(
-        "Distributions cumulées complémentaires des degrés et des forces", y=1.02
+        "Complementary cumulative distributions of degrees and strengths", y=1.02
     )
     save_figure(fig, "degree_ccdf")
 

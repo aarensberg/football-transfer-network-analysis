@@ -120,8 +120,8 @@ def plot_balance(table: pd.DataFrame, n: int = 10) -> None:
     ax.barh(selected.index, selected.to_numpy(), color=colors, height=0.75)
     ax.axvline(0, color="#52514e", linewidth=0.8)
     ax.grid(axis="y", visible=False)
-    ax.set_xlabel("Transferts internationaux sortants − entrants (2010–2023)")
-    ax.set_title("Exportateurs (bleu) et importateurs (rouge) nets de joueurs")
+    ax.set_xlabel("Outgoing − incoming international transfers (2010–2023)")
+    ax.set_title("Net exporters (blue) and net importers (red) of players")
     ax.tick_params(axis="y", labelsize=7)
     save_figure(fig, "country_balance")
 

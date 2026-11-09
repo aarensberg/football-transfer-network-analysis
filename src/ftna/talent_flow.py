@@ -432,6 +432,10 @@ def comparables(detail: dict[str, pd.DataFrame], players: pd.DataFrame) -> pd.Da
 # ---------------------------------------------------------------- figures
 
 
+# Noms anglais des académies, pour la figure du rapport uniquement.
+ACADEMY_EN = {"Barcelone": "Barcelona"}
+
+
 def plot_capture(table: pd.DataFrame) -> None:
     """Ratio de capture par académie avec intervalle bootstrap ; PSG mis en avant."""
     setup_style()
@@ -446,20 +450,19 @@ def plot_capture(table: pd.DataFrame) -> None:
     ax.text(
         1.03,
         len(t) - 0.6,
-        "indemnités de départ\n= valeur ultérieure",
+        "departure fees\n= later value",
         fontsize=7,
         color=TEXT_SECONDARY,
         va="top",
     )
-    ax.set_yticks(y, t.index)
+    ax.set_yticks(y, [ACADEMY_EN.get(name, name) for name in t.index])
     ax.grid(axis="y", visible=False)
     ax.set_xlabel(
-        "ratio de capture = Σ indemnités de départ / Σ plus grosses indemnités "
-        "ultérieures (IC 95 % bootstrap)"
+        "capture ratio = Σ departure fees / Σ highest later fees (95% bootstrap CI)"
     )
     ax.set_title(
-        f"Valeur captée par les académies (joueurs entrés {ENTRY_YEARS[0]}–"
-        f"{ENTRY_YEARS[1]}, partis ≤ {LAST_EVALUATED_DEPARTURE})"
+        f"Value captured by academies (players joining {ENTRY_YEARS[0]}–"
+        f"{ENTRY_YEARS[1]}, leaving ≤ {LAST_EVALUATED_DEPARTURE})"
     )
     save_figure(fig, "academy_value_capture")
 
@@ -479,15 +482,15 @@ def plot_springboards(rates: pd.DataFrame, clubs: Clubs, n: int = 20) -> None:
     ax.set_yticks(np.arange(len(t)), [clubs.name(c) for c in t.index])
     ax.grid(axis="y", visible=False)
     ax.set_xlabel(
-        f"part des sorties qui atteignent l'élite (top {ELITE_TOP_N}) en ≤ 2 sauts "
-        f"et ≤ {HORIZON} ans (IC 95 % Wilson)"
+        f"share of exits reaching the elite (top {ELITE_TOP_N}) in ≤ 2 hops "
+        f"and ≤ {HORIZON} years (95% Wilson CI)"
     )
     ax.set_title(
-        f"Clubs tremplins vers l'élite (sorties {EXIT_YEARS[0]}–{EXIT_YEARS[1]})"
+        f"Springboard clubs to the elite (exits {EXIT_YEARS[0]}–{EXIT_YEARS[1]})"
     )
     handles = [
-        plt.Line2D([], [], marker="o", color=SERIES[0], label="club français"),
-        plt.Line2D([], [], marker="o", color=NEUTRAL, label="autre club"),
+        plt.Line2D([], [], marker="o", color=SERIES[0], label="French club"),
+        plt.Line2D([], [], marker="o", color=NEUTRAL, label="other club"),
     ]
     if french:
         ax.legend(handles=handles, loc="lower right", fontsize=7)

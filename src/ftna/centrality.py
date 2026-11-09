@@ -296,7 +296,7 @@ def plot_pagerank_map(table: pd.DataFrame) -> None:
         alpha=0.35,
         color=SERIES[1],
         linewidths=0,
-        label="jeunes / réserves",
+        label="youth / reserve teams",
     )
     ax.set_xscale("log")
     ax.set_yscale("log")
@@ -315,9 +315,9 @@ def plot_pagerank_map(table: pd.DataFrame) -> None:
         ]
     ).drop_duplicates(subset="name")
     annotate_without_overlap(ax, labelled)
-    ax.set_xlabel("PageRank inverse (fournisseur de joueurs)")
-    ax.set_ylabel("PageRank (destination de joueurs)")
-    ax.set_title("Destinations et fournisseurs du réseau des transferts")
+    ax.set_xlabel("Reverse PageRank (supplier of players)")
+    ax.set_ylabel("PageRank (destination of players)")
+    ax.set_title("Destinations and suppliers in the transfer network")
     ax.legend(loc="upper left", markerscale=3)
     save_figure(fig, "pagerank_map")
 

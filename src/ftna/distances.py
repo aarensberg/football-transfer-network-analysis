@@ -104,18 +104,18 @@ def plot_histograms(directed: DistanceResult, undirected: DistanceResult) -> Non
     fig, ax = plt.subplots(figsize=(6.0, 3.0))
     width = 0.4
     for offset, result, label in (
-        (-width / 2, directed, "orienté (CFC géante)"),
-        (width / 2, undirected, "non orienté (CFF géante)"),
+        (-width / 2, directed, "directed (largest SCC)"),
+        (width / 2, undirected, "undirected (largest WCC)"),
     ):
         d = np.arange(1, len(result.histogram))
         share = result.histogram[1:] / result.histogram.sum()
         ax.bar(d + offset, share, width=width * 0.9, label=label)
-    ax.set_xlabel("Distance (nombre de transferts successifs)")
-    ax.set_ylabel("Part des couples de clubs")
+    ax.set_xlabel("Distance (number of successive transfers)")
+    ax.set_ylabel("Share of club pairs")
     ax.set_xticks(range(1, max(len(directed.histogram), len(undirected.histogram))))
     ax.grid(axis="x", visible=False)
     ax.legend()
-    ax.set_title("Distribution des distances entre clubs")
+    ax.set_title("Distribution of distances between clubs")
     save_figure(fig, "distance_distribution")
 
 

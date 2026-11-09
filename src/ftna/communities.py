@@ -284,10 +284,10 @@ def plot_composition(
                 color="white" if value > 0.55 else TEXT_PRIMARY,
             )
     fig.colorbar(
-        image, ax=ax, fraction=0.03, pad=0.02, label="part des clubs de la communauté"
+        image, ax=ax, fraction=0.03, pad=0.02, label="share of the community's clubs"
     )
     ax.set_title(
-        f"Composition par pays des {TOP_COMMUNITIES} plus grandes communautés (Louvain)"
+        f"Country composition of the {TOP_COMMUNITIES} largest communities (Louvain)"
     )
     save_figure(fig, "community_countries")
 

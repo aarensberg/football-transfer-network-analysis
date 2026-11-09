@@ -173,9 +173,9 @@ def plot_community_graph(
             color=TEXT_PRIMARY,
         )
     ax.set_title(
-        f"Flux entre les {SHOWN_COMMUNITIES} plus grandes communautés\n"
-        f"({TOP_LINKS} liens les plus forts + les {LINKS_PER_COMMUNITY} plus forts "
-        "de chaque communauté)"
+        f"Flows between the {SHOWN_COMMUNITIES} largest communities\n"
+        f"({TOP_LINKS} strongest links + the {LINKS_PER_COMMUNITY} strongest "
+        "of each community)"
     )
     save_figure(fig, "community_graph")
 

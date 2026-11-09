@@ -62,6 +62,14 @@ def summary(frame: pd.DataFrame, total: int) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+# Libellés anglais des catégories, pour la figure du rapport uniquement.
+CATEGORY_EN = {
+    "prêt": "loan",
+    "définitif payé": "permanent, paid",
+    "définitif sans montant": "permanent, no fee",
+}
+
+
 def plot_ratio(frame: pd.DataFrame) -> None:
     setup_style()
     fig, ax = plt.subplots(figsize=(6.2, 3.2))
@@ -77,14 +85,14 @@ def plot_ratio(frame: pd.DataFrame) -> None:
             histtype="step",
             linewidth=2,
             color=color,
-            label=f"{category} (n = {len(values):,})",
+            label=f"{CATEGORY_EN[category]} (n = {len(values):,})",
         )
     ax.axvline(0, color=NEUTRAL, linewidth=1, linestyle="--")
     ax.set_xlabel(
-        "log10(valeur du club acheteur / valeur du club vendeur), saison du transfert"
+        "log10(buying club value / selling club value), season of the transfer"
     )
-    ax.set_ylabel("densité")
-    ax.set_title("Sens des transferts dans la hiérarchie économique des clubs")
+    ax.set_ylabel("density")
+    ax.set_title("Direction of transfers in the economic hierarchy of clubs")
     ax.legend(loc="upper left", fontsize=7)
     save_figure(fig, "value_ratio")
 
