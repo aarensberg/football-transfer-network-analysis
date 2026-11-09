@@ -7,6 +7,9 @@ Mesures (graphe orienté vendeur → acheteur) :
 - closeness entrante/sortante exacte sur la CFC géante ;
 - betweenness exacte (non pondérée), parallélisée par paquets de sources.
 
+Validation externe : valeur marchande actuelle (`clubs.current_mv`) et valeur marchande
+moyenne sur les saisons de la fenêtre (`club_league`, cohérente avec la période du graphe).
+
 Usage : `uv run python -m ftna.centrality` (`--plot-only` : figure seule)
 Sorties : `results/centrality.md`, `results/tables/centrality.csv`,
 `results/figures/pagerank_map.{pdf,png}`.
@@ -33,7 +36,9 @@ from ftna.common import (
     setup_style,
     write_report,
 )
+from ftna.data import load_raw
 from ftna.distances import all_distances
+from ftna.graph import GraphConfig
 
 PAGERANK_ALPHA = 0.85
 TOP = 20
@@ -117,6 +122,19 @@ def compute_centralities(
     table["fees_paid"] = fees.groupby("v").fee.sum().reindex(table.index, fill_value=0)
     table.index.name = "club_id"
     return table
+
+
+def window_market_value(config: GraphConfig | None = None) -> pd.Series:
+    """Valeur marchande moyenne de chaque club sur les saisons de la fenêtre du graphe.
+
+    `club_league` peut contenir deux lignes pour un même couple (club, saison) : on garde
+    le maximum (comme en A9), puis on moyenne les saisons de valeur strictement positive.
+    """
+    config = config or GraphConfig()
+    cl = load_raw(players_columns=["id"]).club_league
+    cl = cl[cl.season.between(config.start_year, config.end_year)]
+    per_season = cl.groupby(["club_id", "season"]).market_value.max()
+    return per_season[per_season > 0].groupby("club_id").mean()
 
 
 MEASURES = [
@@ -235,6 +253,7 @@ def main() -> None:
         return
     graph = main_graph()
     table = compute_centralities(graph, exact=True)
+    table["window_mv"] = window_market_value().reindex(table.index)
     save_table(table.reset_index(), "centrality")
     plot_pagerank_map(table)
 
@@ -247,11 +266,16 @@ def main() -> None:
     corr = table[MEASURES].corr(method="spearman")
     corr.insert(0, "mesure", corr.index)
     valued = table[table.current_mv > 0]
+    window_valued = table[table.window_mv > 0]
     mv_corr = pd.DataFrame(
         {
             "mesure": MEASURES,
             "Spearman avec current_mv": [
                 valued[m].corr(valued.current_mv, method="spearman") for m in MEASURES
+            ],
+            "Spearman avec valeur moyenne 2010–2023": [
+                window_valued[m].corr(window_valued.window_mv, method="spearman")
+                for m in MEASURES
             ],
             "Spearman avec montants payés": [
                 table[m].corr(table.fees_paid, method="spearman") for m in MEASURES
@@ -309,7 +333,12 @@ def main() -> None:
         "",
         "## Validation externe",
         "",
-        f"Clubs avec valeur marchande actuelle > 0 : {len(valued):,}.",
+        (
+            f"Clubs avec valeur marchande actuelle > 0 : {len(valued):,} ; avec valeur "
+            f"moyenne 2010–2023 > 0 (`club_league`, saisons valorisées) : {len(window_valued):,}. "
+            "La valeur moyenne sur la fenêtre est la référence la plus cohérente avec la "
+            "période du graphe ; la valeur actuelle reflète la situation postérieure à 2023."
+        ),
         "",
         md_table(mv_corr, floatfmt=".2f"),
         "",

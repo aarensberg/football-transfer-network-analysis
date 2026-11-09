@@ -71,14 +71,35 @@ def plot_ccdf(degrees: pd.DataFrame) -> None:
     save_figure(fig, "degree_ccdf")
 
 
+def configuration_graph(undirected: nx.Graph, seed: int = SEED) -> nx.Graph:
+    """Modèle de configuration non orienté (mêmes degrés), simplifié : multi-arêtes
+    fusionnées et boucles retirées (quelques degrés diminuent légèrement)."""
+    config = nx.Graph(
+        nx.configuration_model([d for _, d in undirected.degree()], seed=seed)
+    )
+    config.remove_edges_from(nx.selfloop_edges(config))
+    return config
+
+
+def directed_configuration_graph(graph: nx.DiGraph, seed: int = SEED) -> nx.DiGraph:
+    """Modèle de configuration orienté (mêmes degrés entrants et sortants), simplifié."""
+    nodes = list(graph)
+    config = nx.DiGraph(
+        nx.directed_configuration_model(
+            [graph.in_degree(n) for n in nodes],
+            [graph.out_degree(n) for n in nodes],
+            seed=seed,
+        )
+    )
+    config.remove_edges_from(nx.selfloop_edges(config))
+    return config
+
+
 def clustering_baselines(undirected: nx.Graph) -> dict[str, float]:
     """Clustering du graphe et de deux références : G(n, m) (espérance = densité) et un
     modèle de configuration (mêmes degrés, multi-arêtes et boucles retirées)."""
     n, m = undirected.number_of_nodes(), undirected.number_of_edges()
-    config = nx.Graph(
-        nx.configuration_model([d for _, d in undirected.degree()], seed=SEED)
-    )
-    config.remove_edges_from(nx.selfloop_edges(config))
+    config = configuration_graph(undirected)
     return {
         "observed_avg": nx.average_clustering(undirected),
         "observed_transitivity": nx.transitivity(undirected),

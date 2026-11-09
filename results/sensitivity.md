@@ -4,20 +4,20 @@ Généré par `uv run python -m ftna.sensitivity`. Betweenness approchée (k = 1
 
 ## Structure
 
-| variante | nœuds | arêtes | transferts | réciprocité | clustering moyen | CFF | part CFC géante | diamètre (CFC) | rayon (CFC) | distance moyenne | communautés | modularité | NMI avec le pays |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| référence | 12,009 | 450,217 | 920,304 | 0.412 | 0.336 | 6 | 0.966 | 12 | 6 | 3.652 | 35 | 0.836 | 0.849 |
-| sans jeunes/réserves | 10,442 | 389,038 | 761,345 | 0.442 | 0.349 | 16 | 0.971 | 10 | 5 | 3.610 | 45 | 0.830 | 0.835 |
-| 2010–2016 | 10,973 | 232,181 | 404,390 | 0.364 | 0.312 | 2 | 0.913 | 15 | 10 | 4.158 | 29 | 0.835 | 0.759 |
-| 2017–2023 | 11,380 | 290,215 | 515,914 | 0.362 | 0.310 | 7 | 0.945 | 13 | 7 | 4.062 | 39 | 0.837 | 0.859 |
-| sans type Unknown | 11,784 | 377,886 | 674,911 | 0.378 | 0.308 | 8 | 0.945 | 13 | 7 | 3.772 | 32 | 0.817 | 0.821 |
-| avec End of loan | 12,009 | 471,085 | 980,174 | 0.480 | 0.336 | 6 | 0.967 | 12 | 6 | 3.620 | 34 | 0.837 | 0.845 |
+| variante | nœuds | arêtes | transferts | réciprocité | clustering moyen | assortativité (vendeur→acheteur) | CFF | part CFC géante | diamètre (CFC) | rayon (CFC) | distance moyenne | communautés | modularité | NMI avec le pays |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| référence | 12,009 | 450,217 | 920,304 | 0.412 | 0.336 | 0.490 | 6 | 0.966 | 12 | 6 | 3.652 | 35 | 0.836 | 0.849 |
+| sans jeunes/réserves | 10,357 | 388,956 | 761,425 | 0.443 | 0.351 | 0.502 | 4 | 0.973 | 9 | 5 | 3.605 | 31 | 0.829 | 0.834 |
+| 2010–2016 | 10,973 | 232,181 | 404,390 | 0.364 | 0.312 | 0.493 | 2 | 0.913 | 15 | 10 | 4.158 | 29 | 0.835 | 0.759 |
+| 2017–2023 | 11,380 | 290,215 | 515,914 | 0.362 | 0.310 | 0.511 | 7 | 0.945 | 13 | 7 | 4.062 | 39 | 0.837 | 0.859 |
+| sans type Unknown | 11,784 | 377,886 | 674,911 | 0.378 | 0.308 | 0.476 | 8 | 0.945 | 13 | 7 | 3.772 | 32 | 0.817 | 0.821 |
+| avec End of loan | 12,009 | 471,085 | 980,174 | 0.480 | 0.336 | 0.518 | 6 | 0.967 | 12 | 6 | 3.620 | 34 | 0.837 | 0.845 |
 
 ## Stabilité des centralités (Spearman sur les clubs communs)
 
 | variante | clubs communs | ρ out_strength | ρ in_strength | ρ pagerank | ρ reverse_pagerank | ρ out_closeness | ρ betweenness | NMI communautés |
 |---|---|---|---|---|---|---|---|---|
-| sans jeunes/réserves | 10,442 | 0.993 | 0.989 | 0.986 | 0.966 | 0.997 | 0.927 | 0.973 |
+| sans jeunes/réserves | 10,357 | 0.998 | 0.989 | 0.985 | 0.972 | 0.998 | 0.926 | 0.953 |
 | 2010–2016 | 10,973 | 0.868 | 0.882 | 0.821 | 0.853 | 0.908 | 0.781 | 0.920 |
 | 2017–2023 | 11,380 | 0.925 | 0.920 | 0.910 | 0.906 | 0.940 | 0.830 | 0.965 |
 | sans type Unknown | 11,784 | 0.892 | 0.901 | 0.911 | 0.907 | 0.973 | 0.890 | 0.951 |
@@ -27,7 +27,7 @@ Généré par `uv run python -m ftna.sensitivity`. Betweenness approchée (k = 1
 
 | variante | top50 out_strength | top50 in_strength | top50 pagerank | top50 reverse_pagerank | top50 out_closeness | top50 betweenness |
 |---|---|---|---|---|---|---|
-| sans jeunes/réserves | 0.98 | 0.78 | 0.70 | 0.60 | 0.94 | 0.58 |
+| sans jeunes/réserves | 0.96 | 0.78 | 0.70 | 0.66 | 0.94 | 0.56 |
 | 2010–2016 | 0.72 | 0.70 | 0.24 | 0.64 | 0.54 | 0.44 |
 | 2017–2023 | 0.76 | 0.46 | 0.54 | 0.62 | 0.64 | 0.46 |
 | sans type Unknown | 0.86 | 0.76 | 0.62 | 0.42 | 0.74 | 0.52 |
@@ -37,16 +37,16 @@ Généré par `uv run python -m ftna.sensitivity`. Betweenness approchée (k = 1
 
 | reverse_pagerank | pagerank | betweenness | out_closeness |
 |---|---|---|---|
-| Genoa CFC | FSV Duisburg | BSV Schwarz-Weiß Rehden | HNK Hajduk Split |
-| Parma Calcio 1913 | SC Ostbahn XI | TuS Koblenz | Udinese Calcio |
-| Juventus FC | Pallokerho-35 | TSG Neustrelitz | HNK Rijeka |
-| Inter Milan | SV Zeilsheim | Mosta FC | NK Istra 1961 |
-| Chelsea FC | FC Kiffen | NK Hrvatski Dragovoljac | Red Star Belgrade |
-| Udinese Calcio | Tampere United | KFC Uerdingen 05 | GNK Dinamo Zagreb |
-| AS Roma | Hilal 1994 Bergheim | FC International Leipzig | Parma Calcio 1913 |
-| Atalanta BC | Hamm United FC | FK Spartaks Jurmala | Genoa CFC |
-| SL Benfica | SV Hönnepel-Niedermörmter | SV 1910 Neuhof | Olympiacos Piraeus |
-| UC Sampdoria | Arminia Hannover | Parma Calcio 1913 | CSKA-Sofia |
+| Genoa CFC | FSV Duisburg | KFC Uerdingen 05 | HNK Hajduk Split |
+| Parma Calcio 1913 | SC Ostbahn XI | SV 1910 Neuhof | Udinese Calcio |
+| Juventus FC | Pallokerho-35 | BSV Schwarz-Weiß Rehden | HNK Rijeka |
+| Inter Milan | SV Zeilsheim | Germania Halberstadt | NK Istra 1961 |
+| Chelsea FC | FC Kiffen | Mosta FC | Red Star Belgrade |
+| Udinese Calcio | Ganzhou Ruishi | FC International Leipzig | GNK Dinamo Zagreb |
+| Atalanta BC | Tampere United | TSV Eintracht Stadtallendorf | Parma Calcio 1913 |
+| AS Roma | Hilal 1994 Bergheim | SK Austria Klagenfurt | Genoa CFC |
+| SL Benfica | Hamm United FC | Vejle Boldklub | Olympiacos Piraeus |
+| UC Sampdoria | SV Hönnepel-Niedermörmter | SV Kapfenberg | CSKA-Sofia |
 
 ## Top 10 : 2010–2016
 

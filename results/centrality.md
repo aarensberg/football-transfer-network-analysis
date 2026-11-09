@@ -274,18 +274,18 @@ Pays du top 100 : Italy 44, England 11, Brazil 11, Türkiye 6, Portugal 4, Greec
 
 ## Validation externe
 
-Clubs avec valeur marchande actuelle > 0 : 4,410.
+Clubs avec valeur marchande actuelle > 0 : 4,410 ; avec valeur moyenne 2010–2023 > 0 (`club_league`, saisons valorisées) : 5,182. La valeur moyenne sur la fenêtre est la référence la plus cohérente avec la période du graphe ; la valeur actuelle reflète la situation postérieure à 2023.
 
-| mesure | Spearman avec current_mv | Spearman avec montants payés |
-|---|---|---|
-| in_degree | 0.53 | 0.49 |
-| out_degree | 0.56 | 0.55 |
-| in_strength | 0.48 | 0.49 |
-| out_strength | 0.54 | 0.54 |
-| pagerank | 0.03 | 0.18 |
-| reverse_pagerank | 0.47 | 0.47 |
-| in_closeness | 0.53 | 0.50 |
-| out_closeness | 0.59 | 0.56 |
-| betweenness | 0.36 | 0.44 |
+| mesure | Spearman avec current_mv | Spearman avec valeur moyenne 2010–2023 | Spearman avec montants payés |
+|---|---|---|---|
+| in_degree | 0.53 | 0.59 | 0.49 |
+| out_degree | 0.56 | 0.66 | 0.55 |
+| in_strength | 0.48 | 0.58 | 0.49 |
+| out_strength | 0.54 | 0.63 | 0.54 |
+| pagerank | 0.03 | 0.08 | 0.18 |
+| reverse_pagerank | 0.47 | 0.53 | 0.47 |
+| in_closeness | 0.53 | 0.61 | 0.50 |
+| out_closeness | 0.59 | 0.72 | 0.56 |
+| betweenness | 0.36 | 0.43 | 0.44 |
 
 Figure : `results/figures/pagerank_map.pdf`.

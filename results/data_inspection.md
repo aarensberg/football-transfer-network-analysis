@@ -101,7 +101,7 @@ Trois plus gros montants :
 - Fichier trié par joueur puis année : True.
 - Chaîne de carrière cohérente (club de départ = club d'arrivée précédent) : 74.0 % (écarts dus aux prêts, à l'ordre intra-annuel et aux lacunes).
 - Joueurs distincts dans les transferts : 793,947 ; absents de `players.csv` : 9,079 ; `players.csv` : 858,947 lignes.
-- Clubs au nom de jeune/réserve (heuristique) : 1,597 ; transferts réels les impliquant : 388,517 (14.0 % des transferts entre clubs réels).
+- Clubs au nom de jeune/réserve (heuristique) : 1,684 ; transferts réels les impliquant : 393,571 (14.2 % des transferts entre clubs réels).
 - `club_league` : 3,215 couples (club, saison) en double (Apertura/Clausura, deux divisions la même saison) → une jointure sur (club, saison) multiplie les lignes.
 - `club_league` : 323 clubs absents de `clubs.csv`.
 - `leagues` : 475 ligues, 111 pays.

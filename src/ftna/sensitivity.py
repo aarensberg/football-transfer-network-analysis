@@ -6,13 +6,14 @@ Variantes comparées au graphe de référence (2010–2023, sans End of loan, je
 - sans transferts de type « Unknown » (A8) ;
 - avec les retours de prêt « End of loan » (A8, décision 4).
 
-Pour chaque variante : structure (taille, réciprocité, clustering, composantes, diamètre
+Pour chaque variante : structure (taille, réciprocité, clustering, assortativité,
+composantes, diamètre
 et rayon exacts), stabilité des centralités (Spearman et recouvrement des tops sur les
 clubs communs) et des communautés (NMI avec la référence et avec le pays).
 La betweenness est approchée (k = 1000 sources) pour toutes les variantes, référence
 comprise, afin de comparer des quantités homogènes.
 
-Usage : `uv run python -m ftna.sensitivity` (~20 min)
+Usage : `uv run python -m ftna.sensitivity` (~7 min)
 Sorties : `results/sensitivity.md`, `results/tables/sensitivity_*.csv`.
 """
 
@@ -85,8 +86,9 @@ def analyse(name: str, graph: nx.DiGraph) -> VariantResult:
         "arêtes": graph.number_of_edges(),
         "transferts": int(graph.size(weight="weight")),
         "réciprocité": nx.reciprocity(graph),
-        "clustering moyen": nx.average_clustering(
-            undirected.to_undirected(as_view=True)
+        "clustering moyen": nx.average_clustering(undirected),
+        "assortativité (vendeur→acheteur)": nx.degree_assortativity_coefficient(
+            graph, x="out", y="in"
         ),
         "CFF": nx.number_weakly_connected_components(graph),
         "part CFC géante": core.number_of_nodes() / graph.number_of_nodes(),

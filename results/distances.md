@@ -8,7 +8,20 @@ Généré par `uv run python -m ftna.distances`. Distances en nombre de sauts, c
 | orienté, CFC géante (excentricité entrante) | 11,598 | 12 | 6 | 3.65 | 4 |
 | non orienté, CFF géante | 11,999 | 10 | 5 | 3.28 | 3 |
 
-Référence aléatoire (non orienté, même n = 11,999 et degré moyen 59.6) : ln(n)/ln(<k>) ≈ 2.30.
+Référence aléatoire (non orienté, même n = 11,999 et degré moyen 59.6) : ln(n)/ln(<k>) ≈ 2.30 (formule d'Erdős–Rényi, degrés homogènes).
+
+## Référence petit monde : modèles de configuration
+
+Mêmes degrés (entrants et sortants en orienté) que le graphe observé, graine 42, multi-arêtes fusionnées et boucles retirées ; distances exactes sur la composante géante (fortement connexe en orienté).
+
+| graphe | nœuds | arêtes | distance moyenne | diamètre | rayon | clustering moyen |
+|---|---|---|---|---|---|---|
+| orienté, CFC géante observée | 11,598 | 448,881 | 3.652 | 12 | 6 |  |
+| orienté, modèle de configuration (CFC géante) | 11,598 | 446,624 | 2.953 | 6 | 4 |  |
+| non orienté, CFF géante observée | 11,999 | 357,562 | 3.281 | 10 | 5 | 0.336 |
+| non orienté, modèle de configuration (composante géante) | 11,999 | 354,765 | 2.736 | 6 | 4 | 0.015 |
+
+Coefficient petit monde σ = (C / C_config) / (L / L_config) = 18.7 (non orienté ; σ > 1 : petit monde).
 
 ## Distribution des distances
 

@@ -20,7 +20,7 @@ STEPS = (
 
 
 def main() -> None:
-    """Exécute tout le pipeline : `uv run ftna` (~30 min, dont ~20 pour la sensibilité)."""
+    """Exécute tout le pipeline : `uv run ftna` (~18 min, dont ~7 pour la sensibilité)."""
     for step in STEPS:
         start = time.perf_counter()
         print(f"=== ftna.{step}", flush=True)

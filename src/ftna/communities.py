@@ -3,7 +3,8 @@
 Méthode principale : Louvain (maximisation de la modularité) sur le graphe non orienté
 pondéré, où w(u, v) = w(u→v) + w(v→u) (intensité totale d'échange entre deux clubs).
 Robustesse : stabilité entre graines, effet de la résolution, Leiden (modularité),
-Louvain orienté (modularité orientée).
+Louvain orienté (modularité orientée). Significativité : Louvain sur des graphes
+aléatoires du modèle de configuration pondéré (forces des clubs préservées).
 
 Usage : `uv run python -m ftna.communities`
 Sorties : `results/communities.md`, `results/tables/communities.csv`,
@@ -29,6 +30,7 @@ from ftna.common import (
 )
 
 N_SEEDS = 10
+N_NULL = 3  # réalisations du modèle nul
 RESOLUTIONS = (0.5, 1.0, 2.0, 4.0)
 TOP_COMMUNITIES = 15
 
@@ -43,6 +45,51 @@ def undirected_weighted(graph: nx.DiGraph) -> nx.Graph:
         else:
             undirected.add_edge(u, v, weight=w)
     return undirected
+
+
+def strength_null_model(undirected: nx.Graph, seed: int) -> nx.Graph:
+    """Modèle de configuration pondéré : chaque club reçoit autant de demi-transferts que
+    sa force, appariés au hasard ; multiplicités = poids, boucles retirées.
+
+    C'est le modèle nul de la modularité (poids attendu k_i k_j / 2m) : il conserve
+    exactement les forces (aux boucles près) mais détruit toute structure de groupe.
+    """
+    rng = np.random.default_rng(seed)
+    nodes = np.array(list(undirected))
+    strength = np.array([undirected.degree(n, weight="weight") for n in nodes])
+    stubs = np.repeat(nodes, strength.astype(np.int64))
+    rng.shuffle(stubs)
+    u, v = stubs[0::2], stubs[1::2]  # la somme des forces est paire (= 2 × poids total)
+    keep = u != v
+    pairs = pd.DataFrame(
+        {"u": np.minimum(u[keep], v[keep]), "v": np.maximum(u[keep], v[keep])}
+    ).value_counts()
+    null = nx.Graph()
+    null.add_nodes_from(int(n) for n in nodes)
+    null.add_weighted_edges_from(
+        (int(a), int(b), int(w)) for (a, b), w in pairs.items()
+    )
+    return null
+
+
+def null_model_test(undirected: nx.Graph, observed: float) -> pd.DataFrame:
+    """Modularité de Louvain sur `N_NULL` graphes du modèle nul, comparée à l'observée."""
+    rows = []
+    for seed in range(N_NULL):
+        null = strength_null_model(undirected, seed=SEED + seed)
+        comms = nx.community.louvain_communities(null, weight="weight", seed=SEED)
+        rows.append(
+            {
+                "réalisation": seed + 1,
+                "arêtes distinctes": null.number_of_edges(),
+                "communautés": len(comms),
+                "modularité": nx.community.modularity(null, comms),
+            }
+        )
+    table = pd.DataFrame(rows)
+    std = table.modularité.std()
+    table.attrs["z"] = (observed - table.modularité.mean()) / std if std else np.inf
+    return table
 
 
 def labels_of(communities: list[set[int]], nodes: list[int]) -> np.ndarray:
@@ -267,40 +314,40 @@ def main() -> None:
     )
     directed = nx.community.louvain_communities(graph, weight="weight", seed=SEED)
     country_partition = [set(np.array(nodes)[country == c]) for c in np.unique(country)]
+
+    def compare_row(name: str, partition: list[set[int]], ref_nmi: float) -> dict:
+        """Modularités non orientée et orientée d'une partition, NMI."""
+        partition_labels = labels_of(partition, nodes)
+        return {
+            "partition": name,
+            "communautés": len(partition),
+            "modularité (non orientée)": nx.community.modularity(undirected, partition),
+            "modularité orientée": nx.community.modularity(graph, partition),
+            "NMI avec référence": ref_nmi,
+            "NMI avec le pays": nmi(partition_labels, country),
+        }
+
     comparisons = pd.DataFrame(
         [
-            {
-                "partition": "Louvain non orienté (référence)",
-                "communautés": len(communities),
-                "modularité": modularity,
-                "NMI avec référence": 1.0,
-                "NMI avec le pays": nmi(labels.to_numpy(), country),
-            },
-            {
-                "partition": "Leiden (modularité)",
-                "communautés": len(leiden),
-                "modularité": nx.community.modularity(undirected, leiden),
-                "NMI avec référence": nmi(labels_of(leiden, nodes), labels.to_numpy()),
-                "NMI avec le pays": nmi(labels_of(leiden, nodes), country),
-            },
-            {
-                "partition": "Louvain orienté (modularité orientée)",
-                "communautés": len(directed),
-                "modularité": nx.community.modularity(undirected, directed),
-                "NMI avec référence": nmi(
-                    labels_of(directed, nodes), labels.to_numpy()
-                ),
-                "NMI avec le pays": nmi(labels_of(directed, nodes), country),
-            },
-            {
-                "partition": "Pays (partition de référence externe)",
-                "communautés": len(country_partition),
-                "modularité": nx.community.modularity(undirected, country_partition),
-                "NMI avec référence": nmi(country, labels.to_numpy()),
-                "NMI avec le pays": 1.0,
-            },
+            compare_row("Louvain non orienté (référence)", communities, 1.0),
+            compare_row(
+                "Leiden (modularité)",
+                leiden,
+                nmi(labels_of(leiden, nodes), labels.to_numpy()),
+            ),
+            compare_row(
+                "Louvain orienté (optimise la modularité orientée)",
+                directed,
+                nmi(labels_of(directed, nodes), labels.to_numpy()),
+            ),
+            compare_row(
+                "Pays (partition de référence externe)",
+                country_partition,
+                nmi(country, labels.to_numpy()),
+            ),
         ]
     )
+    null = null_model_test(undirected, modularity)
     sizes = profile.clubs.sort_values(ascending=False)
     purity = (
         profile["part du pays dominant"] * profile.clubs
@@ -338,6 +385,27 @@ def main() -> None:
         "",
         md_table(comparisons, floatfmt=".3f"),
         "",
+        (
+            "Modularité non orientée : graphe w(u,v) = w(u→v) + w(v→u) ; modularité "
+            "orientée : formule de Leicht et Newman sur le graphe orienté pondéré."
+        ),
+        "",
+        "## Significativité : modèle nul",
+        "",
+        (
+            f"Louvain (graine {SEED}) sur {N_NULL} graphes du modèle de configuration "
+            "pondéré (forces des clubs préservées, appariement aléatoire des "
+            "transferts, boucles retirées)."
+        ),
+        "",
+        md_table(null, floatfmt=".3f"),
+        "",
+        (
+            f"- Modularité observée {modularity:.3f} contre "
+            f"{null.modularité.mean():.3f} ± {null.modularité.std():.3f} sous le "
+            f"modèle nul (score z ≈ {null.attrs['z']:.0f})."
+        ),
+        "",
         f"## Stabilité de Louvain ({N_SEEDS} graines)",
         "",
         md_table(stability(undirected, nodes), floatfmt=".3f"),
@@ -345,6 +413,14 @@ def main() -> None:
         "## Effet de la résolution",
         "",
         md_table(resolution_scan(undirected, nodes, country), floatfmt=".3f"),
+        "",
+        (
+            "Lecture : la colonne « modularité (γ = 1) » évalue chaque partition avec la "
+            "modularité standard, que Louvain à γ = 1 optimise directement ; son maximum "
+            "à γ = 1 est donc attendu et ne justifie pas à lui seul ce choix. La NMI "
+            "croît mécaniquement avec le nombre de communautés : sa hausse avec γ ne "
+            "prouve pas que les communautés fines sont « plus nationales »."
+        ),
     ]
     write_report("communities", lines)
 

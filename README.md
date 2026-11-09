@@ -16,7 +16,7 @@ Repository: <https://github.com/aarensberg/football-transfer-network-analysis>
 
 ## Graph model
 
-- **Nodes**: football clubs described in `clubs.csv` that take part in at least one retained transfer. Attributes: `name`, `country` and `league` (league of the most recent season up to 2023 in `club_league.csv`), `current_mv`, `youth_or_reserve` (name-based heuristic flag).
+- **Nodes**: football clubs described in `clubs.csv` that take part in at least one retained transfer. Attributes: `name`, `country` and `league` (league of the most recent season up to 2023 in `club_league.csv`), `current_mv`, `youth_or_reserve` (heuristic flag based on the club and league names, e.g. `U19`, `Under 17`, `Primavera`, a trailing `B`/`II`/`2`; manually checked to exclude first teams such as Boca Juniors or Willem II, see `src/ftna/data.py`).
 - **Edges**: an edge u → v exists if at least one player moved from club u (departure) to club v (arrival). Attributes: `weight` (number of transfers), `total_fee` (EUR, mostly 0), `n_permanent`, `n_loan`, `n_unknown`.
 - **Graph type**: directed, simple, weighted, without self-loops (`networkx.DiGraph`). Transfer fees are not used as weights because 98% of them are 0 (free transfer or undisclosed fee).
 - **Filters**: seasons 2010–2023; `End of loan` rows excluded (mechanical return of a loan); placeholder clubs excluded (`-5` retired, `75` unknown, `515` without club); both clubs must be described in `clubs.csv`; self-loops removed.
@@ -55,7 +55,7 @@ Software: Python 3.14, pandas, NetworkX 3.7, SciPy (sparse shortest paths, requi
 
 ## Running the analysis
 
-Run the whole pipeline (about 30 minutes, 20 of which for the sensitivity analysis):
+Run the whole pipeline (about 18 minutes, 7 of which for the sensitivity analysis):
 
 ```bash
 uv run ftna
@@ -69,9 +69,9 @@ Or run each step separately, in this order (each step writes a Markdown report i
 | Graph | `uv run python -m ftna.graph` | `graph_summary.md`, `data/processed/transfer_network.graphml` | Filtering funnel and graph construction |
 | Structure | `uv run python -m ftna.structure` | `structure.md` | Degree/strength distributions, reciprocity, clustering vs random baselines, assortativity |
 | Connectivity | `uv run python -m ftna.connectivity` | `connectivity.md` | Weakly/strongly connected components, bow-tie decomposition |
-| Distances | `uv run python -m ftna.distances` | `distances.md` | Exact diameter, radius, center, periphery and distance distribution |
-| Centrality | `uv run python -m ftna.centrality` | `centrality.md`, `tables/centrality.csv` | Degree, strength, PageRank, reverse PageRank, exact closeness and betweenness |
-| Communities | `uv run python -m ftna.communities` | `communities.md`, `tables/communities.csv` | Louvain, robustness (seeds, resolution, Leiden, directed), comparison with countries |
+| Distances | `uv run python -m ftna.distances` | `distances.md` | Exact diameter, radius, center, periphery, distance distribution, small-world comparison with configuration models |
+| Centrality | `uv run python -m ftna.centrality` | `centrality.md`, `tables/centrality.csv` | Degree, strength, PageRank, reverse PageRank, exact closeness and betweenness; validation against market value |
+| Communities | `uv run python -m ftna.communities` | `communities.md`, `tables/communities.csv` | Louvain, significance against a null model, robustness (seeds, resolution, Leiden, directed), comparison with countries |
 | Countries | `uv run python -m ftna.countries` | `countries.md`, `tables/country_flows.csv` | Country-level flows, net exporters/importers, corridors |
 | Hierarchy | `uv run python -m ftna.hierarchy` | `hierarchy.md` | Direction of transfers relative to club market value |
 | Roles | `uv run python -m ftna.roles` | `roles.md`, `tables/roles.csv` | Participation coefficient and within-community z-score |
@@ -84,7 +84,10 @@ Figures are saved in `results/figures/` as PDF (report) and PNG (preview).
 - Distances are counted in hops (edge weights measure exchange intensity, not length). Directed distances are computed exactly on the largest strongly connected component; undirected distances on the largest weakly connected component.
 - PageRank uses α = 0.85 and the transfer count as weight; reverse PageRank runs on the transposed graph.
 - Betweenness is exact (unweighted) on the main graph, computed in parallel by source batches; sensitivity variants use a 1,000-source approximation.
-- Communities: Louvain on the undirected graph whose weight sums both directions, resolution 1.
+- Communities: Louvain on the undirected graph whose weight sums both directions, resolution 1. Significance: Louvain on 3 graphs of the weighted configuration model (club strengths preserved, transfers paired at random).
+- Small-world baseline: exact distances in configuration models with the same (in/out) degrees, rather than the Erdős–Rényi formula ln n / ln ⟨k⟩, which assumes homogeneous degrees.
+- External validation: Spearman correlation with the mean squad market value over the 2010–2023 seasons (`club_league.csv`); the current market value (`clubs.csv`) is also reported.
+- The "without youth teams" variant also drops the clubs left isolated by their removal.
 
 ## Key results
 
@@ -92,14 +95,14 @@ All figures below come from the reports in `results/` (main graph: 2010–2023, 
 
 - **Structure**: no scale-free hubs (activity is capped by squad size), strong reciprocity (41% of edges vs 0.3% at random), very high clustering (0.34 vs 0.015 for a degree-preserving random graph) and positive degree assortativity (0.49).
 - **Connectivity**: not connected; 6 weakly connected components (the largest holds 99.9% of clubs) and 404 strongly connected components (the largest holds 96.6% of clubs and 99.7% of transfers).
-- **Distances** (hops, exact): diameter 12 and radius 6 on the largest strongly connected component (directed); diameter 10 and radius 5 on the largest weakly connected component (undirected); mean distance 3.65 (directed), i.e. a small world.
-- **Centrality** is multidimensional: Italian and Brazilian clubs lead by volume (Parma: 926 outgoing transfers); Balkan and Eastern Mediterranean clubs lead closeness (Hajduk Split, Dinamo Zagreb, Red Star, Olympiacos); mid-tier clubs bridging sub-markets lead betweenness; PageRank points to end-of-career destinations, not prestige (Spearman 0.03 with market value).
+- **Distances** (hops, exact): diameter 12 and radius 6 on the largest strongly connected component (directed); diameter 10 and radius 5 on the largest weakly connected component (undirected); mean distance 3.65 (directed) and 3.28 (undirected), close to a degree-preserving random graph (2.95 and 2.74) while clustering is 22 times higher: a small world (σ ≈ 19).
+- **Centrality** is multidimensional: Italian and Brazilian clubs lead by volume (Parma: 926 outgoing transfers); Balkan and Eastern Mediterranean clubs lead closeness (Hajduk Split, Dinamo Zagreb, Red Star, Olympiacos); mid-tier clubs bridging sub-markets lead betweenness; PageRank points to end-of-career destinations, not prestige (Spearman 0.08 with the 2010–2023 market value, against 0.72 for out-closeness).
 - **Hierarchy**: 85% of loans go to a less valuable club, 65% of paid transfers go to a more valuable club: players are loaned down and bought up.
-- **Communities**: 35 Louvain communities, modularity 0.836, robust to seeds, Leiden, edge direction and resolution. They are national markets merged into regional blocs that follow language and history (Brazil–Portugal, France–Belgium–Netherlands, post-Soviet, former Yugoslavia, Scandinavia, British Isles…). 85% of transfers are domestic.
+- **Communities**: 35 Louvain communities, modularity 0.836 (0.063 ± 0.001 for the weighted configuration model), robust to seeds, Leiden, edge direction and resolution. They are national markets merged into regional blocs that follow language and history (Brazil–Portugal, France–Belgium–Netherlands, post-Soviet, former Yugoslavia, Scandinavia, British Isles…). 85% of transfers are domestic.
 - **Bridges between blocs**: Benfica, Sporting CP, Red Bull Salzburg, Manchester City, Chelsea, Olympiacos, Dynamo Kyiv, FC Basel (highest participation coefficients).
-- **Robustness**: removing youth/reserve teams, splitting the period, dropping `Unknown` transfers or adding `End of loan` rows keeps communities (NMI ≥ 0.92) and centrality rankings (Spearman ≥ 0.78) stable; only the exact top ranks of PageRank and betweenness move.
+- **Robustness**: removing youth/reserve teams, splitting the period, dropping `Unknown` transfers or adding `End of loan` rows keeps communities (NMI ≥ 0.92), centrality rankings (Spearman ≥ 0.78) and degree assortativity (0.48–0.52) stable; only the exact top ranks of PageRank and betweenness move.
 
-Limitations: only clubs described in `clubs.csv` are kept (Transfermarkt coverage, very deep for German-speaking amateur leagues); 98% of transfer fees are zero or undisclosed; youth/reserve teams are detected with a name-based heuristic.
+Limitations: only clubs described in `clubs.csv` are kept (Transfermarkt coverage, very deep for German-speaking amateur leagues); 98% of transfer fees are zero or undisclosed; youth/reserve teams are detected with a name-based heuristic (manually checked, but imperfect).
 
 ## Repository structure
 

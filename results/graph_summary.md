@@ -24,7 +24,7 @@ Généré par `uv run python -m ftna.graph` à partir de `data/raw/`.
 - Poids : médiane 1, moyenne 2.04, max 225 ; arêtes de poids 1 : 64.0%
 - Clubs sans pays identifié : 68
 - Pays représentés : 110
-- Équipes de jeunes/réserves (heuristique, attribut `youth_or_reserve`) : 1,567 nœuds, 17.3% du poids total (arêtes touchant au moins une de ces équipes)
+- Équipes de jeunes/réserves (heuristique, attribut `youth_or_reserve`) : 1,640 nœuds, 17.3% du poids total (arêtes touchant au moins une de ces équipes)
 
 ## Arêtes les plus lourdes
 

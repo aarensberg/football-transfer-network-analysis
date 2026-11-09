@@ -3,7 +3,7 @@
 Généré par `uv run python -m ftna.countries`. Table complète : `results/tables/country_flows.csv`.
 
 - Transferts entre clubs de pays connus : 917,518 ; part **domestique** : 84.9%.
-- Part des transferts entre deux clubs de la **même ligue** (dernière ligue connue) : 33.8%.
+- Part des transferts entre deux clubs de la **même ligue la saison du transfert** : 35.6% (ligue connue pour les deux clubs dans 56.8% des transferts) ; avec la dernière ligue connue : 33.8%.
 - Transferts internationaux : 138,785 ; dont entre pays du même bloc de communautés (A5) : 31.2%.
 - Pays : 110 ; couples de pays reliés : 7,131.
 

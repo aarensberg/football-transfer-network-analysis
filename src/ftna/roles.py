@@ -33,6 +33,8 @@ from ftna.communities import undirected_weighted
 HUB_Z = 2.5
 MIN_STRENGTH = 100  # clubs suffisamment actifs pour interpréter P
 SHOWN_COMMUNITIES = 25
+TOP_LINKS = 30  # liens les plus forts affichés sur le graphe des communautés
+LINKS_PER_COMMUNITY = 2  # liens garantis à chaque communauté (aucune isolée)
 
 
 def role(p: float, z: float) -> str:
@@ -98,12 +100,12 @@ def plot_community_graph(
         if a != b and a in shown and b in shown:
             key = (min(a, b), max(a, b))
             flows[key] = flows.get(key, 0.0) + w
-    # Liens affichés : les 2 plus forts de chaque communauté et les 30 plus forts au total,
+    # Liens affichés : les plus forts au total et les plus forts de chaque communauté,
     # pour qu'aucune communauté ne soit isolée sur la figure.
     ranked = sorted(flows.items(), key=lambda kv: -kv[1])
-    kept = dict(ranked[:30])
+    kept = dict(ranked[:TOP_LINKS])
     for c in shown:
-        for key, w in [kv for kv in ranked if c in kv[0]][:2]:
+        for key, w in [kv for kv in ranked if c in kv[0]][:LINKS_PER_COMMUNITY]:
             kept[key] = w
     meta = nx.Graph()
     meta.add_nodes_from(shown)
@@ -143,8 +145,9 @@ def plot_community_graph(
             color=TEXT_PRIMARY,
         )
     ax.set_title(
-        f"Flux entre les {SHOWN_COMMUNITIES} plus grandes communautés "
-        "(2 liens les plus forts par communauté)"
+        f"Flux entre les {SHOWN_COMMUNITIES} plus grandes communautés\n"
+        f"({TOP_LINKS} liens les plus forts + les {LINKS_PER_COMMUNITY} plus forts "
+        "de chaque communauté)"
     )
     save_figure(fig, "community_graph")
 

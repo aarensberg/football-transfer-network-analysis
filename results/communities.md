@@ -14,7 +14,7 @@ Généré par `uv run python -m ftna.communities`. Louvain (NetworkX, résolutio
 | 2 | 890 | France | 0.56 | France 499, Belgium 165, Netherlands 144 | 0.85 | AS Monaco, Standard Liège, RSC Anderlecht, KAA Gent |
 | 3 | 787 | Italy | 0.98 | Italy 769, San Marino 16, Switzerland 1 | 0.94 | Parma Calcio 1913, Genoa CFC, Atalanta BC, Delfino Pescara 1936 |
 | 4 | 774 | Russia | 0.28 | Russia 219, Ukraine 140, Belarus 65 | 0.89 | FK Khimki, Dinamo Tbilisi, SKA Khabarovsk, Rubin Kazan |
-| 5 | 705 | Austria | 0.98 | Austria 688, Germany 12, Hungary 2 | 0.91 | Red Bull Salzburg, LASK, SV Kapfenberg, LASK Amateure OÖ |
+| 5 | 705 | Austria | 0.98 | Austria 688, Germany 12, Hungary 2 | 0.91 | Red Bull Salzburg, LASK, SV Kapfenberg, SV Horn |
 | 6 | 692 | Argentina | 0.20 | Argentina 136, Mexico 98, Peru 68 | 0.93 | Asociación Deportivo Pasto, CD América de Cali, Querétaro FC, Defensa y Justicia |
 | 7 | 572 | Japan | 0.57 | Japan 326, Thailand 66, Korea, South 64 | 0.91 | Muangthong United, Police Tero FC, Daejeon Hana Citizen, Gyeongnam FC |
 | 8 | 532 | Norway | 0.34 | Norway 179, Denmark 135, Sweden 114 | 0.89 | FC Midtjylland, AFC Eskilstuna, Vejle Boldklub, HB Köge |
@@ -59,12 +59,26 @@ Figure : `results/figures/community_countries.pdf`.
 
 ## Comparaisons
 
-| partition | communautés | modularité | NMI avec référence | NMI avec le pays |
-|---|---|---|---|---|
-| Louvain non orienté (référence) | 35 | 0.836 | 1.000 | 0.849 |
-| Leiden (modularité) | 34 | 0.836 | 0.992 | 0.852 |
-| Louvain orienté (modularité orientée) | 35 | 0.836 | 0.987 | 0.853 |
-| Pays (partition de référence externe) | 111 | 0.806 | 0.849 | 1.000 |
+| partition | communautés | modularité (non orientée) | modularité orientée | NMI avec référence | NMI avec le pays |
+|---|---|---|---|---|---|
+| Louvain non orienté (référence) | 35 | 0.836 | 0.836 | 1.000 | 0.849 |
+| Leiden (modularité) | 34 | 0.836 | 0.836 | 0.992 | 0.852 |
+| Louvain orienté (optimise la modularité orientée) | 35 | 0.836 | 0.836 | 0.987 | 0.853 |
+| Pays (partition de référence externe) | 111 | 0.806 | 0.806 | 0.849 | 1.000 |
+
+Modularité non orientée : graphe w(u,v) = w(u→v) + w(v→u) ; modularité orientée : formule de Leicht et Newman sur le graphe orienté pondéré.
+
+## Significativité : modèle nul
+
+Louvain (graine 42) sur 3 graphes du modèle de configuration pondéré (forces des clubs préservées, appariement aléatoire des transferts, boucles retirées).
+
+| réalisation | arêtes distinctes | communautés | modularité |
+|---|---|---|---|
+| 1 | 902,514 | 8 | 0.063 |
+| 2 | 902,311 | 9 | 0.063 |
+| 3 | 902,302 | 6 | 0.064 |
+
+- Modularité observée 0.836 contre 0.063 ± 0.001 sous le modèle nul (score z ≈ 975).
 
 ## Stabilité de Louvain (10 graines)
 
@@ -85,3 +99,5 @@ Figure : `results/figures/community_countries.pdf`.
 | 1.000 | 35 | 26 | 1,889 | 0.836 | 0.849 |
 | 2.000 | 58 | 48 | 787 | 0.827 | 0.874 |
 | 4.000 | 88 | 68 | 769 | 0.816 | 0.897 |
+
+Lecture : la colonne « modularité (γ = 1) » évalue chaque partition avec la modularité standard, que Louvain à γ = 1 optimise directement ; son maximum à γ = 1 est donc attendu et ne justifie pas à lui seul ce choix. La NMI croît mécaniquement avec le nombre de communautés : sa hausse avec γ ne prouve pas que les communautés fines sont « plus nationales ».

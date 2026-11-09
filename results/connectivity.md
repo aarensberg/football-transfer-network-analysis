@@ -30,7 +30,7 @@ Généré par `uv run python -m ftna.connectivity`.
 
 | partie | clubs | part des nœuds | degré total moyen | part jeunes/réserves | pays principaux |
 |---|---|---|---|---|---|
-| CFC géante | 11,598 | 0.966 | 77.5 | 0.123 | Germany (2206), Italy (764), Austria (674) |
-| IN | 259 | 0.0216 | 3.96 | 0.432 | Japan (76), Estonia (20), Germany (17) |
-| OUT | 138 | 0.0115 | 2.51 | 0.145 | Japan (24), Germany (15), Türkiye (12) |
+| CFC géante | 11,598 | 0.966 | 77.5 | 0.129 | Germany (2206), Italy (764), Austria (674) |
+| IN | 259 | 0.0216 | 3.96 | 0.452 | Japan (76), Estonia (20), Germany (17) |
+| OUT | 138 | 0.0115 | 2.51 | 0.167 | Japan (24), Germany (15), Türkiye (12) |
 | Autres | 14 | 0.00117 | 1.71 | 0.286 | Japan (11), Estonia (2), France (1) |

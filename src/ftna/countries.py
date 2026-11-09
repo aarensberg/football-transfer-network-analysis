@@ -2,6 +2,9 @@
 
 Chaque club porte le pays de sa dernière ligue connue (≤ 2023) ; les 68 clubs sans pays
 sont ignorés ici. Les volumes ne concernent que les clubs décrits dans `clubs.csv`.
+La part « même ligue » utilise la ligue de chaque club **la saison du transfert**
+(`club_league`), pour ne pas confondre promotions et relégations avec des échanges
+entre ligues ; la version « dernière ligue connue » est donnée pour comparaison.
 
 Usage : `uv run python -m ftna.countries`
 Sorties : `results/countries.md`, `results/tables/country_flows.csv`,
@@ -21,6 +24,8 @@ from ftna.common import (
     setup_style,
     write_report,
 )
+from ftna.data import load_raw
+from ftna.graph import GraphConfig, filter_transfers
 
 DIVERGING = ("#2a78d6", "#e34948")  # exportateur net / importateur net
 MIN_CLUBS = 20  # pays retenus pour les classements de part domestique
@@ -36,6 +41,35 @@ def edge_frame(graph: nx.DiGraph) -> pd.DataFrame:
         ],
         columns=["from", "to", "league_from", "league_to", "weight"],
     )
+
+
+def same_league_at_season(config: GraphConfig | None = None) -> tuple[float, float]:
+    """Part des transferts entre deux clubs de la même ligue la saison du transfert.
+
+    Une seule ligue par couple (club, saison), choisie comme dans `club_attributes`
+    (valeur marchande la plus élevée, puis code de ligue) pour éviter la
+    multiplication de lignes. Renvoie (part, couverture parmi les transferts du graphe).
+    """
+    raw = load_raw(players_columns=["id"])
+    transfers, _ = filter_transfers(raw, config or GraphConfig())
+    league = (
+        raw.club_league.sort_values(
+            ["club_id", "season", "market_value", "league_id"],
+            ascending=[True, True, False, True],
+        )
+        .drop_duplicates(["club_id", "season"])
+        .set_index(["club_id", "season"])
+        .league_id
+    )
+    from_league = pd.MultiIndex.from_arrays(
+        [transfers.left_club_id, transfers.year]
+    ).map(league)
+    to_league = pd.MultiIndex.from_arrays(
+        [transfers.joined_club_id, transfers.year]
+    ).map(league)
+    known = pd.notna(from_league) & pd.notna(to_league)
+    same = (from_league[known] == to_league[known]).mean()
+    return float(same), float(known.mean())
 
 
 def country_table(edges: pd.DataFrame, clubs: pd.Series) -> pd.DataFrame:
@@ -107,6 +141,7 @@ def main() -> None:
         (edges.league_from != "") & (edges.league_from == edges.league_to)
     ]
     same_league_share = same_league.weight.sum() / edges.weight.sum()
+    season_league_share, season_league_coverage = same_league_at_season()
 
     # Bloc de chaque pays = communauté Louvain qui contient le plus de ses clubs (A5).
     communities = pd.read_csv(TABLES_DIR / "communities.csv")
@@ -141,7 +176,12 @@ def main() -> None:
         "Généré par `uv run python -m ftna.countries`. Table complète : `results/tables/country_flows.csv`.",
         "",
         f"- Transferts entre clubs de pays connus : {total:,} ; part **domestique** : {domestic_share:.1%}.",
-        f"- Part des transferts entre deux clubs de la **même ligue** (dernière ligue connue) : {same_league_share:.1%}.",
+        (
+            f"- Part des transferts entre deux clubs de la **même ligue la saison du transfert** : "
+            f"{season_league_share:.1%} (ligue connue pour les deux clubs dans "
+            f"{season_league_coverage:.1%} des transferts) ; avec la dernière ligue connue : "
+            f"{same_league_share:.1%}."
+        ),
         (
             f"- Transferts internationaux : {intl.weight.sum():,} ; dont entre pays du même bloc de "
             f"communautés (A5) : {intl_same_bloc:.1%}."

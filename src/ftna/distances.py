@@ -5,7 +5,9 @@ Conventions :
   d'échange, pas une longueur ;
 - orienté : calcul exact sur la plus grande composante fortement connexe (CFC), où
   toutes les distances sont finies ;
-- non orienté : calcul exact sur la plus grande composante faiblement connexe (CFF).
+- non orienté : calcul exact sur la plus grande composante faiblement connexe (CFF) ;
+- référence « petit monde » : mêmes calculs sur des modèles de configuration (mêmes
+  degrés, graine fixe), plus juste que ln(n)/ln(<k>) pour des degrés hétérogènes.
 
 Usage : `uv run python -m ftna.distances`
 Sorties : `results/distances.md`, `results/figures/distance_distribution.{pdf,png}`.
@@ -20,6 +22,7 @@ import pandas as pd
 from scipy.sparse.csgraph import shortest_path
 
 from ftna.common import (
+    SEED,
     club_label,
     main_graph,
     md_table,
@@ -27,6 +30,7 @@ from ftna.common import (
     setup_style,
     write_report,
 )
+from ftna.structure import configuration_graph, directed_configuration_graph
 
 CHUNK = 500  # lignes de la matrice des distances calculées à la fois
 
@@ -130,6 +134,43 @@ def summary_row(
     }
 
 
+def configuration_baseline(
+    core: nx.DiGraph,
+    giant: nx.Graph,
+    directed: DistanceResult,
+    undirected: DistanceResult,
+) -> pd.DataFrame:
+    """Distances exactes et clustering dans des modèles de configuration de mêmes
+    degrés que la CFC géante (orienté) et la CFF géante (non orienté)."""
+    d_config = directed_configuration_graph(core)
+    d_core = d_config.subgraph(max(nx.strongly_connected_components(d_config), key=len))
+    u_config = configuration_graph(giant)
+    u_giant = u_config.subgraph(max(nx.connected_components(u_config), key=len))
+    d_null = all_distances(d_core, directed=True)
+    u_null = all_distances(u_giant, directed=False)
+    rows = []
+    for label, graph, result in (
+        ("orienté, CFC géante observée", core, directed),
+        ("orienté, modèle de configuration (CFC géante)", d_core, d_null),
+        ("non orienté, CFF géante observée", giant, undirected),
+        ("non orienté, modèle de configuration (composante géante)", u_giant, u_null),
+    ):
+        rows.append(
+            {
+                "graphe": label,
+                "nœuds": graph.number_of_nodes(),
+                "arêtes": graph.number_of_edges(),
+                "distance moyenne": mean_distance(result.histogram),
+                "diamètre": int(result.out_ecc.max()),
+                "rayon": int(result.out_ecc.min()),
+                "clustering moyen": nx.average_clustering(graph)
+                if not graph.is_directed()
+                else np.nan,
+            }
+        )
+    return pd.DataFrame(rows)
+
+
 def main() -> None:
     graph = main_graph()
     core = graph.subgraph(max(nx.strongly_connected_components(graph), key=len)).copy()
@@ -166,6 +207,11 @@ def main() -> None:
         2 * giant.number_of_edges() / giant.number_of_nodes(),
     )
     random_l = np.log(n) / np.log(k)
+    baseline = configuration_baseline(core, giant, directed, undirected)
+    obs, rnd = baseline.iloc[2], baseline.iloc[3]
+    sigma = (obs["clustering moyen"] / rnd["clustering moyen"]) / (
+        obs["distance moyenne"] / rnd["distance moyenne"]
+    )
     shares = (
         pd.DataFrame(
             {
@@ -199,7 +245,22 @@ def main() -> None:
         "",
         (
             f"Référence aléatoire (non orienté, même n = {n:,} et degré moyen {k:.1f}) : "
-            f"ln(n)/ln(<k>) ≈ {random_l:.2f}."
+            f"ln(n)/ln(<k>) ≈ {random_l:.2f} (formule d'Erdős–Rényi, degrés homogènes)."
+        ),
+        "",
+        "## Référence petit monde : modèles de configuration",
+        "",
+        (
+            f"Mêmes degrés (entrants et sortants en orienté) que le graphe observé, graine {SEED}, "
+            "multi-arêtes fusionnées et boucles retirées ; distances exactes sur la composante "
+            "géante (fortement connexe en orienté)."
+        ),
+        "",
+        md_table(baseline, floatfmt=".3f"),
+        "",
+        (
+            f"Coefficient petit monde σ = (C / C_config) / (L / L_config) = {sigma:.1f} "
+            "(non orienté ; σ > 1 : petit monde)."
         ),
         "",
         "## Distribution des distances",
