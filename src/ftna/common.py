@@ -30,11 +30,17 @@ NEUTRAL = "#a3a29c"
 
 
 def main_graph(exclude_youth: bool = False) -> nx.DiGraph:
-    """Graphe principal, éventuellement sans équipes de jeunes et réserves."""
+    """Graphe principal, éventuellement sans équipes de jeunes et réserves.
+
+    Sans les jeunes, les clubs devenus isolés (tous leurs partenaires étaient des
+    équipes de jeunes) sont retirés : ils ne participent à aucun transfert retenu et
+    formeraient sinon des composantes et des communautés d'un seul club.
+    """
     graph = load_graph()
     if exclude_youth:
         keep = [n for n, y in graph.nodes(data="youth_or_reserve") if not y]
         graph = graph.subgraph(keep).copy()
+        graph.remove_nodes_from(list(nx.isolates(graph)))
     return graph
 
 
