@@ -51,11 +51,11 @@ cd football-transfer-network-analysis
 uv sync
 ```
 
-Software: Python 3.14, pandas, NetworkX 3.7, SciPy (sparse shortest paths, required by `nx.pagerank`) and Matplotlib (figures). Random seed: 42.
+Software: Python 3.14, pandas, NetworkX 3.7, SciPy (sparse shortest paths, required by `nx.pagerank`) and Matplotlib (figures); pytest for the unit tests (`uv run pytest`). Random seed: 42.
 
 ## Running the analysis
 
-Run the whole pipeline (about 20 minutes, 7 of which for the sensitivity analysis):
+Run the whole pipeline (about 23 minutes, 7 of which for the sensitivity analysis):
 
 ```bash
 uv run ftna
@@ -75,6 +75,7 @@ Or run each step separately, in this order (each step writes a Markdown report i
 | Countries | `uv run python -m ftna.countries` | `countries.md`, `tables/country_flows.csv` | Country-level flows, net exporters/importers, corridors |
 | Hierarchy | `uv run python -m ftna.hierarchy` | `hierarchy.md` | Direction of transfers relative to club market value |
 | Roles | `uv run python -m ftna.roles` | `roles.md`, `tables/roles.csv`, `tables/edge_betweenness.csv` | Participation coefficient, within-community z-score, exact edge betweenness of inter-community links |
+| Talent flow | `uv run python -m ftna.talent_flow` | `talent_flow.md`, `tables/talent_flow_*.csv` | Product for PSG (see below): academy departures and value realized elsewhere, springboard clubs, competitors, comparables |
 | Sensitivity | `uv run python -m ftna.sensitivity` | `sensitivity.md` | Variants without youth teams, by sub-period, by transfer type |
 
 Figures are saved in `results/figures/` as PDF (report) and PNG (preview).
@@ -106,6 +107,30 @@ All figures below come from the reports in `results/` (main graph: 2010–2023, 
 
 Limitations: only clubs described in `clubs.csv` are kept (Transfermarkt coverage, very deep for German-speaking amateur leagues); 98% of transfer fees are zero or undisclosed; youth/reserve teams are detected with a name-based heuristic (manually checked, but imperfect).
 
+## Product: Paris Talent Flow
+
+Beyond the course analysis, we built a decision-support tool for the sporting director of Paris Saint-Germain. It answers: *where do the players trained at PSG go, who captures the value they create afterwards, and through which springboard clubs should they be sent (loan, sale with sell-on or buy-back clause) to recover part of it?* The idea was selected from ten recruitment pain points, scored on added value and feasibility with our data. Code: `src/ftna/careers.py`, `src/ftna/springboards.py`, `src/ftna/talent_flow.py`; report: `results/talent_flow.md`.
+
+Method:
+
+- Careers are rebuilt from the raw `transfers.csv`, not from the filtered graph: players enter academies through club identifiers missing from `clubs.csv`.
+- A trained player is one whose first move into a youth or reserve team of the academy happened between 2008 and 2019. 15 academies are compared, with their youth teams matched manually.
+- A departure is the first non-loan move out of the club (first team and youth teams). Departures up to 2021 are evaluated.
+- The value realized afterwards is the highest non-loan fee later paid for the player, excluding moves involving the academy itself, from the departure year up to the year of a first return to the academy (after a buy-back, the career belongs to a new departure). The order of rows within a year is not chronological in the file, so all computations work at the year level.
+- Capture ratio = Σ departure fees / Σ highest later fees, with a 95% bootstrap interval.
+- The elite is the 20 clubs with the highest squad value each season; "played in the elite" means joining an elite club (loans included) within three years of the departure. A player trained in two academies counts once in pooled analyses.
+
+Key results:
+
+- **Value realized elsewhere**: 239 players trained at PSG, 215 evaluated departures, 91% without a known fee. PSG received €118.7M when they left; the highest fees paid for them afterwards add up to €325.3M. The capture ratio is **0.36** (95% CI [0.23; 0.58], 0.41 without the two largest cases), the lowest of the 15 academies, close to Rennes and Bayern (0.39; the confidence intervals overlap). Ajax, Monaco, Lyon and Benfica are at 1.29–1.36, Real Madrid at 1.17, Juventus at 2.40. Examples: Nkunku (€19.5M to Leipzig, then €60M to Chelsea), Diaby (€15M to Leverkusen, then €60M), Coman (free to Juventus, then €21M to Bayern).
+- **Who captures**: RB Leipzig, Lille and Leverkusen as first destinations of PSG alumni. For the six French academies: Monaco, Dortmund and Nice.
+- **Bridge clubs**: academy players first sent to a non-elite club with a high participation coefficient (P ≥ 0.6, analysis A10) reach the elite within three years in 5.5% of cases, against 1.2% otherwise, and are later sold for a fee in 48% of cases, against 18%. This is an association, not a causal effect.
+- **Springboards**: Southampton, Ajax, Lyon, Lille, Sevilla and Villarreal send about 18–21% of their outgoing players to the elite within two moves and three years. Only 5% of the 7,368 clubs with at least 30 exits sent any player to the elite, with a median rate of 1.3% among them.
+- **Competitors**: foreign clubs signing players from French youth teams (loans excluded) are mainly Belgian, then Italian. Italian clubs went from 29 signings (2010–2016) to 94 (2017–2023). Emerging springboards (rise in rate between 2010–2015 and 2016–2020): Southampton, Mönchengladbach, Leicester, Betis, Flamengo, Salzburg.
+- **Comparables**: for each position × age at departure, the share later sold for a fee and the distribution of the highest later fee, to set sell-on percentages and buy-back prices.
+
+Limitations: no performance data (minutes, statistics); a zero fee means free or undisclosed; clauses are invisible; only cohorts that left up to 2021 can be evaluated; small numbers, where a dozen players carry most of an academy's value; youth teams are matched manually; there is no birthplace, so regional talent pools cannot be located.
+
 ## Repository structure
 
 ```text
@@ -115,6 +140,7 @@ Limitations: only clubs described in `clubs.csv` are kept (Transfermarkt coverag
 ├── report/              # LaTeX report (template.tex, biblio.bib)
 ├── results/             # Generated reports, tables (tables/) and figures (figures/)
 ├── src/ftna/            # Analysis code (one module per step, see table above)
+├── tests/               # Unit tests on synthetic data (uv run pytest)
 ├── pyproject.toml       # Project metadata and dependencies
 └── README.md
 ```
