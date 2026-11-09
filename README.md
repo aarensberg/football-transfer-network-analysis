@@ -148,11 +148,3 @@ Limitations: no performance data (minutes, statistics); a zero fee means free or
 ├── pyproject.toml       # Project metadata and dependencies
 └── README.md
 ```
-
-## Code reuse
-
-No existing code for this dataset has been reused so far. This section will be updated if that changes, with proper citations.
-
-## Use of AI tools
-
-To be completed.
