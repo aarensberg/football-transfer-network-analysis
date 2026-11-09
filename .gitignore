@@ -24,3 +24,9 @@ report/*.blg
 report/*.out
 report/*.fls
 report/*.fdb_latexmk
+
+# Presentation: only the exported slides are versioned (sources, data and notes stay local)
+presentation/*
+!presentation/export/
+presentation/export/*
+!presentation/export/defense.pdf
