@@ -1,0 +1,236 @@
+player_id,name,position,birth_year,entry_year,departure_year,departure_from,departure_to,departure_fee,later_max_fee,later_buyer,reached_elite,bought_back,evaluable
+344381,Christopher Nkunku,Midfield - Attacking Midfield,1997,2014,2019,Paris Saint-Germain,RB Leipzig (Germany),19500000,60000000.0,Chelsea FC (England),True,False,True
+395516,Moussa Diaby,Attack - Right Winger,1999,2016,2019,Paris Saint-Germain,Bayer 04 Leverkusen (Germany),15000000,60000000.0,Al-Ittihad Club (Saudi Arabia),False,False,True
+264956,Jean-Kévin Augustin,Attack - Centre-Forward,1997,2013,2017,Paris Saint-Germain,RB Leipzig (Germany),16000000,21000000.0,Leeds United (England),False,False,True
+243714,Kingsley Coman,Attack - Left Winger,1996,2012,2014,Paris Saint-Germain,Juventus FC (Italy),0,21000000.0,Bayern Munich (Germany),True,False,True
+344605,Boubakary Soumaré,Midfield - Defensive Midfield,1999,2015,2017,Paris Saint-Germain B,LOSC Lille (France),0,20000000.0,Leicester City (England),False,False,True
+182906,Mike Maignan,Goalkeeper,1995,2011,2015,Paris Saint-Germain,LOSC Lille (France),1000000,16399999.0,AC Milan (Italy),False,False,True
+344152,Odsonne Edouard,Attack - Centre-Forward,1998,2014,2018,Paris Saint-Germain,Celtic FC (Scotland),10300000,16300000.0,Crystal Palace (England),False,False,True
+538996,Tanguy Nianzou,Defender - Centre-Back,2002,2018,2020,Paris Saint-Germain,Bayern Munich (Germany),0,16000000.0,Sevilla FC (Spain),True,False,True
+324690,Jonathan Ikoné,Attack - Right Winger,1998,2015,2018,Paris Saint-Germain,LOSC Lille (France),5000000,15400000.0,ACF Fiorentina (Italy),False,False,True
+371141,Stanley Nsoki,Defender - Centre-Back,1999,2016,2019,Paris Saint-Germain,OGC Nice (France),12500000,12000000.0,TSG 1899 Hoffenheim (Germany),False,False,True
+370846,Timothy Weah,Midfield - Right Midfield,2000,2016,2019,Paris Saint-Germain,LOSC Lille (France),10000000,11000000.0,Juventus FC (Italy),False,False,True
+296422,Fodé Ballo-Touré,Defender - Left-Back,1997,2014,2017,Paris Saint-Germain B,LOSC Lille (France),0,11000000.0,AS Monaco (France),False,False,True
+395236,Yacine Adli,Midfield - Defensive Midfield,2000,2016,2018,Paris Saint-Germain,FC Girondins Bordeaux (France),5500000,8750000.0,AC Milan (Italy),True,False,True
+460632,Kévin Cabral,Attack - Left Winger,1999,2016,2017,Paris Saint-Germain U19,Valenciennes FC B (France),0,5400000.0,Los Angeles Galaxy (United States),False,False,True
+395523,Wilfried Kanga,Attack - Centre-Forward,1998,2015,2017,Paris Saint-Germain U19,Angers SCO (France),0,5000000.0,Hertha BSC (Germany),False,False,True
+184935,Kalifa Coulibaly,Attack - Centre-Forward,1991,2010,2014,Paris Saint-Germain B,R Charleroi SC (Belgium),0,4500000.0,FC Nantes (France),False,False,True
+111422,Neeskens Kebano,Attack - Left Winger,1992,2010,2013,Paris Saint-Germain,R Charleroi SC (Belgium),0,4450000.0,Fulham FC (England),False,False,True
+395522,Samuel Essende,Attack - Centre-Forward,1998,2014,2019,Paris Saint-Germain B,US Avranches (France),0,4000000.0,FC Augsburg (Germany),False,False,True
+296356,Souleyman Doumbia,Defender - Left-Back,1996,2013,2016,Paris Saint-Germain B,Sans club,0,3000000.0,Stade Rennais FC (France),False,False,True
+395512,Antoine Bernede,Midfield - Central Midfield,1999,2015,2018,Paris Saint-Germain,Red Bull Salzburg (Austria),0,2200000.0,FC Lausanne-Sport (Switzerland),False,False,True
+93678,Gaëtan Charbonnier,Attack - Centre-Forward,1988,2008,2009,Paris Saint-Germain B,Angers SCO (France),0,1500000.0,Montpellier HSC (France),False,False,True
+93747,Yacine Qasmi,Attack - Centre-Forward,1991,2009,2011,Paris Saint-Germain B,Stade Rennais FC B (France),0,1500000.0,Rayo Vallecano (Spain),False,False,True
+364827,Cédric Kipré,Defender - Centre-Back,1996,2013,2014,Paris Saint-Germain U19,Leicester City U18 (England),0,1100000.0,Wigan Athletic (England),False,False,True
+93663,Fouad Bachirou,Midfield - Defensive Midfield,1990,2008,2010,Paris Saint-Germain B,Greenock Morton FC (Scotland),0,700000.0,Malmö FF (Sweden),False,False,True
+536520,Ruben Providence,Attack - Left Winger,2001,2018,2019,Paris Saint-Germain U19,Roma U19 (Italy),500000,500000.0,TSV Hartberg (Austria),False,False,True
+174089,Santy Ngom,Attack - Centre-Forward,1993,2014,2015,Paris Saint-Germain B,Sans club,0,500000.0,SM Caen (France),False,False,True
+181373,Antoine Conte,Defender - Centre-Back,1994,2011,2014,Paris Saint-Germain,Stade Reims (France),0,500000.0,Beitar Jerusalem (Israel),False,False,True
+164939,Nicolas Rajsel,Attack - Left Winger,1993,2011,2013,Paris Saint-Germain B,Sans club,0,450000.0,KV Oostende (-2024) (Belgium),False,False,True
+536475,Moussa Sissako,Defender - Centre-Back,2000,2016,2020,Paris Saint-Germain,Standard Liège (Belgium),400000,300000.0,FC Sochi (Russia),False,False,True
+536519,Virgiliu Postolachi,Attack - Centre-Forward,2000,2017,2019,Paris Saint-Germain B,LOSC Lille B (France),0,300000.0,Grenoble Foot 38 (France),False,False,True
+353374,Lamine Ba,Defender - Centre-Back,1997,2015,2016,Paris Saint-Germain U19,Virtus Entella (Italy),0,200000.0,Doxa Katokopias (Cyprus),False,False,True
+164912,Loïck Landre,Defender - Centre-Back,1992,2008,2013,Paris Saint-Germain,RC Lens (France),0,150000.0,Nîmes Olympique (France),False,False,True
+395239,Claudio Gomes,Midfield - Defensive Midfield,2000,2016,2018,Paris Saint-Germain B,Manchester City U21 (England),0,128000.0,Palermo FC (Italy),False,False,True
+126647,Lucien Owona,Defender - Centre-Back,1990,2009,2010,Paris Saint-Germain B,Real Oviedo Vetusta (Spain),0,70000.0,UD Almería (Spain),False,False,True
+182910,Hervin Ongenda,Midfield - Attacking Midfield,1995,2011,2016,Paris Saint-Germain,PEC Zwolle (Netherlands),300000,30000.0,Chievo Verona (Italy),False,False,True
+585959,Arnaud Kalimuendo,Attack - Centre-Forward,2002,2018,2022,Paris Saint-Germain,Stade Rennais FC (France),20000000,0.0,,False,False,False
+536477,Arthur Zagré,Defender - Left-Back,2001,2017,2019,Paris Saint-Germain,AS Monaco (France),10000000,0.0,,False,False,True
+120629,Alphonse Areola,Goalkeeper,1993,2009,2022,Paris Saint-Germain,West Ham United (England),9300000,0.0,,False,False,False
+536482,Junior Dina Ebimbe,Midfield - Right Midfield,2000,2016,2023,Paris Saint-Germain,Eintracht Frankfurt (Germany),6500000,0.0,,False,False,False
+463610,Loïc Mbe Soh,Defender - Centre-Back,2001,2017,2020,Paris Saint-Germain B,Nottingham Forest (England),5000000,0.0,,False,False,True
+135492,Youssouf Sabaly,Defender - Right-Back,1993,2010,2017,Paris Saint-Germain,FC Girondins Bordeaux (France),4000000,0.0,,False,False,True
+709482,Thierno Baldé,Defender - Right-Back,2002,2019,2022,Paris Saint-Germain,ESTAC Troyes (France),3000000,0.0,,False,False,False
+395519,Metehan Güclü,Attack - Centre-Forward,1999,2016,2019,Paris Saint-Germain B,Stade Rennais FC (France),1500000,0.0,,False,False,True
+495489,Gaëtan Robail,Attack - Left Winger,1994,2016,2019,Paris Saint-Germain B,RC Lens (France),1000000,0.0,,False,False,True
+538998,Timothée Pembélé,Defender - Right-Back,2002,2018,2023,Paris Saint-Germain,Sunderland AFC (England),1000000,0.0,,False,False,False
+164928,Ilan Boccara,Midfield - Defensive Midfield,1993,2010,2012,Paris Saint-Germain B,Ajax Amsterdam U21 (Netherlands),500000,0.0,,False,False,True
+282028,Rémy Descamps,Goalkeeper,1996,2013,2019,Paris Saint-Germain,R Charleroi SC (Belgium),400000,0.0,,False,False,True
+460630,Azzeddine Toufiqui,Midfield - Attacking Midfield,1999,2016,2019,Paris Saint-Germain B,SM Caen (France),250000,0.0,,False,False,True
+26327,Stéphane N'Guéma,Attack - Right Winger,1984,2010,2011,Paris Saint-Germain B,club 13621,0,0.0,,False,False,True
+31644,Cédric Bétrémieux,Attack - Second Striker,1982,2011,2012,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+77358,Bassirou Dembélé,Midfield - Defensive Midfield,1990,2008,2010,Paris Saint-Germain B,SK Slavia Prague (Czech Republic),0,0.0,,False,False,True
+78963,Thomas Martin,Midfield - Defensive Midfield,1990,2014,2015,Paris Saint-Germain B,FC Chambly Oise (France),0,0.0,,False,False,True
+89604,Sébastien Atlan,Defender - Left-Back,1984,2012,2014,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+93656,Kévin Afougou,Defender - Centre-Back,1990,2008,2010,Paris Saint-Germain B,Paris FC (France),0,0.0,,False,False,True
+93687,Mohammed Diarra,Midfield - Defensive Midfield,1992,2010,2012,Paris Saint-Germain B,Odense Boldklub (Denmark),0,0.0,,False,False,True
+93730,Alexandre Letellier,Goalkeeper,1990,2009,2010,Paris Saint-Germain B,Angers SCO (France),0,0.0,,False,True,True
+93731,Florian Makhedjouf,Midfield - Central Midfield,1991,2009,2011,Paris Saint-Germain B,CS Sedan-Ardennes (France),0,0.0,,False,False,True
+93743,Mickaël Paupin,Defender - Left-Back,1991,2009,2011,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+93751,Kévin Rimane,Defender - Centre-Back,1991,2008,2011,Paris Saint-Germain B,US Boulogne (France),0,0.0,,False,True,True
+93756,Mathieu Sail,Goalkeeper,1991,2009,2011,Paris Saint-Germain B,US Saint-Malo (France),0,0.0,,False,False,True
+93766,Hichem Slimani,Attack - Right Winger,1990,2009,2010,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+102659,Franck Dufrennes,Midfield - Attacking Midfield,1987,2012,2013,Paris Saint-Germain B,Vannes OC (France),0,0.0,,False,False,True
+109738,Malik Rouag,Attack - Centre-Forward,1983,2012,2013,Paris Saint-Germain B,Grenoble Foot 38 (France),0,0.0,,False,False,True
+111049,Jimmy Kamghain,Attack - Left Winger,1992,2009,2012,Paris Saint-Germain B,KV Kortrijk (Belgium),0,0.0,,False,False,True
+111061,Alassane També,Defender - Right-Back,1992,2008,2011,Paris Saint-Germain B,KV Kortrijk (Belgium),0,0.0,,False,False,True
+111809,Youness El Baillal,Midfield - Left Midfield,1991,2012,2014,Paris Saint-Germain B,Football Club Mantois (France),0,0.0,,False,False,True
+111837,Yoann Arquin,Attack - Centre-Forward,1988,2009,2010,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+126646,Zanké Diarra,Midfield - Defensive Midfield,1985,2009,2010,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+126648,Hakeem Achour,Midfield - Attacking Midfield,1989,2009,2010,Paris Saint-Germain B,US Ivry Football (France),0,0.0,,False,False,True
+126649,Adama Touré,Midfield - Central Midfield,1991,2008,2011,Paris Saint-Germain,FC Lorient (France),0,0.0,,False,False,True
+126650,John-Christophe Ayina,Attack - Left Winger,1991,2009,2011,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+126697,Hicham M'Laab,Midfield - Attacking Midfield,1990,2017,2018,Paris Saint-Germain B,AS Vitré (France),0,0.0,,False,False,True
+127184,Alvin Arrondel,Defender - Right-Back,1993,2011,2014,Paris Saint-Germain B,Vitória Guimarães SC B (Portugal),0,0.0,,False,False,True
+134276,Bastien Héry,Midfield - Central Midfield,1992,2010,2012,Paris Saint-Germain B,Sheffield Wednesday (England),0,0.0,,False,False,True
+140523,George Weah Jr.,Attack - Second Striker,1987,2014,2015,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+142326,Philtzgerald Mbaka,Midfield - Central Midfield,1993,2011,2013,Paris Saint-Germain B,Rayo Cantabria (Spain),0,0.0,,False,False,True
+157491,Jordan Ikoko,Defender - Right-Back,1994,2011,2016,Paris Saint-Germain B,EA Guingamp (France),0,0.0,,False,False,True
+157504,Alexis Moreira,Attack - Centre-Forward,1994,2013,2013,Paris Saint-Germain B,Stade Brest 29 B (France),0,0.0,,False,False,True
+157508,Abdallah Yaisien,Midfield - Attacking Midfield,1994,2010,2013,Paris Saint-Germain B,Bologna FC 1909 (Italy),0,0.0,,False,True,True
+164897,Jean-Christophe Bahebeck,Attack - Centre-Forward,1993,2010,2018,Paris Saint-Germain,FC Utrecht (Netherlands),0,0.0,,False,False,True
+164899,Ousmane Baldé,Midfield - Defensive Midfield,1989,2010,2012,Paris Saint-Germain B,Getafe CF B (Spain),0,0.0,,False,False,True
+164902,Pierre Bourdin,Defender - Centre-Back,1994,2009,2014,Paris Saint-Germain B,Cercle Brugge (Belgium),0,0.0,,False,False,True
+164904,Mory Diaw,Goalkeeper,1993,2012,2015,Paris Saint-Germain,CD Mafra (Portugal),0,0.0,,False,False,True
+164915,Lionel Mpasi-Nzau,Goalkeeper,1994,2011,2012,Paris Saint-Germain B,Toulouse FC B (France),0,0.0,,False,False,True
+164930,Abdelrafik Gérard,Midfield - Central Midfield,1993,2011,2014,Paris Saint-Germain B,US Créteil-Lusitanos (France),0,0.0,,False,False,True
+164932,Arnaud Honoré,Midfield - Central Midfield,1993,2011,2013,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+164940,Richard Samnick,Defender - Centre-Back,1993,2011,2013,Paris Saint-Germain B,SSC Bari (Italy),0,0.0,,False,False,True
+164941,Yannis Takerboucht,Defender - Right-Back,1993,2011,2013,Paris Saint-Germain B,Rayo Cantabria (Spain),0,0.0,,False,False,True
+182876,Stéphane Lambese,Defender - Right-Back,1995,2011,2016,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+182882,Franck Bambock,Midfield - Defensive Midfield,1995,2011,2015,Paris Saint-Germain B,SD Huesca (Spain),0,0.0,,False,False,True
+182913,Adrien Rabiot,Midfield - Central Midfield,1995,2011,2019,Paris Saint-Germain,Juventus FC (Italy),0,0.0,,True,False,True
+184961,Kalifa Traoré,Defender - Centre-Back,1991,2010,2014,Paris Saint-Germain B,Angers SCO (France),0,0.0,,False,False,True
+189435,Jérémi Kimmakon,Attack - Right Winger,1994,2014,2015,Paris Saint-Germain,Sans club,0,0.0,,False,False,True
+191453,Anthony Petrilli,Attack - Centre-Forward,1993,2014,2016,Paris Saint-Germain B,Trélissac FC (France),0,0.0,,False,False,True
+191520,Jordy Claveau,Goalkeeper,1995,2013,2015,Paris Saint-Germain B,Le Mans FC (France),0,0.0,,False,False,True
+195376,Hermann Kabasele,Attack - Centre-Forward,1992,2015,2016,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+198624,Makan Traoré,Defender - Left-Back,1992,2014,2017,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+203345,Romuald Lacazette,Midfield - Central Midfield,1994,2011,2015,Paris Saint-Germain B,TSV 1860 Munich (Germany),0,0.0,,False,False,True
+203486,Sorel Chemin,Midfield - Attacking Midfield,1994,2013,2014,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+203503,Romain Habran,Attack - Right Winger,1994,2013,2017,Paris Saint-Germain B,Royal Antwerp FC (Belgium),0,0.0,,False,False,True
+203512,Mickaël Latour,Midfield - Attacking Midfield,1995,2012,2014,Paris Saint-Germain B,Virtus Entella (Italy),0,0.0,,False,False,True
+203526,Jérémy Quemener,Midfield - Central Midfield,1994,2011,2012,Paris Saint-Germain U19,FC Metz B (France),0,0.0,,False,False,True
+236059,Christian Kipré,Defender - Centre-Back,1995,2013,2015,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+241071,Benjamin Garnier,Defender - Left-Back,1988,2011,2014,Paris Saint-Germain B,AS Chatou (France),0,0.0,,False,True,True
+243734,Hervé Mombela,Defender - Centre-Back,1996,2017,2018,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+243737,Roli Pereira de Sa,Midfield - Attacking Midfield,1996,2012,2017,Paris Saint-Germain B,FC Nantes B (France),0,0.0,,False,False,True
+259722,Alexandre Demirdjian,Defender - Left-Back,1997,2014,2016,Paris Saint-Germain U19,club 14837,0,0.0,,False,False,True
+272623,Nathan Epaillard,Midfield - Defensive Midfield,1997,2013,2019,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+272630,Bryan Labissiere,Midfield - Attacking Midfield,1997,2013,2017,Paris Saint-Germain B,SO Romorantin (France),0,0.0,,False,False,True
+282029,Jordan Diakiese,Defender - Right-Back,1995,2012,2015,Paris Saint-Germain B,ESTAC Troyes B (France),0,0.0,,False,False,True
+282059,John Junior Nkomb Nkomb,Attack - Centre-Forward,1994,2013,2014,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+284472,Enes Azizi,Goalkeeper,1994,2012,2013,Paris Saint-Germain U19,AC Reggiana 1919 (Italy),0,0.0,,False,False,True
+288502,Gustavo Hebling,Midfield - Central Midfield,1996,2015,2017,Paris Saint-Germain B,Portimonense SC (Portugal),0,0.0,,False,False,True
+289432,Dylan Batubinsika,Defender - Centre-Back,1996,2012,2017,Paris Saint-Germain B,Royal Antwerp FC (Belgium),0,0.0,,False,False,True
+289433,Yakou Méïté,Attack - Left Winger,1996,2012,2016,Paris Saint-Germain B,Reading FC (England),0,0.0,,False,False,True
+289434,Cécé Pepe,Defender - Centre-Back,1996,2012,2014,Paris Saint-Germain U19,Olympique Marseille U19 (France),0,0.0,,False,False,True
+289435,Yohan Demoncy,Midfield - Central Midfield,1996,2012,2018,Paris Saint-Germain B,US Orléans (France),0,0.0,,False,False,True
+289436,Bryan Mavinzi,Midfield - Central Midfield,1996,2012,2016,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+289437,Kévin Farade,Attack - Centre-Forward,1995,2013,2015,Paris Saint-Germain B,US Lusitanos Saint-Maur (France),0,0.0,,False,False,True
+289438,Devon Romil,Attack - Right Winger,1996,2013,2017,Paris Saint-Germain B,club 56545,0,0.0,,False,False,True
+291111,Sessi D'Almeida,Midfield - Defensive Midfield,1995,2015,2016,Paris Saint-Germain B,Barnsley FC (England),0,0.0,,False,False,True
+292695,Salif Sanogo,Attack - Centre-Forward,1996,2012,2016,Paris Saint-Germain B,AJ Auxerre B (France),0,0.0,,False,False,True
+296359,Félix Eboa Eboa,Defender - Centre-Back,1997,2013,2017,Paris Saint-Germain B,EA Guingamp (France),0,0.0,,False,False,True
+297121,Ernest Kehound,Attack - Right Winger,1987,2008,2009,Paris Saint-Germain B,US Orléans (France),0,0.0,,False,False,True
+301068,Arnaud Fezui,Defender - Centre-Back,1995,2012,2015,Paris Saint-Germain B,FCM Aubervilliers (France),0,0.0,,False,False,True
+315579,Michaël Hervé,Midfield - Attacking Midfield,1996,2015,2016,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+321618,Abdoulahy Sangaré,Defender - Centre-Back,1984,2012,2013,Paris Saint-Germain B,AS Poissy (France),0,0.0,,False,False,True
+324800,Alec Georgen,Defender - Right-Back,1998,2014,2018,Paris Saint-Germain B,US Avranches (France),0,0.0,,False,False,True
+335131,Kévin Nzuzi Mata,Attack - Left Winger,1994,2016,2017,Paris Saint-Germain B,AC Boulogne-Billancourt (France),0,0.0,,False,False,True
+340299,Walter Lopes,Attack - Left Winger,1992,2010,2012,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+340475,Nicolas Helin,Goalkeeper,1996,2013,2015,Paris Saint-Germain U19,Sans club,0,0.0,,False,False,True
+340480,Mamadou Doucouré,Defender - Centre-Back,1998,2014,2016,Paris Saint-Germain B,Borussia Mönchengladbach (Germany),0,0.0,,False,False,True
+340486,Sacha Franco-Gallart,Midfield,1997,2014,2016,Paris Saint-Germain U19,Sans club,0,0.0,,False,False,True
+340487,Bryan Goncalves,Defender - Left-Back,1996,2015,2016,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+343291,Glenn Mbimba,Defender - Centre-Back,1994,2011,2012,Paris Saint-Germain U19,Clermont Foot 63 U19 (France),0,0.0,,False,False,True
+344382,Harold Voyer,Defender - Centre-Back,1997,2013,2017,Paris Saint-Germain B,AS Poissy (France),0,0.0,,False,False,True
+344383,Ardian Krasniqi,Defender - Right-Back,1997,2014,2015,Paris Saint-Germain U19,Entente Sannois Saint-Gratien U19 (France),0,0.0,,False,False,True
+344598,Dan-Axel Zagadou,Defender - Centre-Back,1999,2015,2017,Paris Saint-Germain B,Borussia Dortmund (Germany),0,0.0,,True,False,True
+344651,Anthony Brydges,Defender - Right-Back,1997,2013,2017,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+344652,Léonard Aggoune,Goalkeeper,1997,2014,2017,Paris Saint-Germain B,Pafos FC (Cyprus),0,0.0,,False,False,True
+344653,Mandjio Keita,Attack - Right Winger,1997,2014,2015,Paris Saint-Germain B,Paris FC B (France),0,0.0,,False,False,True
+352360,Fares Hassani,Midfield - Attacking Midfield,1991,2017,2018,Paris Saint-Germain B,Iris Club de Croix (France),0,0.0,,False,False,True
+353400,Isaac Hemans Arday,Defender - Left-Back,1996,2017,2021,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+356537,Levi Opdam,Defender - Right-Back,1996,2018,2019,Paris Saint-Germain B,TOP Oss (Netherlands),0,0.0,,False,False,True
+362344,Lorenzo Callegari,Midfield - Defensive Midfield,1998,2014,2018,Paris Saint-Germain B,Genoa CFC (Italy),0,0.0,,False,False,True
+362550,Arnaud Fotso,Midfield - Central Midfield,1994,2011,2013,Paris Saint-Germain U19,Inconnu,0,0.0,,False,False,True
+373202,Alexandre Ricourt,Defender,1997,2014,2015,Paris Saint-Germain U19,club 42786,0,0.0,,False,False,True
+392276,Timothée Taufflieb,Midfield - Central Midfield,1992,2013,2016,Paris Saint-Germain B,Quevilly - Rouen Métropole (France),0,0.0,,False,False,True
+392282,Jean Louchet,Goalkeeper,1996,2015,2016,Paris Saint-Germain B,Stade Reims B (France),0,0.0,,False,False,True
+394326,Mahamadou Dembélé,Defender - Centre-Back,1999,2015,2017,Paris Saint-Germain U19,Red Bull Salzburg (Austria),0,0.0,,False,False,True
+395251,Sébastien Cibois,Goalkeeper,1998,2014,2019,Paris Saint-Germain,Sans club,0,0.0,,False,False,True
+395509,Arnaud Luzayadio,Defender - Right-Back,1999,2016,2019,Paris Saint-Germain B,US Orléans (France),0,0.0,,False,False,True
+395510,David Attah,Midfield - Attacking Midfield,1998,2014,2016,Paris Saint-Germain U19,FC Lorient B (France),0,0.0,,False,False,True
+395511,Alexis Giacomini,Midfield - Attacking Midfield,1998,2017,2018,Paris Saint-Germain B,EA Guingamp B (France),0,0.0,,False,False,True
+395513,Abdoulaye Konaté,Midfield - Central Midfield,1998,2017,2019,Paris Saint-Germain B,Sans club,0,0.0,,False,True,True
+395514,Théo Epailly,Attack - Left Winger,1999,2016,2017,Paris Saint-Germain U19,AS Monaco U21 (France),0,0.0,,False,False,True
+395521,Allan Carneva,Attack,1998,2014,2017,Paris Saint-Germain U19,Paris FC B (France),0,0.0,,False,False,True
+419382,Adama Traoré,Attack - Second Striker,1989,2008,2009,Paris Saint-Germain,club 25638,0,0.0,,False,False,True
+460622,Thomas Chesneau,Goalkeeper,1999,2018,2019,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+460624,Pierre Ouvry,Goalkeeper,2000,2017,2019,Paris Saint-Germain U19,C'Chartres Football (France),0,0.0,,False,False,True
+460626,Garissone Innocent,Goalkeeper,2000,2017,2022,Paris Saint-Germain,KAS Eupen (Belgium),0,0.0,,False,False,False
+460627,Will-Césaire Matimbou,Goalkeeper,2000,2016,2019,Paris Saint-Germain U19,Entente Sannois Saint-Gratien (France),0,0.0,,False,False,True
+460628,Mathis Pascal,Defender - Centre-Back,1998,2017,2018,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+460631,Rémi Cabral,Attack - Centre-Forward,1999,2016,2017,Paris Saint-Germain U19,FC Metz B (France),0,0.0,,False,False,True
+460633,Bardou Mapeja,Attack - Left Winger,1998,2016,2017,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+469043,Samuel Guibert,Defender - Centre-Back,1989,2017,2018,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+505643,Sabri Haddadou,Midfield - Attacking Midfield,1999,2017,2019,Paris Saint-Germain B,AS Poissy (France),0,0.0,,False,False,True
+515157,Paul-Henri Moussinga,Midfield - Defensive Midfield,1997,2015,2016,Paris Saint-Germain U19,Amiens SC B (France),0,0.0,,False,False,True
+517900,Sofiane Jdaini,Defender - Left-Back,1998,2016,2019,Paris Saint-Germain B,Racing Club de France (France),0,0.0,,False,False,True
+536473,Lucas Maronnier,Defender - Right-Back,2000,2017,2018,Paris Saint-Germain U19,club 12749,0,0.0,,False,False,True
+536474,Raphaël Nya,Defender - Centre-Back,2000,2017,2019,Paris Saint-Germain U19,Wolverhampton Wanderers U21 (England),0,0.0,,False,False,True
+536476,Trey Vimalin,Goalkeeper,2001,2018,2019,Paris Saint-Germain U19,Stade Reims B (France),0,0.0,,False,False,True
+536478,Emmanuel Attah,Attack - Left Winger,2000,2017,2019,Paris Saint-Germain B,Angers SCO B (France),0,0.0,,False,False,True
+536479,Alexandre Fressange,Attack - Left Winger,2001,2018,2022,Paris Saint-Germain B,Sans club,0,0.0,,False,False,False
+536480,Lucas Bernadou,Midfield - Central Midfield,2000,2017,2020,Paris Saint-Germain B,FC Emmen (Netherlands),0,0.0,,False,False,True
+536483,Idriss Mzaouiyani,Midfield - Central Midfield,2000,2017,2019,Paris Saint-Germain U19,Al-Ain FC (United Arab Emirates),0,0.0,,False,False,True
+536521,Romaric Yapi,Defender - Right-Back,2000,2017,2019,Paris Saint-Germain U19,Brighton & Hove Albion U21 (England),0,0.0,,False,False,True
+538045,Kays Ruiz-Atil,Midfield - Central Midfield,2002,2018,2021,Paris Saint-Germain,FC Barcelona Atlètic (Spain),0,0.0,,False,False,True
+566931,Xavi Simons,Midfield - Attacking Midfield,2003,2019,2022,Paris Saint-Germain,PSV Eindhoven (Netherlands),0,0.0,,False,True,False
+569385,Adil Aouchiche,Midfield - Attacking Midfield,2002,2018,2020,Paris Saint-Germain,AS Saint-Étienne (France),0,0.0,,False,False,True
+589689,Fahd El Khoumisti,Attack - Centre-Forward,1993,2017,2018,Paris Saint-Germain B,US Orléans (France),0,0.0,,False,False,True
+590914,Bandiougou Fadiga,Midfield - Attacking Midfield,2001,2018,2021,Paris Saint-Germain B,Olympiacos Piraeus (Greece),0,0.0,,False,False,True
+592588,Cawdy Williams,Attack - Right Winger,2000,2018,2019,Paris Saint-Germain U19,Racing Strasbourg B (France),0,0.0,,False,False,True
+606576,Denis Franchi,Goalkeeper,2002,2019,2022,Paris Saint-Germain,Burnley FC (England),0,0.0,,False,False,False
+608027,Anfane Ahamada,Midfield - Defensive Midfield,2002,2019,2023,Paris Saint-Germain,Sans club,0,0.0,,False,False,False
+612660,Richard Makutungu,Attack - Right Winger,2001,2018,2021,Paris Saint-Germain U19,Sans club,0,0.0,,False,False,True
+618342,Yanis Saidani,Goalkeeper,2001,2018,2021,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+618351,Curtis Fiawoo,Defender - Centre-Back,2001,2018,2019,Paris Saint-Germain U19,AC Le Havre U19 (France),0,0.0,,False,False,True
+618402,Ziyad Larkeche,Defender - Left-Back,2002,2018,2020,Paris Saint-Germain U19,Fulham FC U21 (England),0,0.0,,False,False,True
+618405,Teddy Alloh,Defender - Left-Back,2002,2019,2022,Paris Saint-Germain,KAS Eupen (Belgium),0,0.0,,False,False,False
+618408,Maxen Kapo,Midfield - Defensive Midfield,2001,2018,2021,Paris Saint-Germain B,FC Lausanne-Sport (Switzerland),0,0.0,,False,False,True
+618411,Massinissa Oufella,Midfield - Attacking Midfield,2001,2018,2022,Paris Saint-Germain B,Sans club,0,0.0,,False,False,False
+618415,Nathan Bitumazala,Midfield - Attacking Midfield,2002,2019,2022,Paris Saint-Germain,KAS Eupen (Belgium),0,0.0,,False,False,False
+618416,Kenny Nagera,Attack - Centre-Forward,2002,2019,2023,Paris Saint-Germain,FC Differdange 03 (Luxembourg),0,0.0,,False,False,False
+618425,Tanguy Coulibaly,Attack - Right Winger,2001,2018,2019,Paris Saint-Germain U19,VfB Stuttgart (Germany),0,0.0,,False,False,True
+618487,Hussayn Touati,Attack - Left Winger,2001,2019,2021,Paris Saint-Germain U19,Sans club,0,0.0,,False,False,True
+619989,Ramy El Khatch,Defender - Right-Back,1996,2013,2014,Paris Saint-Germain U19,Jeanne d'Arc de Drancy U19 (France),0,0.0,,False,False,True
+638422,Jean-Baptiste Fischer,Midfield - Central Midfield,1998,2015,2016,Paris Saint-Germain U19,club 9746,0,0.0,,False,False,True
+641576,Tidjany Touré,Attack - Left Winger,2002,2019,2022,Paris Saint-Germain,Feyenoord U21 (Netherlands),0,0.0,,False,False,False
+642757,Francesco Lo Celso,Midfield - Attacking Midfield,2000,2016,2017,Paris Saint-Germain U19,club 15109,0,0.0,,False,False,True
+659513,Soumaïla Coulibaly,Defender - Centre-Back,2003,2019,2021,Paris Saint-Germain U19,Borussia Dortmund (Germany),0,0.0,,True,False,True
+709481,Ayoub Yousfi,Midfield - Attacking Midfield,2002,2019,2020,Paris Saint-Germain U19,club 12769,0,0.0,,False,False,True
+718232,Abdoulaye Kamara,Midfield - Defensive Midfield,2004,2019,2021,Paris Saint-Germain U19,Borussia Dortmund II (Germany),0,0.0,,False,False,True
+718233,Gaylord Kitenge,Defender - Left-Back,2002,2019,2020,Paris Saint-Germain U19,Sans club,0,0.0,,False,False,True
+718863,Hubert Mbuyi-Muamba,Defender - Centre-Back,2003,2019,2021,Paris Saint-Germain U19,TSG 1899 Hoffenheim II (Germany),0,0.0,,False,False,True
+719238,Respicio Augusto Ainca,Midfield,1996,2014,2015,Paris Saint-Germain U19,Sans club,0,0.0,,False,False,True
+721952,Jonathan Mutombo,Defender - Right-Back,2002,2019,2021,Paris Saint-Germain U19,Vitória de Guimarães SC U23 (- 2022) (Portugal),0,0.0,,False,False,True
+721953,Isaac Karamoko,Attack - Centre-Forward,2002,2019,2020,Paris Saint-Germain U19,Sans club,0,0.0,,False,False,True
+724419,Ibrahim Tall,Defender - Centre-Back,1999,2019,2021,Paris Saint-Germain B,club 5073,0,0.0,,False,False,True
+732097,Kévin Yoke,Attack - Left Winger,1996,2018,2020,Paris Saint-Germain B,Le Mans FC (France),0,0.0,,False,False,True
+737766,Mathieu de Oliveira,Midfield - Attacking Midfield,1993,2018,2019,Paris Saint-Germain B,Entente Sannois Saint-Gratien (France),0,0.0,,False,True,True
+760793,Kévin Remanaho,Defender - Left-Back,1993,2017,2018,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+761284,Théo Chanu,Goalkeeper,2002,2019,2020,Paris Saint-Germain U19,Sans club,0,0.0,,False,False,True
+761286,Hervé Malebe,Attack - Right Winger,2002,2019,2020,Paris Saint-Germain U19,Reading FC U21 (England),0,0.0,,False,False,True
+771225,Amadou N'Diaye,Attack - Centre-Forward,1990,2015,2016,Paris Saint-Germain B,Retraite,0,0.0,,False,False,True
+773756,Digbeu Gogoua,Midfield - Defensive Midfield,1998,2018,2020,Paris Saint-Germain B,OFC Les Mureaux (France),0,0.0,,False,False,True
+773757,Yassine El Ouatki,Midfield - Central Midfield,1998,2017,2022,Paris Saint-Germain B,Varbergs BoIS (Sweden),0,0.0,,False,False,False
+773759,Maël Couteau,Defender - Centre-Back,1999,2019,2020,Paris Saint-Germain B,club 6647,0,0.0,,False,False,True
+801349,Deniz Karademir,Midfield - Attacking Midfield,1995,2013,2016,Paris Saint-Germain B,Évreux Football Club 27 (France),0,0.0,,False,True,True
+807105,Samuel Arneton,Defender - Centre-Back,1995,2019,2013,Paris Saint-Germain U19,club 43570,0,0.0,,False,True,True
+807126,Emeryc Mabandza Batantou,Defender - Centre-Back,1993,2019,2023,Paris Saint-Germain B,US Lusitanos Saint-Maur (France),0,0.0,,False,False,False
+807146,Olivier Ondziel Onna,Defender - Centre-Back,1994,2019,2022,Paris Saint-Germain B,OFC Les Mureaux (France),0,0.0,,False,False,False
+807169,Laurains Ngandu Kaniki,Defender - Centre-Back,1988,2019,2022,Paris Saint-Germain B,Inconnu,0,0.0,,False,False,False
+807171,Mohamed Touré,Defender - Left-Back,1995,2019,2023,Paris Saint-Germain B,club 93409,0,0.0,,False,False,False
+807172,Germain Delage,Defender,1988,2019,2021,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+807174,Anouar Ghazouani,Attack - Centre-Forward,1984,2019,2021,Paris Saint-Germain B,Sans club,0,0.0,,False,False,True
+807273,Tom Bouvil,Attack - Right Winger,1992,2019,2021,Paris Saint-Germain B,ESA Linas-Montlhéry (France),0,0.0,,False,False,True
+807275,Abdourahmane Fofana,Attack - Centre-Forward,1998,2019,2021,Paris Saint-Germain B,OFC Les Mureaux (France),0,0.0,,False,False,True
+807276,Queran Verset,Attack - Left Winger,2000,2019,2021,Paris Saint-Germain B,club 77571,0,0.0,,False,False,True
+832211,Christian Gomis,Midfield - Defensive Midfield,1998,2019,2020,Paris Saint-Germain B,Lokomotiv Plovdiv (Bulgaria),0,0.0,,False,False,True
+858595,Maxime Miriezolo,Attack - Right Winger,1997,2015,2018,Paris Saint-Germain B,Olympique Noisy-le-Sec (France),0,0.0,,False,False,True
+863180,Lionel Thiam,Defender,1991,2013,2014,Paris Saint-Germain B,club 61017,0,0.0,,False,False,True
+865544,Valentin Pinto,Goalkeeper,1999,2016,2017,Paris Saint-Germain U19,Quevilly - Rouen Métropole B (France),0,0.0,,False,False,True
+871791,Dylan Yaya Dieuveil,Goalkeeper,1996,2019,2014,Paris Saint-Germain U19,AS Poissy (France),0,0.0,,False,True,True
+1059392,Nicolas Bernardino,Midfield - Central Midfield,2002,2019,2020,Paris Saint-Germain U19,Paris FC B (France),0,0.0,,False,False,True

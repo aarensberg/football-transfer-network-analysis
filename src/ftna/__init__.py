@@ -3,7 +3,8 @@
 import importlib
 import time
 
-# Étapes dans l'ordre de dépendance (communities avant roles, centrality avant roles).
+# Étapes dans l'ordre de dépendance (centrality et communities avant roles, roles
+# avant talent_flow).
 STEPS = (
     "inspection",
     "graph",
@@ -15,6 +16,7 @@ STEPS = (
     "countries",
     "hierarchy",
     "roles",
+    "talent_flow",
     "sensitivity",
 )
 
