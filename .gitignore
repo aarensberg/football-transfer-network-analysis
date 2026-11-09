@@ -13,3 +13,14 @@ wheels/
 docs/
 CLAUDE.local.md
 /data/
+
+# LaTeX sources of the report (not versioned) and build files
+report/report.tex
+report/biblio.bib
+report/*.aux
+report/*.log
+report/*.bbl
+report/*.blg
+report/*.out
+report/*.fls
+report/*.fdb_latexmk

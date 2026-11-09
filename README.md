@@ -80,6 +80,10 @@ Or run each step separately, in this order (each step writes a Markdown report i
 
 Figures are saved in `results/figures/` as PDF (report) and PNG (preview).
 
+### Report
+
+The written report is `report/report.pdf`. Its LaTeX sources are not versioned; it includes the figures of `results/figures/`.
+
 ### Conventions
 
 - Distances are counted in hops (edge weights measure exchange intensity, not length). Directed distances are computed exactly on the largest strongly connected component; undirected distances on the largest weakly connected component.
@@ -137,7 +141,7 @@ Limitations: no performance data (minutes, statistics); a zero fee means free or
 .
 ├── data/raw/            # Raw Kaggle CSV files (not versioned)
 ├── data/processed/      # Generated graph (not versioned)
-├── report/              # LaTeX report (template.tex, biblio.bib)
+├── report/              # Written report (report.pdf)
 ├── results/             # Generated reports, tables (tables/) and figures (figures/)
 ├── src/ftna/            # Analysis code (one module per step, see table above)
 ├── tests/               # Unit tests on synthetic data (uv run pytest)
